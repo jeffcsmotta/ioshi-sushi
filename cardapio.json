@@ -1,0 +1,289 @@
+{
+  "merchant": {
+    "name": "Ioshi Japanese Food",
+    "short_name": "Ioshi Sushi",
+    "slogan": "Prazer em Servir • O Melhor da Culinária Japonesa em Caxias do Sul",
+    "phone": "+555435335556",
+    "phone_display": "(54) 3533-5556",
+    "address": "Av. Júlio de Castilhos, 2970 - São Pelegrino, Caxias do Sul - RS",
+    "maps_url": "https://g.page/ioshi-sushi?share",
+    "instagram": "https://www.instagram.com/ioshi.sushi",
+    "facebook": "https://www.facebook.com/ioshi.sushi",
+    "rating": "4.7",
+    "reviews_count": "1.240+",
+    "hours": "Terça a Domingo • 18h30 às 23h00",
+    "logo": "assets/logo.png"
+  },
+  "categories": [
+    { "id": "combos", "name": "Combos & Combinados", "icon": "package" },
+    { "id": "hots", "name": "Hots Especiais", "icon": "flame" },
+    { "id": "pokes", "name": "Pokes Havaianos", "icon": "bowl" },
+    { "id": "entradas", "name": "Entradas & Onigiris", "icon": "utensils" },
+    { "id": "sashimis", "name": "Sashimis & Niguiris", "icon": "fish" },
+    { "id": "quentes", "name": "Pratos Quentes", "icon": "soup" },
+    { "id": "sobremesas", "name": "Sobremesas", "icon": "sparkles" },
+    { "id": "bebidas", "name": "Bebidas", "icon": "cup-soda" }
+  ],
+  "products": [
+    {
+      "id": "combo-iosake",
+      "name": "Combo Iosake (38 Peças)",
+      "category": "combos",
+      "category_name": "Combos & Combinados",
+      "description": "Seleção nobre com 8 Sashimis de Salmão fresco, 8 Uramakis Filadélfia, 8 Hossomakis de Salmão, 6 Niguiris Salmão Maçaricado e 8 Hot Rolls crocantes.",
+      "price": 110.00,
+      "badge": "Mais Pedido ⭐",
+      "image": "assets/tabua.webp",
+      "rating": 5.0
+    },
+    {
+      "id": "combo-promocional",
+      "name": "Combo Promocional Ioshi (30 Peças + Refri)",
+      "category": "combos",
+      "category_name": "Combos & Combinados",
+      "description": "Combo Yasuke (18 peças variadas com sashimis, niguiris e uramakis) + 12 Hot Filadélfia crocantes + 1 Refrigerante lata 350ml.",
+      "price": 79.90,
+      "badge": "Destaque da Casa 🔥",
+      "image": "assets/sushi.webp",
+      "rating": 4.9
+    },
+    {
+      "id": "combo-hot-12",
+      "name": "Combo Hot Especial (12 Peças)",
+      "category": "hots",
+      "category_name": "Hots Especiais",
+      "description": "2 Hot Filadélfia, 2 Hot Cítrico Especial, 2 Hot de Alho Poró Crispy, 2 Hot Gambey, 2 Hot Ioshi e 2 Hot Doritos crocantes com tarê.",
+      "price": 34.90,
+      "badge": "Favorito 🍣",
+      "image": "assets/sushi.webp",
+      "rating": 4.8
+    },
+    {
+      "id": "big-hot-salmao",
+      "name": "Big Hot Salmão Premium (8 unidades)",
+      "category": "hots",
+      "category_name": "Hots Especiais",
+      "description": "Roll empanado extra crocante com generoso recheio de salmão, cream cheese Philadelphia, cebolinha e molho tarê artesanal.",
+      "price": 43.00,
+      "badge": "Crocante & Suculento",
+      "image": "assets/sushi.webp",
+      "rating": 4.9
+    },
+    {
+      "id": "combo-chuugi",
+      "name": "Combo Chuugi (58 Peças)",
+      "category": "combos",
+      "category_name": "Combos & Combinados",
+      "description": "Ideal para 2 a 3 pessoas. Variedade farta com 14 Sashimis, 12 Uramakis especiais, 12 Hossomakis, 8 Niguiris e 12 Hot Rolls.",
+      "price": 163.00,
+      "badge": "Para Compartilhar 👥",
+      "image": "assets/tabua.webp",
+      "rating": 4.9
+    },
+    {
+      "id": "combo-makoto-4",
+      "name": "Combo Makoto 4 (92 Peças Nobres)",
+      "category": "combos",
+      "category_name": "Combos & Combinados",
+      "description": "Banquete para 4 a 5 pessoas. Seleção master com 24 Sashimis nobres, 24 Uramakis variados, 16 Niguiris, 12 Hossomakis e 16 Hots especiais.",
+      "price": 237.00,
+      "badge": "Master Banquete 🏆",
+      "image": "assets/tabua.webp",
+      "rating": 5.0
+    },
+    {
+      "id": "poke-salmao-fresh",
+      "name": "Poke Salmão Fresh & Crispy",
+      "category": "pokes",
+      "category_name": "Pokes Havaianos",
+      "description": "Base de gohan temperado, cubos generosos de salmão fresco in natura, manga em cubos, cebola roxa, cream cheese, alho poró crispy, batata doce crispy e gergelim torrado.",
+      "price": 49.00,
+      "badge": "Mais Pedido ⭐",
+      "image": "assets/sushi.webp",
+      "rating": 5.0
+    },
+    {
+      "id": "poke-salmao-selado",
+      "name": "Poke Salmão Selado no Maçarico",
+      "category": "pokes",
+      "category_name": "Pokes Havaianos",
+      "description": "Base de gohan, cubos de salmão suavemente maçaricados com azeite trufado, cream cheese, lâminas de pepino sunomono, chips crocantes e molho tarê da casa.",
+      "price": 52.00,
+      "badge": "Trufado 🌿",
+      "image": "assets/sushi.webp",
+      "rating": 4.9
+    },
+    {
+      "id": "ceviche-salmao",
+      "name": "Ceviche Clássico de Salmão",
+      "category": "entradas",
+      "category_name": "Entradas & Onigiris",
+      "description": "Cubos de salmão fresco marinados em leche de tigre cítrico, cebola roxa fininha, pimenta dedo-de-moça suave, coentro e milho crocante.",
+      "price": 32.00,
+      "badge": "Cítrico & Refrescante",
+      "image": "assets/sushi.webp",
+      "rating": 4.8
+    },
+    {
+      "id": "onigiri-salmao-spicy",
+      "name": "Onigiri Especial de Salmão",
+      "category": "entradas",
+      "category_name": "Entradas & Onigiris",
+      "description": "Tradicional triângulo de arroz japonês recheado com tartar de salmão fresco temperado com maionese japonesa e envolto em alga nori crocante.",
+      "price": 15.00,
+      "badge": "Snack Tradicional 🍙",
+      "image": "assets/sushi.webp",
+      "rating": 4.7
+    },
+    {
+      "id": "onigiri-camarao",
+      "name": "Onigiri de Camarão Empanado",
+      "category": "entradas",
+      "category_name": "Entradas & Onigiris",
+      "description": "Arroz japonês com recheio de camarão empanado em panko crocante, cream cheese e cebolinha.",
+      "price": 16.00,
+      "badge": "",
+      "image": "assets/sushi.webp",
+      "rating": 4.7
+    },
+    {
+      "id": "porcao-tokay-salmao",
+      "name": "Porção Tokay Salmão (4 unidades)",
+      "category": "entradas",
+      "category_name": "Entradas & Onigiris",
+      "description": "Fatias nobres de salmão enroladas com recheio de cream cheese, geleia de pimenta e lâminas de amêndoas tostadas.",
+      "price": 26.00,
+      "badge": "Gourmet ✨",
+      "image": "assets/sushi.webp",
+      "rating": 4.9
+    },
+    {
+      "id": "sashimi-salmao-10",
+      "name": "Sashimi de Salmão Fresco (10 fatias)",
+      "category": "sashimis",
+      "category_name": "Sashimis & Niguiris",
+      "description": "10 cortes nobres e espessos do lombo de salmão fresco selecionado, servidos com wasabi e gengibre gari.",
+      "price": 40.00,
+      "badge": "Corte Nobre 🐟",
+      "image": "assets/tabua.webp",
+      "rating": 5.0
+    },
+    {
+      "id": "sashimi-salmao-selado-10",
+      "name": "Sashimi Salmão Selado Trufado (10 fatias)",
+      "category": "sashimis",
+      "category_name": "Sashimis & Niguiris",
+      "description": "10 fatias de salmão maçaricadas rapidamente, finalizadas com gotas de azeite trufado, flor de sal e raspas de limão siciliano.",
+      "price": 44.00,
+      "badge": "Chef Choice 🌟",
+      "image": "assets/tabua.webp",
+      "rating": 5.0
+    },
+    {
+      "id": "niguiri-salmao-brulee-6",
+      "name": "Niguiri Salmão Brûlée (6 unidades)",
+      "category": "sashimis",
+      "category_name": "Sashimis & Niguiris",
+      "description": "Niguiris de salmão maçaricados com açúcar mascavo e tarê, criando uma crostinha caramelizada irresistível.",
+      "price": 28.00,
+      "badge": "Sucesso Absoluto",
+      "image": "assets/sushi.webp",
+      "rating": 4.9
+    },
+    {
+      "id": "yakissoba-tradicional-misto",
+      "name": "Yakissoba Tradicional Especial (450g)",
+      "category": "quentes",
+      "category_name": "Pratos Quentes",
+      "description": "Massa artesanal frita na chapa wok com tiras de filé mignon, peito de frango, legumes selecionados frescos e molho clássico oriental encorpado.",
+      "price": 36.00,
+      "badge": "Prato Quente 🍜",
+      "image": "assets/sushi.webp",
+      "rating": 4.8
+    },
+    {
+      "id": "teppanyaki-salmao",
+      "name": "Teppanyaki de Salmão Grelhado",
+      "category": "quentes",
+      "category_name": "Pratos Quentes",
+      "description": "Posta nobre de salmão grelhado na chapa de ferro com legumes salteados na manteiga oriental e arroz gohan.",
+      "price": 54.00,
+      "badge": "",
+      "image": "assets/sushi.webp",
+      "rating": 4.8
+    },
+    {
+      "id": "trio-brownie-ioshi",
+      "name": "Trio de Brownie Artesanal Ioshi",
+      "category": "sobremesas",
+      "category_name": "Sobremesas",
+      "description": "3 mini brownies quentinhos de chocolate belga intenso com cobertura de doce de leite artesanal, calda de Nutella e morango fresco.",
+      "price": 24.00,
+      "badge": "Sobremesa Destaque 🍫",
+      "image": "assets/brownie.webp",
+      "rating": 5.0
+    },
+    {
+      "id": "hot-banana-nutella",
+      "name": "Hot Roll Banana com Nutella (6 un)",
+      "category": "sobremesas",
+      "category_name": "Sobremesas",
+      "description": "Massa folhada crocante recheada com banana caramelizada, frita e coberta com bastante Nutella e leite em pó ninho.",
+      "price": 22.00,
+      "badge": "Irresistível",
+      "image": "assets/brownie.webp",
+      "rating": 4.9
+    },
+    {
+      "id": "coca-cola-zero",
+      "name": "Coca-Cola Zero Lata 350ml",
+      "category": "bebidas",
+      "category_name": "Bebidas",
+      "description": "Lata 350ml servida estupidamente gelada.",
+      "price": 7.00,
+      "badge": "",
+      "image": "assets/sushi.webp",
+      "rating": 4.8
+    },
+    {
+      "id": "coca-cola-original",
+      "name": "Coca-Cola Original Lata 350ml",
+      "category": "bebidas",
+      "category_name": "Bebidas",
+      "description": "Lata 350ml servida estupidamente gelada.",
+      "price": 7.00,
+      "badge": "",
+      "image": "assets/sushi.webp",
+      "rating": 4.8
+    },
+    {
+      "id": "agua-mineral-gas",
+      "name": "Água Mineral com Gás 500ml",
+      "category": "bebidas",
+      "category_name": "Bebidas",
+      "description": "Garrafa 500ml com gás natural.",
+      "price": 5.00,
+      "badge": "",
+      "image": "assets/sushi.webp",
+      "rating": 4.8
+    },
+    {
+      "id": "cerveja-heineken-long-neck",
+      "name": "Cerveja Heineken Long Neck 330ml",
+      "category": "bebidas",
+      "category_name": "Bebidas",
+      "description": "Puro malte lager 330ml bem gelada.",
+      "price": 12.00,
+      "badge": "Gelada 🍺",
+      "image": "assets/sushi.webp",
+      "rating": 4.9
+    }
+  ],
+  "upsell": {
+    "id": "trio-brownie-ioshi",
+    "title": "Sobremesa Oficial da Casa 🍫",
+    "subtitle": "Feche seu pedido com chave de ouro: Trio de Brownie Artesanal de Chocolate Belga.",
+    "price": 24.00,
+    "image": "assets/brownie.webp"
+  }
+}
