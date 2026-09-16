@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onira.fly para Ioshi Japanese Food — Canal Próprio 0% Comissão</title>
+    <meta name="description" content="Proposta comercial Onira.fly para o Ioshi Japanese Food: canal digital proprietário de alta conversão, 0% de comissão por pedido e soberania da base de clientes em Caxias do Sul.">
+    <meta name="theme-color" content="#0A0A0C">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --gold: #FFC700; --gold-hover: #E5B300;
+            --bg: #0A0A0C; --surface: #141417; --surface-2: #1C1C21;
+            --text: #FFFFFF; --muted: #A1A1AA;
+            --green: #10B981; --red: #EF4444;
+            --radius: 16px;
+            --font-h: 'Outfit', sans-serif; --font-b: 'Plus Jakarta Sans', sans-serif; --font-m: 'JetBrains Mono', monospace;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        html { scroll-behavior: smooth; }
+        body { background: var(--bg); color: var(--text); font-family: var(--font-b); line-height: 1.6; overflow-x: hidden; }
+        .wrap { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+        section { padding: clamp(56px, 7vw, 96px) 0; scroll-margin-top: 80px; }
+        .eyebrow { display: inline-block; font-family: var(--font-m); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); background: rgba(255,199,0,0.12); border: 1px solid rgba(255,199,0,0.32); padding: 6px 14px; border-radius: 9999px; margin-bottom: 20px; }
+        h1, h2, h3 { font-family: var(--font-h); letter-spacing: -0.02em; line-height: 1.15; }
+        .sec-title { font-size: clamp(1.7rem, 3.6vw, 2.6rem); font-weight: 800; margin-bottom: 14px; }
+        .sec-desc { color: var(--muted); font-size: 1.05rem; max-width: 700px; }
+        .gold { color: var(--gold); }
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-family: var(--font-h); font-weight: 800; padding: 15px 30px; border-radius: 12px; text-decoration: none; cursor: pointer; border: none; font-size: 1rem; transition: all 0.2s ease; min-height: 52px; }
+        .btn-gold { background: var(--gold); color: #0A0A0A; box-shadow: 0 4px 18px rgba(255,199,0,0.25); }
+        .btn-gold:hover { background: var(--gold-hover); transform: translateY(-2px); }
+        .btn-ghost { background: rgba(255,255,255,0.06); color: #fff; border: 1px solid rgba(255,255,255,0.14); }
+        .btn-ghost:hover { border-color: var(--gold); transform: translateY(-2px); }
+
+        /* Header */
+        .site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(10,10,12,0.88); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(255,255,255,0.07); }
+        .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 68px; }
+        .brand { display: flex; align-items: center; gap: 10px; font-family: var(--font-h); font-weight: 800; font-size: 1.2rem; text-decoration: none; color: #fff; }
+        .brand img { height: 34px; width: auto; }
+        .brand small { font-family: var(--font-m); font-size: 0.65rem; color: var(--gold); border: 1px solid var(--gold); border-radius: 9999px; padding: 2px 8px; }
+        .nav-cta { padding: 10px 20px; font-size: 0.88rem; min-height: 44px; }
+
+        /* Hero */
+        .hero { padding-top: calc(68px + clamp(40px, 6vw, 80px)); position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: -120px; left: 20%; width: 420px; height: 420px; background: radial-gradient(circle, rgba(255,199,0,0.09) 0%, transparent 70%); pointer-events: none; }
+        .hero h1 { font-size: clamp(2.1rem, 5vw, 3.4rem); font-weight: 900; margin-bottom: 18px; }
+        .hero p.lead { color: var(--muted); font-size: 1.12rem; max-width: 640px; margin-bottom: 32px; }
+        .hero p.lead strong { color: #fff; }
+        .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 44px; }
+        .proof-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; background: rgba(20,20,23,0.8); border: 1px solid rgba(255,255,255,0.09); border-radius: var(--radius); padding: 20px; }
+        .proof b { display: block; font-family: var(--font-h); font-size: 1.5rem; color: var(--gold); }
+        .proof span { font-size: 0.82rem; color: var(--muted); }
+
+        /* Canais */
+        .channels { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 36px; }
+        .channel { background: var(--surface); border: 1px solid rgba(255,255,255,0.09); border-radius: var(--radius); padding: 28px 24px; }
+        .channel.own { border-color: rgba(255,199,0,0.5); background: radial-gradient(circle at top right, rgba(255,199,0,0.12) 0%, var(--surface) 70%); }
+        .channel .tag { font-family: var(--font-m); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em; color: var(--muted); }
+        .channel.own .tag { color: var(--gold); }
+        .channel h3 { font-size: 1.25rem; margin: 8px 0 6px; }
+        .channel .rate { font-family: var(--font-h); font-weight: 800; font-size: 1.05rem; margin: 12px 0; padding: 10px 14px; border-radius: 10px; background: rgba(0,0,0,0.4); }
+        .channel .rate.bad { color: var(--red); }
+        .channel .rate.good { color: var(--gold); }
+        .channel p { color: var(--muted); font-size: 0.92rem; }
+
+        /* Simulador */
+        .sim-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 36px; align-items: start; }
+        .sim-card { background: var(--surface); border: 1px solid rgba(255,255,255,0.09); border-radius: var(--radius); padding: 30px 26px; }
+        .sim-card.result { border-color: rgba(16,185,129,0.4); background: linear-gradient(160deg, rgba(16,185,129,0.1) 0%, var(--surface) 60%); text-align: center; }
+        .sim-field { margin-bottom: 26px; }
+        .sim-field label { display: flex; justify-content: space-between; font-weight: 700; font-size: 0.92rem; margin-bottom: 10px; }
+        .sim-field label output { color: var(--gold); font-family: var(--font-h); }
+        input[type="range"] { width: 100%; accent-color: var(--gold); height: 32px; }
+        .res-month { font-family: var(--font-h); font-size: clamp(2rem, 5vw, 2.8rem); font-weight: 900; color: var(--green); }
+        .res-annual { font-family: var(--font-h); font-size: 1.3rem; font-weight: 800; color: var(--gold); margin-top: 6px; }
+        .res-note { font-size: 0.82rem; color: var(--muted); margin: 14px 0 22px; }
+
+        /* Pricing (Regra Master: ZERO Permuta • Setup 3x 800 ou 2.400 + Acompanhamento 100/mês) */
+        .pricing { display: grid; grid-template-columns: 1.2fr 1fr; gap: 18px; margin-top: 36px; }
+        .price-card { border-radius: var(--radius); padding: 34px 30px; display: flex; flex-direction: column; }
+        .price-card.main { background: radial-gradient(circle at top right, rgba(255,199,0,0.14) 0%, var(--surface) 70%); border: 1.5px solid var(--gold); }
+        .price-card.sub { background: var(--surface); border: 1px solid rgba(255,255,255,0.09); }
+        .price-card h3 { font-size: 1.3rem; margin-bottom: 6px; }
+        .price-card .pdesc { color: var(--muted); font-size: 0.92rem; margin-bottom: 18px; }
+        .price-big { font-family: var(--font-h); font-size: 1.9rem; font-weight: 900; color: var(--gold); }
+        .price-sub { color: var(--muted); font-size: 0.88rem; margin-bottom: 20px; }
+        .feat { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 26px; flex: 1; }
+        .feat li { display: flex; gap: 10px; align-items: flex-start; font-size: 0.92rem; color: #E5E7EB; }
+        .feat li i { width: 17px; height: 17px; color: var(--green); flex-shrink: 0; margin-top: 3px; }
+
+        /* CTA final */
+        .final { text-align: center; background: radial-gradient(circle at center, rgba(255,199,0,0.08) 0%, transparent 65%); border-top: 1px solid rgba(255,255,255,0.07); }
+        .final h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; margin-bottom: 14px; }
+        .final p { color: var(--muted); max-width: 620px; margin: 0 auto 30px; }
+        footer { border-top: 1px solid rgba(255,255,255,0.07); padding: 26px 0; color: var(--muted); font-size: 0.84rem; text-align: center; }
+        footer a { color: var(--gold); text-decoration: none; font-weight: 700; }
+
+        @media (max-width: 900px) {
+            .proof-strip { grid-template-columns: repeat(2, 1fr); }
+            .channels, .sim-grid, .pricing { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="wrap nav">
+            <a href="index.html" class="brand">
+                <img src="assets/logo_official.png" alt="Ioshi Japanese Food">
+                <small>ONIRA.FLY</small>
+            </a>
+            <a href="#proposta" class="btn btn-gold nav-cta">Ver Investimento</a>
+        </div>
+    </header>
+
+    <!-- Hero Estratégico -->
+    <section class="hero">
+        <div class="wrap">
+            <span class="eyebrow">ESTRATÉGIA DE RETENÇÃO & MARGEM</span>
+            <h1>Soberania Digital para o <span class="gold">Ioshi Japanese Food</span></h1>
+            <p class="lead">
+                O iFood é uma excelente porta de entrada para novos clientes. Mas na segunda compra de quem já é fiel, <strong>cada 23% de taxa é margem que deveria ficar com a sua operação em Caxias do Sul</strong>.
+            </p>
+
+            <div class="hero-ctas">
+                <a href="index.html" class="btn btn-gold">
+                    <i data-lucide="eye"></i> Ver Demonstração do Site
+                </a>
+                <a href="#simulador" class="btn btn-ghost">
+                    <i data-lucide="calculator"></i> Simular Economia Anual
+                </a>
+            </div>
+
+            <div class="proof-strip">
+                <div class="proof">
+                    <b>0%</b>
+                    <span>Comissão por pedido</span>
+                </div>
+                <div class="proof">
+                    <b>&lt; 1,2s</b>
+                    <span>Carregamento instantâneo</span>
+                </div>
+                <div class="proof">
+                    <b>100%</b>
+                    <span>Sua base de clientes e contatos</span>
+                </div>
+                <div class="proof">
+                    <b>WhatsApp</b>
+                    <span>Comanda direta sem fricção</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- O Papel dos Canais -->
+    <section>
+        <div class="wrap">
+            <span class="eyebrow">ARQUITETURA DE CANAIS</span>
+            <h2 class="sec-title">A virada de chave no delivery gastronômico</h2>
+            <p class="sec-desc">
+                Você não precisa sair dos marketplaces — você precisa usar cada canal para o que ele faz de melhor.
+            </p>
+
+            <div class="channels">
+                <div class="channel">
+                    <span class="tag">MARKETPLACES (iFood)</span>
+                    <h3>Topo de Funil</h3>
+                    <div class="rate bad">18% a 27% de comissão</div>
+                    <p>Perfeito para adquirir clientes que nunca ouviram falar do restaurante. Custo de aquisição alto, mas necessário para descoberta inicial.</p>
+                </div>
+                <div class="channel">
+                    <span class="tag">SISTEMAS TRADICIONAIS</span>
+                    <h3>Fricção no Checkout</h3>
+                    <div class="rate bad">Cadastro longo + App pesado</div>
+                    <p>Obriga o cliente faminto a baixar aplicativo, lembrar senha ou passar por formulários lentos antes de conseguir pedir.</p>
+                </div>
+                <div class="channel own">
+                    <span class="tag">CANAL PRÓPRIO ONIRA.FLY</span>
+                    <h3>Retenção & Recompra</h3>
+                    <div class="rate good">0% de taxa sobre vendas</div>
+                    <p>1ª dobra imediata no cardápio, checkout ágil em 3 toques, zero senha e comanda formatada direto no WhatsApp da sua equipe.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simulador de Economia -->
+    <section id="simulador" style="background: var(--surface-2);">
+        <div class="wrap">
+            <span class="eyebrow">CALCULADORA DE MARGEM</span>
+            <h2 class="sec-title">Quanto o Ioshi deixa na mesa todos os meses?</h2>
+            <p class="sec-desc">
+                Arraste os seletores com base no faturamento mensal de delivery para calcular o impacto da recuperação de margem.
+            </p>
+
+            <div class="sim-grid">
+                <div class="sim-card">
+                    <div class="sim-field">
+                        <label>
+                            <span>Faturamento Delivery / Mês</span>
+                            <output id="lbl-faturamento">R$ 45.000</output>
+                        </label>
+                        <input type="range" id="rng-faturamento" min="15000" max="150000" step="5000" value="45000">
+                    </div>
+                    <div class="sim-field">
+                        <label>
+                            <span>% migrado para o canal próprio</span>
+                            <output id="lbl-migracao">35%</output>
+                        </label>
+                        <input type="range" id="rng-migracao" min="10" max="70" step="5" value="35">
+                    </div>
+                    <div class="sim-field">
+                        <label>
+                            <span>Taxa média economizada</span>
+                            <output id="lbl-taxa">23%</output>
+                        </label>
+                        <input type="range" id="rng-taxa" min="15" max="27" step="1" value="23">
+                    </div>
+                </div>
+
+                <div class="sim-card result">
+                    <span class="eyebrow" style="background:rgba(16,185,129,0.15); border-color:rgba(16,185,129,0.4); color:var(--green);">ECONOMIA DIRETA</span>
+                    <div class="res-month" id="res-mes">R$ 3.622,50</div>
+                    <div style="color:var(--muted); font-size:0.9rem;">a mais no seu caixa todo mês</div>
+                    <div class="res-annual" id="res-ano">R$ 43.470,00 / ano</div>
+                    <p class="res-note">Recursos que pagam a infraestrutura inteira no primeiro mês e protegem sua margem para reinvestir no negócio.</p>
+                    <a href="#proposta" class="btn btn-gold" style="width:100%;">Garantir Minha Soberania</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proposta Comercial Travada (Setup 3x 800 + 100/mês • ZERO PERMUTA) -->
+    <section id="proposta">
+        <div class="wrap">
+            <span class="eyebrow">PROPOSTA COMERCIAL ONIRA LABS</span>
+            <h2 class="sec-title">Investimento Transparente e Sem Pegadinhas</h2>
+            <p class="sec-desc">
+                Implementação chave na mão, catálogo completo pré-configurado e acompanhamento contínuo de alta performance.
+            </p>
+
+            <div class="pricing">
+                <div class="price-card main">
+                    <span class="eyebrow" style="align-self:flex-start;">SETUP COMPLETO & IMPLANTAÇÃO</span>
+                    <h3>Canal Digital Onira.fly Master</h3>
+                    <p class="pdesc">Arquitetura sob medida, catálogo de produtos cadastrado e fluxo de WhatsApp operacional.</p>
+                    <div class="price-big">3x de R$ 800,00</div>
+                    <div class="price-sub">ou R$ 2.400,00 à vista via Pix</div>
+                    <ul class="feat">
+                        <li><i data-lucide="check"></i> <span>Cardápio responsivo de 1ª dobra imediata (Zero banners corporativos poluídos).</span></li>
+                        <li><i data-lucide="check"></i> <span>Carrinho unificado dark com rolagem fluida e zero alertas nativos chatos.</span></li>
+                        <li><i data-lucide="check"></i> <span>Comanda de cozinha limpa direto no WhatsApp oficial da casa.</span></li>
+                        <li><i data-lucide="check"></i> <span>Banner de Upsell integrado para aumentar o ticket médio por pedido.</span></li>
+                        <li><i data-lucide="check"></i> <span>Otimização para busca local de Caxias do Sul (Schema.org e SEO técnico).</span></li>
+                    </ul>
+                    <a href="https://api.whatsapp.com/send?phone=5554999999999&text=Ol%C3%A1!%20Gostaria%20de%20ativar%20o%20Onira.fly%20para%20o%20Ioshi%20Japanese%20Food." target="_blank" class="btn btn-gold">
+                        <i data-lucide="check-circle"></i> Aprovar Implementação
+                    </a>
+                </div>
+
+                <div class="price-card sub">
+                    <span class="eyebrow" style="align-self:flex-start;">MANUTENÇÃO & NUVEM</span>
+                    <h3>Acompanhamento Mensal</h3>
+                    <p class="pdesc">Hospedagem ultra-rápida, SSL dedicado e suporte contínuo para atualizações.</p>
+                    <div class="price-big" style="color:#fff;">R$ 100,00<span style="font-size:1rem; color:var(--muted); font-weight:500;">/mês</span></div>
+                    <div class="price-sub">Sem fidelidade anual contratual</div>
+                    <ul class="feat">
+                        <li><i data-lucide="check"></i> <span>Hospedagem global em borda com carregamento em milissegundos.</span></li>
+                        <li><i data-lucide="check"></i> <span>Certificado de Segurança SSL emitido e renovado automaticamente.</span></li>
+                        <li><i data-lucide="check"></i> <span>Alterações de preços e itens no cardápio inclusas sob demanda.</span></li>
+                        <li><i data-lucide="check"></i> <span>Monitoramento 24/7 com 99,9% de uptime garantido.</span></li>
+                    </ul>
+                    <a href="index.html" class="btn btn-ghost">
+                        <i data-lucide="external-link"></i> Testar o Cardápio ao Vivo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="final section">
+        <div class="wrap">
+            <span class="eyebrow">VAMOS COMEÇAR?</span>
+            <h2>Seu canal próprio no ar em tempo recorde</h2>
+            <p>O protótipo com os produtos do Ioshi Japanese Food já está estruturado e pronto para rodar. Ative agora a sua ferramenta de soberania digital.</p>
+            <a href="https://api.whatsapp.com/send?phone=5554999999999&text=Ol%C3%A1!%20Vamos%20colocar%20o%20Onira.fly%20do%20Ioshi%20no%20ar!" target="_blank" class="btn btn-gold">
+                <i data-lucide="message-circle"></i> Falar com o Estrategista Onira
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrap">
+            <p>© 2026 Onira Labs. Todos os direitos reservados. Feito para negócios gastronômicos que valorizam a própria margem.</p>
+        </div>
+    </footer>
+
+    <script>
+        if (window.lucide) lucide.createIcons();
+
+        // Lógica do Simulador
+        const fmt = (v) => 'R$ ' + Math.round(v).toLocaleString('pt-BR');
+        const rngFat = document.getElementById('rng-faturamento');
+        const rngMig = document.getElementById('rng-migracao');
+        const rngTax = document.getElementById('rng-taxa');
+
+        function updateSim() {
+            const fat = parseFloat(rngFat.value);
+            const mig = parseFloat(rngMig.value);
+            const tax = parseFloat(rngTax.value);
+
+            document.getElementById('lbl-faturamento').textContent = fmt(fat);
+            document.getElementById('lbl-migracao').textContent = mig + '%';
+            document.getElementById('lbl-taxa').textContent = tax + '%';
+
+            const faturamentoMigrado = fat * (mig / 100);
+            const economiaMes = faturamentoMigrado * (tax / 100);
+            const economiaAno = economiaMes * 12;
+
+            document.getElementById('res-mes').textContent = fmt(economiaMes);
+            document.getElementById('res-ano').textContent = fmt(economiaAno) + ' / ano';
+        }
+
+        [rngFat, rngMig, rngTax].forEach(el => el.addEventListener('input', updateSim));
+        updateSim();
+    </script>
+</body>
+</html>

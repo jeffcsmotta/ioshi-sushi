@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ioshi Japanese Food | Delivery de Sushi em Caxias do Sul</title>
+    <meta name="description" content="🍣 Ioshi Japanese Food — Combos nobres, pokes frescos, hots crocantes e sashimis na Av. Júlio de Castilhos, 2970, São Pelegrino, Caxias do Sul. Monte seu pedido e envie direto no WhatsApp com 0% taxas.">
+    <meta name="keywords" content="Ioshi Sushi, Ioshi Japanese Food, Sushi Caxias do Sul, Delivery Sushi São Pelegrino, Combo Sushi Caxias, Poke Caxias, Festival de Sushi">
+
+    <!-- Open Graph / WhatsApp Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Ioshi Japanese Food">
+    <meta property="og:title" content="Ioshi Japanese Food | Delivery de Sushi em Caxias do Sul">
+    <meta property="og:description" content="🍣 Combos nobres, pokes frescos, hots crocantes e festival de sushi. Peça direto no WhatsApp com 0% taxas!">
+    <meta property="og:image" content="assets/logo.png">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Schema.org JSON-LD (SEO Local) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SushiRestaurant",
+      "name": "Ioshi Japanese Food",
+      "image": "assets/logo.png",
+      "telephone": "+555435335556",
+      "priceRange": "$$",
+      "servesCuisine": ["Japonesa", "Sushi", "Poke", "Festival de Sushi"],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "1240"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Júlio de Castilhos, 2970",
+        "addressLocality": "Caxias do Sul",
+        "addressRegion": "RS",
+        "postalCode": "95010-002",
+        "addressCountry": "BR"
+      }
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <meta name="theme-color" content="#0A0A0C">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Ioshi Sushi">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="style.css?v=20260916-v1">
+</head>
+<body>
+
+    <!-- Top Announcement Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-info">
+                <span><i data-lucide="map-pin"></i> Av. Júlio de Castilhos, 2970 • São Pelegrino, Caxias do Sul</span>
+            </div>
+            <div class="top-contacts">
+                <a href="https://api.whatsapp.com/send?phone=555435335556" target="_blank" class="top-phone"><i data-lucide="phone"></i> (54) 3533-5556</a>
+                <span class="divider">|</span>
+                <span class="top-rating"><i data-lucide="star"></i> 4,7 no Google (1.240+ avaliações)</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Despoluído (Regra Master Onira.fly: Logo + Status + Proposta + Lixeira + Meu Pedido) -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo" aria-label="Página Inicial do Ioshi Japanese Food">
+                <img src="assets/logo_official.png" alt="Ioshi Japanese Food" class="brand-logo-img">
+            </a>
+
+            <div class="header-actions">
+                <div id="status-badge" class="status-badge">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Delivery Aberto • Caxias</span>
+                </div>
+                <a href="proposta.html" class="btn-buy-site" aria-label="Ver proposta do site">
+                    <i data-lucide="zap"></i> Proposta
+                </a>
+                <button type="button" class="cart-clear-btn" id="cart-clear-header" onclick="window.clearCart()" aria-label="Limpar o pedido" title="Limpar pedido">
+                    <i data-lucide="trash-2"></i>
+                </button>
+                <button class="cart-toggle-btn" id="cart-toggle" onclick="window.openCart()" aria-label="Abrir carrinho de compras">
+                    <i data-lucide="shopping-bag"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                    <span class="cart-total-header" id="cart-total-header">R$ 0,00</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1ª DOBRA: CARDÁPIO IMEDIATO (Regra Master Onira.fly: Zero Hero Corporativo) -->
+    <main class="menu-section section" id="cardapio">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 24px;">
+                <span class="subtitle">CARDÁPIO COMPLETO & DELIVERY</span>
+                <h1 class="title">Faça seu Pedido Online</h1>
+                <p class="section-desc">Ingredientes frescos selecionados, cortes nobres e o padrão tradicional japonês com entrega rápida em Caxias do Sul.</p>
+            </div>
+
+            <!-- Busca Instantânea -->
+            <div class="search-bar-wrap">
+                <i data-lucide="search" class="search-icon"></i>
+                <input type="text" id="menu-search" class="search-input" placeholder="Buscar no cardápio... (ex: salmão, combo, hot, poke)">
+            </div>
+
+            <!-- Carrossel de Categorias Touch -->
+            <div class="category-filters-container">
+                <div class="category-filters" id="category-filters">
+                    <!-- Gerado via JS -->
+                </div>
+            </div>
+
+            <!-- Grid de Produtos com Preços em Verde Esmeralda -->
+            <div class="menu-grid" id="menu-grid">
+                <!-- Gerado dinamicamente via JS com cardapio.json -->
+            </div>
+        </div>
+    </main>
+
+    <!-- BANNER DE UPSELL NO RODAPÉ DO CARDÁPIO (+ Sobremesa Oficial) -->
+    <section class="special-offer-section section">
+        <div class="container">
+            <div class="special-offer-card">
+                <div class="special-offer-img-box">
+                    <img src="assets/brownie.webp" alt="Trio de Brownie Artesanal Ioshi" class="special-offer-img" loading="lazy">
+                    <div class="special-badge">
+                        <i data-lucide="sparkles" style="width:14px; height:14px;"></i> Sobremesa Destaque
+                    </div>
+                </div>
+                <div class="special-offer-content">
+                    <span class="subtitle-red">EXPERIÊNCIA COMPLETA</span>
+                    <h2 class="special-title">Trio de Brownie Artesanal Ioshi</h2>
+                    <p class="special-desc">Três mini brownies quentinhos de puro chocolate belga com cobertura de doce de leite artesanal, calda de Nutella e morango fresco selecionado.</p>
+                    <div class="special-price-row">
+                        <div class="price-box">
+                            <span class="price-label" style="color: #A1A1AA;">Adicione ao pedido por:</span>
+                            <div class="new-price">R$ 24,00</div>
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="addToCart('trio-brownie-ioshi')">
+                            <i data-lucide="plus"></i> Adicionar Sobremesa
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HISTÓRIA EDITORIAL DA CASA (1 Foto + 1 Texto, Sem Mosaicos) -->
+    <section class="story-section section" id="historia">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-img-box">
+                    <img src="assets/tabua.webp" alt="Tradição e Maestria no Ioshi Sushi" class="story-img" loading="lazy">
+                </div>
+                <div class="story-text">
+                    <span class="subtitle">PRAZER EM SERVIR</span>
+                    <h2 class="title" style="margin-bottom: 18px;">Autenticidade e Frescor no Coração de São Pelegrino</h2>
+                    <p>O <strong>Ioshi Japanese Food</strong> nasceu da paixão pela autêntica culinária oriental e pelo respeito absoluto a cada insumo. Localizado na tradicional Av. Júlio de Castilhos, tornamo-nos referência na Serra Gaúcha pela arte no corte do salmão fresco e pela textura inconfundível do nosso shari artesanal.</p>
+                    <p>Além do consagrado festival de sushi no salão, estruturamos uma operação de delivery ágil e cuidadosa, garantindo que combinados, pokes e hots cheguem à sua mesa com a mesma crocância, frescor e temperatura ideais de um restaurante premium.</p>
+                    <div style="margin-top: 24px;">
+                        <a href="#cardapio" class="btn btn-primary">
+                            <i data-lucide="utensils"></i> Explorar o Cardápio
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AVALIAÇÕES REAIS (Google Maps) -->
+    <section class="reviews-section section">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 40px;">
+                <span class="subtitle" style="color: #FBBF24;">DEPOIMENTOS REAIS</span>
+                <h2 class="title">O que dizem nossos clientes</h2>
+                <p class="section-desc" style="color: #94A3B8;">Mais de 1.240 clientes avaliaram nossa experiência gastronômica com nota média de 4,7 estrelas no Google.</p>
+            </div>
+
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"O melhor sushi de Caxias do Sul sem dúvida! Peças sempre super frescas, o Combo Iosake tem um custo-benefício incrível e o salmão maçaricado derrete na boca."</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">RC</div>
+                        <div>
+                            <strong>Rodrigo Castilhos</strong>
+                            <span>Avaliação no Google • Caxias do Sul</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"Delivery impecável! As peças chegam arrumadinhas, os hots bem crocantes e o poke de salmão com alho poró crispy é sensacional. Pedimos toda semana."</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">MS</div>
+                        <div>
+                            <strong>Mariana Silveira</strong>
+                            <span>Avaliação no Google • São Pelegrino</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"Atendimento atencioso, festival de altíssimo padrão e entrega muito rápida. O sashimi selado trufado é de outro mundo!"</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">LF</div>
+                        <div>
+                            <strong>Lucas Ferrari</strong>
+                            <span>Avaliação no Google • Caxias do Sul</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCALIZAÇÃO & MAPA -->
+    <section class="contact-section section" id="contato">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="subtitle">VISITE NOSSO RESTAURANTE</span>
+                    <h2 class="title">São Pelegrino • Caxias do Sul</h2>
+                    <p class="contact-intro">Venha viver a experiência do nosso festival no salão ou peça seu delivery oficial com entrega ágil.</p>
+                    <div class="info-list">
+                        <div class="info-item">
+                            <div class="info-icon"><i data-lucide="map-pin"></i></div>
+                            <div>
+                                <strong style="color: #0F172A;">Endereço Físico</strong>
+                                <p style="color: #64748B; font-size: 0.92rem;">Av. Júlio de Castilhos, 2970 - São Pelegrino, Caxias do Sul - RS, CEP 95010-002</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i data-lucide="clock"></i></div>
+                            <div>
+                                <strong style="color: #0F172A;">Horário de Funcionamento</strong>
+                                <p style="color: #64748B; font-size: 0.92rem;">Terça a Domingo: 18h30 às 23h00 • Almoço executivo sob consulta</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i data-lucide="phone"></i></div>
+                            <div>
+                                <strong style="color: #0F172A;">WhatsApp & Reservas</strong>
+                                <p style="color: #64748B; font-size: 0.92rem;">(54) 3533-5556</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 28px;">
+                        <a href="https://api.whatsapp.com/send?phone=555435335556" target="_blank" class="btn btn-whatsapp">
+                            <i data-lucide="message-circle"></i> Falar no WhatsApp Oficial
+                        </a>
+                    </div>
+                </div>
+                <div class="map-card">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3483.746685817882!2d-51.19638792447953!3d-29.169084375375508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951ea32a32cceb25%3A0xb5a0bf643cbf4cb2!2sAv.%20J%C3%BAlio%20de%20Castilhos%2C%202970%20-%20S%C3%A3o%20Pelegrino%2C%20Caxias%20do%20Sul%20-%20RS!5e0!3m2!1spt-BR!2sbr!4v1715000000000!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização Ioshi Japanese Food"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER DARK MINIMALIST -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <img src="assets/logo_official.png" alt="Ioshi Japanese Food" class="brand-logo-footer">
+                <p>Ioshi Japanese Food Ltda • CNPJ 19.336.983/0001-38<br>Av. Júlio de Castilhos, 2970 - São Pelegrino, Caxias do Sul - RS</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#cardapio">Cardápio Completo</a></li>
+                    <li><a href="#historia">A Casa & Tradição</a></li>
+                    <li><a href="#contato">Localização & Contato</a></li>
+                    <li><a href="proposta.html">Proposta Comercial</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Canais Digitais</h4>
+                <ul>
+                    <li><a href="https://www.instagram.com/ioshi.sushi" target="_blank" rel="noopener">Instagram @ioshi.sushi</a></li>
+                    <li><a href="https://api.whatsapp.com/send?phone=555435335556" target="_blank" rel="noopener">WhatsApp Oficial</a></li>
+                    <li><a href="https://g.page/ioshi-sushi?share" target="_blank" rel="noopener">Google Maps</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+                <span>© 2026 Ioshi Japanese Food. Todos os direitos reservados.</span>
+                <span>Desenvolvido com tecnologia <a href="proposta.html" class="footer-dev-link">Onira.fly</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CARRINHO DRAWER (Rolagem Única Contínua • Padrão Claem / Franceska) -->
+    <div class="cart-drawer-overlay" id="cart-overlay"></div>
+    <aside class="cart-drawer" id="cart-drawer" aria-label="Carrinho de Compras">
+        <div class="cart-header">
+            <div class="cart-header-title">
+                <i data-lucide="shopping-bag"></i> Meu Pedido
+            </div>
+            <div class="cart-header-actions">
+                <button type="button" class="cart-trash-btn" id="cart-clear-drawer" onclick="window.clearCart()" title="Limpar pedido" aria-label="Limpar pedido">
+                    <i data-lucide="trash-2"></i>
+                </button>
+                <button type="button" class="cart-close-btn" onclick="window.closeCart()" aria-label="Fechar carrinho">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="cart-body">
+            <!-- Alternador de Entrega / Retirada -->
+            <div class="fulfillment-toggle">
+                <button type="button" class="f-btn active" id="f-delivery" onclick="setFulfillment('delivery')">
+                    <i data-lucide="bike" style="width:16px; height:16px;"></i> Tele-Entrega
+                </button>
+                <button type="button" class="f-btn" id="f-takeout" onclick="setFulfillment('takeout')">
+                    <i data-lucide="store" style="width:16px; height:16px;"></i> Retirada no Balcão
+                </button>
+            </div>
+
+            <!-- Dados do Cliente -->
+            <div class="form-group">
+                <label class="form-label" for="customer-name">Seu Nome (Opcional)</label>
+                <input type="text" id="customer-name" class="form-input" placeholder="Ex: Jefferson Motta">
+            </div>
+
+            <div class="form-group" id="address-group">
+                <label class="form-label" for="customer-address">Endereço de Entrega</label>
+                <input type="text" id="customer-address" class="form-input" placeholder="Rua, número, complemento e bairro">
+            </div>
+
+            <!-- Lista de Produtos -->
+            <div id="cart-items-container">
+                <!-- Injetado via JS -->
+            </div>
+
+            <!-- Forma de Pagamento (3 botões limpos, sem chave Pix crua) -->
+            <div class="form-group" style="margin-top: 14px;">
+                <label class="form-label">Forma de Pagamento</label>
+                <div class="payment-grid">
+                    <button type="button" class="pay-btn active" id="pay-pix" onclick="setPayment('Pix')">Pix</button>
+                    <button type="button" class="pay-btn" id="pay-cartao" onclick="setPayment('Cartão')">Cartão</button>
+                    <button type="button" class="pay-btn" id="pay-dinheiro" onclick="setPayment('Dinheiro')">Dinheiro</button>
+                </div>
+            </div>
+
+            <!-- Resumo e Totais -->
+            <div class="cart-summary" id="cart-summary-box">
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span id="summary-subtotal">R$ 0,00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Taxa de Entrega:</span>
+                    <span>A calcular</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total Estimado:</span>
+                    <span class="val" id="summary-total">R$ 0,00</span>
+                </div>
+            </div>
+
+            <!-- Botão WhatsApp Direto Sem Alert -->
+            <button type="button" class="btn-checkout" id="btn-checkout" onclick="window.checkoutWhatsApp()">
+                <i data-lucide="send"></i> Enviar Pedido no WhatsApp
+            </button>
+        </div>
+    </aside>
+
+    <script src="app.js?v=20260916-v1"></script>
+</body>
+</html>
