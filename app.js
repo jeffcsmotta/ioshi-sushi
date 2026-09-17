@@ -108,15 +108,15 @@ function renderMenu() {
                 <h3 class="card-title">${esc(item.name)}</h3>
                 <p class="card-desc">${esc(item.description)}</p>
                 <div class="card-interactive-hint">
-                    <i data-lucide="eye" style="width:14px; height:14px;"></i> Ver composição & montar
+                    <i data-lucide="info" style="width:13px; height:13px;"></i> Ver composição e detalhes
                 </div>
                 <div class="card-bottom">
                     <div class="card-price">
                         <span class="price-label">Valor:</span>
                         <div class="price-value">${BRL(item.price)}</div>
                     </div>
-                    <button type="button" class="btn-card-action" onclick="event.stopPropagation(); openProductModal('${item.id}')" aria-label="Ver detalhes e adicionar ${esc(item.name)}">
-                        <i data-lucide="plus" style="width:15px; height:15px;"></i> Montar
+                    <button type="button" class="btn-card-action" onclick="event.stopPropagation(); openProductModal('${item.id}')" aria-label="Ver detalhes e pedir ${esc(item.name)}">
+                        <i data-lucide="plus" style="width:14px; height:14px;"></i> Pedir
                     </button>
                 </div>
             </div>
@@ -345,7 +345,7 @@ function updateCartUI() {
             <div class="cart-empty">
                 <i data-lucide="shopping-bag"></i>
                 <p style="font-weight:700; margin-bottom:4px; color:#F4F4F5;">Seu pedido está vazio</p>
-                <span style="font-size:0.84rem; color:var(--text-dim);">Escolha seus combinados e monte seu pedido.</span>
+                <span style="font-size:0.84rem; color:var(--text-dim);">Escolha seus combinados e faça seu pedido.</span>
             </div>`;
         if (summaryBox) summaryBox.style.display = 'none';
         if (checkoutBtn) checkoutBtn.style.display = 'none';
