@@ -12,7 +12,7 @@
     <meta property="og:site_name" content="Ioshi Japanese Food">
     <meta property="og:title" content="Ioshi Japanese Food | Delivery de Sushi em Caxias do Sul">
     <meta property="og:description" content="🍣 Combos nobres, pokes frescos, hots crocantes e festival de sushi. Peça direto no WhatsApp com 0% taxas!">
-    <meta property="og:image" content="assets/logo.png">
+    <meta property="og:image" content="assets/logo_official.png">
     <meta property="og:locale" content="pt_BR">
 
     <!-- Schema.org JSON-LD (SEO Local) -->
@@ -21,15 +21,10 @@
       "@context": "https://schema.org",
       "@type": "SushiRestaurant",
       "name": "Ioshi Japanese Food",
-      "image": "assets/logo.png",
+      "image": "assets/logo_official.png",
       "telephone": "+555435335556",
       "priceRange": "$$",
       "servesCuisine": ["Japonesa", "Sushi", "Poke", "Festival de Sushi"],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.7",
-        "reviewCount": "1240"
-      },
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Av. Júlio de Castilhos, 2970",
@@ -42,8 +37,8 @@
     </script>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/logo.png">
-    <meta name="theme-color" content="#0A0A0C">
+    <link rel="icon" type="image/png" href="assets/logo_official.png">
+    <meta name="theme-color" content="#08080A">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Ioshi Sushi">
@@ -56,25 +51,25 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <link rel="stylesheet" href="style.css?v=20260916-v1">
+    <link rel="stylesheet" href="style.css?v=20260916-darkv2">
 </head>
 <body>
 
-    <!-- Top Announcement Bar -->
+    <!-- Top Announcement Bar (Sem nota de cabeçalho) -->
     <div class="top-bar">
         <div class="container top-bar-content">
             <div class="top-info">
-                <span><i data-lucide="map-pin"></i> Av. Júlio de Castilhos, 2970 • São Pelegrino, Caxias do Sul</span>
+                <span><i data-lucide="map-pin"></i> Av. Júlio de Castilhos, 2970 • São Pelegrino</span>
             </div>
             <div class="top-contacts">
                 <a href="https://api.whatsapp.com/send?phone=555435335556" target="_blank" class="top-phone"><i data-lucide="phone"></i> (54) 3533-5556</a>
-                <span class="divider">|</span>
-                <span class="top-rating"><i data-lucide="star"></i> 4,7 no Google (1.240+ avaliações)</span>
+                <span class="divider" style="color: rgba(255,255,255,0.1);">|</span>
+                <span><i data-lucide="clock" style="width:13px; height:13px; color:var(--accent);"></i> 18h30 às 23h00</span>
             </div>
         </div>
     </div>
 
-    <!-- Header Despoluído (Regra Master Onira.fly: Logo + Status + Proposta + Lixeira + Meu Pedido) -->
+    <!-- Header Despoluído (Logo + Status "Aberto Hoje" + Proposta + Lixeira + Meu Pedido) -->
     <header class="header">
         <div class="container header-container">
             <a href="#" class="logo" aria-label="Página Inicial do Ioshi Japanese Food">
@@ -84,7 +79,7 @@
             <div class="header-actions">
                 <div id="status-badge" class="status-badge">
                     <span class="status-dot"></span>
-                    <span class="status-text">Delivery Aberto • Caxias</span>
+                    <span class="status-text">Aberto Hoje</span>
                 </div>
                 <a href="proposta.html" class="btn-buy-site" aria-label="Ver proposta do site">
                     <i data-lucide="zap"></i> Proposta
@@ -123,7 +118,7 @@
                 </div>
             </div>
 
-            <!-- Grid de Produtos com Preços em Verde Esmeralda -->
+            <!-- Grid de Produtos com Preços em Verde Esmeralda & Cards com Glassmorphism -->
             <div class="menu-grid" id="menu-grid">
                 <!-- Gerado dinamicamente via JS com cardapio.json -->
             </div>
@@ -146,10 +141,10 @@
                     <p class="special-desc">Três mini brownies quentinhos de puro chocolate belga com cobertura de doce de leite artesanal, calda de Nutella e morango fresco selecionado.</p>
                     <div class="special-price-row">
                         <div class="price-box">
-                            <span class="price-label" style="color: #A1A1AA;">Adicione ao pedido por:</span>
+                            <span class="price-label" style="color: var(--text-dim);">Adicione ao pedido por:</span>
                             <div class="new-price">R$ 24,00</div>
                         </div>
-                        <button type="button" class="btn btn-primary" onclick="addToCart('trio-brownie-ioshi')">
+                        <button type="button" class="btn btn-primary" onclick="window.openProductModal('trio-brownie-ioshi')">
                             <i data-lucide="plus"></i> Adicionar Sobremesa
                         </button>
                     </div>
@@ -186,7 +181,7 @@
             <div class="text-center" style="margin-bottom: 40px;">
                 <span class="subtitle" style="color: #FBBF24;">DEPOIMENTOS REAIS</span>
                 <h2 class="title">O que dizem nossos clientes</h2>
-                <p class="section-desc" style="color: #94A3B8;">Mais de 1.240 clientes avaliaram nossa experiência gastronômica com nota média de 4,7 estrelas no Google.</p>
+                <p class="section-desc">Mais de 1.240 clientes avaliaram nossa experiência gastronômica com nota média de 4,7 estrelas no Google.</p>
             </div>
 
             <div class="reviews-grid">
@@ -239,22 +234,22 @@
                         <div class="info-item">
                             <div class="info-icon"><i data-lucide="map-pin"></i></div>
                             <div>
-                                <strong style="color: #0F172A;">Endereço Físico</strong>
-                                <p style="color: #64748B; font-size: 0.92rem;">Av. Júlio de Castilhos, 2970 - São Pelegrino, Caxias do Sul - RS, CEP 95010-002</p>
+                                <strong>Endereço Físico</strong>
+                                <p style="color: var(--text-muted); font-size: 0.92rem;">Av. Júlio de Castilhos, 2970 - São Pelegrino, Caxias do Sul - RS, CEP 95010-002</p>
                             </div>
                         </div>
                         <div class="info-item">
                             <div class="info-icon"><i data-lucide="clock"></i></div>
                             <div>
-                                <strong style="color: #0F172A;">Horário de Funcionamento</strong>
-                                <p style="color: #64748B; font-size: 0.92rem;">Terça a Domingo: 18h30 às 23h00 • Almoço executivo sob consulta</p>
+                                <strong>Horário de Funcionamento</strong>
+                                <p style="color: var(--text-muted); font-size: 0.92rem;">Terça a Domingo: 18h30 às 23h00 • Almoço executivo sob consulta</p>
                             </div>
                         </div>
                         <div class="info-item">
                             <div class="info-icon"><i data-lucide="phone"></i></div>
                             <div>
-                                <strong style="color: #0F172A;">WhatsApp & Reservas</strong>
-                                <p style="color: #64748B; font-size: 0.92rem;">(54) 3533-5556</p>
+                                <strong>WhatsApp & Reservas</strong>
+                                <p style="color: var(--text-muted); font-size: 0.92rem;">(54) 3533-5556</p>
                             </div>
                         </div>
                     </div>
@@ -304,7 +299,58 @@
         </div>
     </footer>
 
-    <!-- CARRINHO DRAWER (Rolagem Única Contínua • Padrão Claem / Franceska) -->
+    <!-- MODAL DE DETALHES DO PRODUTO (INTERATIVO • CLIQUE NO CARD) -->
+    <div class="product-modal-overlay" id="product-modal-overlay" onclick="window.handleModalBackdropClick(event)">
+        <div class="product-modal" id="product-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <div class="modal-header-img">
+                <img id="modal-img" src="assets/tabua.webp" alt="Produto Ioshi" class="modal-img">
+                <button type="button" class="modal-close-btn" onclick="window.closeProductModal()" aria-label="Fechar detalhes">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-meta-row">
+                    <div class="modal-tag-group" id="modal-tag-group">
+                        <!-- Injetado via JS (Categoria, Quantidade de Peças, Serve X pessoas) -->
+                    </div>
+                    <div class="modal-price" id="modal-price">R$ 0,00</div>
+                </div>
+
+                <h2 class="modal-title" id="modal-title">Nome do Produto</h2>
+                <p class="modal-desc" id="modal-desc">Descrição completa do produto...</p>
+
+                <!-- Box de Itens do Combo Legíveis com Quantidades -->
+                <div class="breakdown-box" id="modal-breakdown-box">
+                    <div class="breakdown-title">
+                        <i data-lucide="package-check" style="width:16px; height:16px;"></i> O que vem neste item:
+                    </div>
+                    <ul class="breakdown-list" id="modal-breakdown-list">
+                        <!-- Injetado via JS -->
+                    </ul>
+                </div>
+
+                <!-- Observação do Item -->
+                <div class="modal-notes-group">
+                    <label class="modal-notes-label" for="modal-item-notes">Observações para a cozinha (opcional):</label>
+                    <textarea id="modal-item-notes" class="modal-notes-input" placeholder="Ex: Sem cebolinha, molho tarê à parte, caprichar no gengibre..."></textarea>
+                </div>
+
+                <!-- Ações: Quantidade e Botão Adicionar -->
+                <div class="modal-actions">
+                    <div class="modal-stepper">
+                        <button type="button" class="modal-stepper-btn" onclick="window.adjustModalQty(-1)" aria-label="Diminuir quantidade">-</button>
+                        <span class="modal-stepper-val" id="modal-qty-val">1</span>
+                        <button type="button" class="modal-stepper-btn" onclick="window.adjustModalQty(1)" aria-label="Aumentar quantidade">+</button>
+                    </div>
+                    <button type="button" class="btn-modal-add" id="btn-modal-add" onclick="window.confirmModalAddToCart()">
+                        <i data-lucide="plus-circle"></i> <span id="modal-btn-label">Adicionar ao Pedido • R$ 0,00</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CARRINHO DRAWER (Rolagem Única Contínua • Dark Glassmorphism) -->
     <div class="cart-drawer-overlay" id="cart-overlay"></div>
     <aside class="cart-drawer" id="cart-drawer" aria-label="Carrinho de Compras">
         <div class="cart-header">
@@ -381,6 +427,6 @@
         </div>
     </aside>
 
-    <script src="app.js?v=20260916-v1"></script>
+    <script src="app.js?v=20260916-darkv2"></script>
 </body>
 </html>
