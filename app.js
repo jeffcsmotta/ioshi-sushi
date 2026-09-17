@@ -95,7 +95,9 @@ function renderMenu() {
         return;
     }
 
-    grid.innerHTML = list.map((item) => `
+    grid.innerHTML = list.map((item) => {
+        const isSimpleItem = item.category === 'bebidas' || (!item.options && (!item.items_breakdown || item.items_breakdown.length <= 1) && !item.has_options);
+        return `
         <div class="menu-card" data-id="${item.id}" onclick="openProductModal('${item.id}')" role="button" tabindex="0" aria-label="Ver detalhes de ${esc(item.name)}">
             <div class="card-img-box">
                 <img src="${item.image}" alt="${esc(item.name)}" class="card-img" loading="lazy" onerror="this.onerror=null;this.src='assets/tabua.webp'">
@@ -108,20 +110,26 @@ function renderMenu() {
                 <h3 class="card-title">${esc(item.name)}</h3>
                 <p class="card-desc">${esc(item.description)}</p>
                 <div class="card-interactive-hint">
-                    <i data-lucide="info" style="width:13px; height:13px;"></i> Ver composição e detalhes
+                    ${isSimpleItem 
+                        ? `<i data-lucide="zap" style="width:13px; height:13px; color:var(--accent);"></i> Adição rápida em 1 clique` 
+                        : `<i data-lucide="info" style="width:13px; height:13px;"></i> Ver composição e detalhes`}
                 </div>
                 <div class="card-bottom">
                     <div class="card-price">
                         <span class="price-label">Valor:</span>
                         <div class="price-value">${BRL(item.price)}</div>
                     </div>
-                    <button type="button" class="btn-card-action" onclick="event.stopPropagation(); openProductModal('${item.id}')" aria-label="Ver detalhes e pedir ${esc(item.name)}">
-                        <i data-lucide="plus" style="width:14px; height:14px;"></i> Pedir
-                    </button>
+                    ${isSimpleItem 
+                        ? `<button type="button" class="btn-card-action" onclick="event.stopPropagation(); addDirectToCart('${item.id}', event)" aria-label="Adicionar ${esc(item.name)} direto ao pedido">
+                            <i data-lucide="plus" style="width:14px; height:14px;"></i> Adicionar
+                        </button>`
+                        : `<button type="button" class="btn-card-action" onclick="event.stopPropagation(); openProductModal('${item.id}')" aria-label="Ver opções de ${esc(item.name)}">
+                            <i data-lucide="sliders-horizontal" style="width:14px; height:14px;"></i> Opções
+                        </button>`}
                 </div>
             </div>
         </div>
-    `).join('');
+    `;}).join('');
     if (window.lucide) lucide.createIcons();
 }
 
@@ -244,6 +252,28 @@ function confirmModalAddToCart() {
     showToast(`🍣 <strong>${addedQty}x ${esc(addedName)}</strong> adicionado ao pedido!`);
 }
 window.confirmModalAddToCart = confirmModalAddToCart;
+
+function addDirectToCart(itemId, e) {
+    if (e && e.stopPropagation) e.stopPropagation();
+    const item = MENU_DATA.find((i) => i.id === itemId);
+    if (!item) return;
+
+    const existing = cart.find((c) => c.id === item.id && !c.notes);
+    if (existing) {
+        existing.quantity += 1;
+    } else {
+        cart.push({
+            id: item.id,
+            title: item.name,
+            price: item.price,
+            quantity: 1,
+            notes: ''
+        });
+    }
+    updateCartUI();
+    showToast(`⚡ <strong>1x ${esc(item.name)}</strong> adicionado ao carrinho!`);
+}
+window.addDirectToCart = addDirectToCart;
 
 /* ---------- Carrinho Unificado Dark ---------- */
 

@@ -1,0 +1,16 @@
+{
+  "nome": "Ioshi Japanese Food",
+  "slug": "ioshi-sushi",
+  "nicho": "Gastronomia Japonesa",
+  "cidade": "Caxias do Sul - RS",
+  "cor_primaria": "#F27437",
+  "cor_hover": "#E06124",
+  "cor_glow": "rgba(242, 116, 55, 0.28)",
+  "cor_soft": "rgba(242, 116, 55, 0.12)",
+  "whatsapp": "555435335556",
+  "setup_preco": "1.000,00",
+  "mensalidade": "100,00",
+  "logo": "assets/logo_official.png",
+  "status_pipeline": "Apresentando",
+  "deploy_url": "https://ioshi-sushi.pages.dev"
+}
