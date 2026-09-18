@@ -1,25 +1,49 @@
 /**
- * Onira Labs — Proposal Radar & Telemetry Tracker (v1.0)
+ * Onira Labs — Proposal Radar & Telemetry Tracker (v2.0)
  * Rastreia aberturas de propostas, seções visualizadas e tempo na tabela de preços.
- * Dispara webhooks de alerta em tempo real (Telegram / Discord / n8n / API).
+ * Com Auto-Imunização de Staff (Diferencia acessos internos da equipe vs clientes reais).
  */
 
 (function () {
     const config = window.ONIRA_PROPOSAL_CONFIG || {
-        clientSlug: window.location.pathname.split('/').filter(Boolean)[0] || 'cliente-demo',
+        clientSlug: window.location.pathname.split('/').filter(Boolean).pop()?.replace('.html', '') || 'cliente-demo',
         clientName: document.title || 'Cliente Onira',
-        webhookUrl: '', // URL do Webhook (Telegram/Discord/Endpoint)
-        sendInterval: 15000 // Intervalo de sincronização de batimento
+        webhookUrl: '', // URL do Webhook (CallMeBot / Telegram / Endpoint)
+        sendInterval: 15000
     };
 
+    // =========================================================================
+    // 1. AUTO-DETECÇÃO DE STAFF (JEFFERSON / DIRETORIA ONIRA)
+    // =========================================================================
+    const urlParams = new URLSearchParams(window.location.search);
+    const hasStaffParam = urlParams.has('staff') || urlParams.has('admin') || urlParams.has('preview') || window.location.hash === '#staff';
+    const isStoredStaffDevice = localStorage.getItem('onira_staff_device') === 'true';
+    const cameFromCockpit = document.referrer && (document.referrer.includes('cockpit') || document.referrer.includes(':8080'));
+
+    const isStaff = hasStaffParam || isStoredStaffDevice || cameFromCockpit;
+
+    // Se veio do Cockpit ou usou parâmetro de equipe, marca o navegador permanentemente
+    if (hasStaffParam || cameFromCockpit) {
+        localStorage.setItem('onira_staff_device', 'true');
+    }
+
+    // =========================================================================
+    // 2. CONTADOR DE ABERTURAS (ISOLADO DE ACESSOS DA EQUIPE)
+    // =========================================================================
     const storageKey = `onira_prop_views_${config.clientSlug}`;
-    let viewCount = parseInt(localStorage.getItem(storageKey) || '0', 10) + 1;
-    localStorage.setItem(storageKey, viewCount.toString());
+    let viewCount = parseInt(localStorage.getItem(storageKey) || '0', 10);
+
+    if (!isStaff) {
+        // Apenas acessos de clientes reais incrementam o contador comercial
+        viewCount += 1;
+        localStorage.setItem(storageKey, viewCount.toString());
+    }
 
     const sessionData = {
         clientSlug: config.clientSlug,
         clientName: config.clientName,
         viewCount: viewCount,
+        isStaff: isStaff,
         startTime: new Date().toISOString(),
         sectionsViewed: new Set(),
         timeSpentOnPricesSec: 0,
@@ -27,10 +51,21 @@
         lastActiveSection: 'hero'
     };
 
-    console.log(`[Onira Radar] Sessão iniciada para: ${config.clientName} (Abertura nº ${viewCount} • ${sessionData.device})`);
+    if (isStaff) {
+        console.log(`%c[Onira Radar] 👔 Acesso Interno (Staff Onira). Alertas comerciais desativados para este dispositivo.`, 'background:#181826; color:#F59E0B; padding:4px 8px; border-radius:4px; font-weight:bold;');
+    } else {
+        console.log(`[Onira Radar] 📡 Sessão de Prospect Real: ${config.clientName} (Abertura nº ${viewCount} • ${sessionData.device})`);
+    }
 
-    // Envio de alerta
+    // =========================================================================
+    // 3. ENVIO DE TELEMETRIA (SILENCIADO SE FOR STAFF)
+    // =========================================================================
     function sendTelemetryPing(eventType, extraData = {}) {
+        // Se for acesso do Jefferson/Staff, NÃO dispara alerta comercial nem notificação no WhatsApp
+        if (isStaff) {
+            return;
+        }
+
         const payload = {
             event: eventType,
             clientSlug: sessionData.clientSlug,
@@ -57,11 +92,22 @@
         }
     }
 
-    // Alerta de abertura inicial
+    // Dispara apenas se for cliente real
     sendTelemetryPing('proposal_opened');
 
-    // Rastreamento de seções via IntersectionObserver
+    // =========================================================================
+    // 4. OBSERVER DE SEÇÕES & FEEDBACK VISUAL DISCRETO
+    // =========================================================================
     document.addEventListener('DOMContentLoaded', () => {
+        // Se for Staff, exibe badge discreta fixa no rodapé para tranquilidade do Jefferson
+        if (isStaff) {
+            const staffBadge = document.createElement('div');
+            staffBadge.id = 'onira-staff-indicator';
+            staffBadge.innerHTML = '👔 Modo Equipe Onira Ativo (Alertas Silenciados)';
+            staffBadge.style.cssText = 'position:fixed; bottom:12px; left:12px; z-index:99999; background:rgba(9,9,13,0.92); color:#F59E0B; border:1px solid rgba(245,158,11,0.4); border-radius:20px; padding:6px 14px; font-size:11px; font-family:sans-serif; font-weight:700; backdrop-filter:blur(8px); box-shadow:0 4px 15px rgba(0,0,0,0.5); pointer-events:none;';
+            document.body.appendChild(staffBadge);
+        }
+
         const sectionsToTrack = document.querySelectorAll('section[id], div[id], [data-track-section]');
         if (!sectionsToTrack.length || !window.IntersectionObserver) return;
 
@@ -102,9 +148,9 @@
         });
     });
 
-    // Enviar status ao fechar/sair da página
+    // Enviar resumo de saída apenas se cliente real
     window.addEventListener('visibilitychange', () => {
-        if (document.visibilityState === 'hidden') {
+        if (document.visibilityState === 'hidden' && !isStaff) {
             sendTelemetryPing('proposal_session_summary');
         }
     });
