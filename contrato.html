@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrato de Prestação de Serviços — Onira Labs &amp; Ioshi Japanese Food</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0A66C2;
+            --navy: #0A192F;
+            --text: #1E293B;
+            --muted: #64748B;
+            --border: #E2E8F0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: #F8FAFC;
+            color: var(--text);
+            line-height: 1.7;
+            padding: 40px 20px;
+        }
+        .page-wrap {
+            max-width: 820px;
+            margin: 0 auto;
+            background: #FFFFFF;
+            padding: clamp(32px, 6vw, 64px);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+        }
+        .contract-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--navy);
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+        .header-title h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.4rem;
+            color: var(--navy);
+            text-transform: uppercase;
+            letter-spacing: -0.01em;
+        }
+        .header-title p {
+            font-size: 0.85rem;
+            color: var(--muted);
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .brand-seal {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: #FFFFFF;
+            background: var(--navy);
+            padding: 8px 16px;
+            border-radius: 6px;
+        }
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+            color: var(--navy);
+            margin: 28px 0 12px;
+            border-left: 4px solid var(--primary);
+            padding-left: 10px;
+        }
+        p, li {
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        ul {
+            padding-left: 24px;
+            margin-bottom: 16px;
+        }
+        .highlight-box {
+            background: #F1F5F9;
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin: 20px 0;
+            border: 1px solid #E2E8F0;
+        }
+        .highlight-box strong { color: var(--navy); }
+        .signatures {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 56px;
+            padding-top: 32px;
+            border-top: 1px solid var(--border);
+        }
+        .sig-block {
+            text-align: center;
+        }
+        .sig-line {
+            width: 100%;
+            height: 1px;
+            background: #000;
+            margin-bottom: 10px;
+        }
+        .sig-block b { display: block; font-size: 0.95rem; color: var(--navy); }
+        .sig-block span { font-size: 0.82rem; color: var(--muted); }
+        
+        .print-btn {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: var(--navy);
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 999px;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.2s ease;
+        }
+        .print-btn:hover { background: var(--primary); transform: translateY(-2px); }
+
+        @media print {
+            body { background: #fff; padding: 0; }
+            .page-wrap { box-shadow: none; border: none; padding: 0; }
+            .print-btn { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-wrap">
+        <div class="contract-header">
+            <div class="header-title">
+                <h1>Instrumento Particular de Prestação de Serviços Digitais</h1>
+                <p>REF: CANAL PROPRIETÁRIO ONIRA LABS • IOSHI-SUSHI</p>
+            </div>
+            <div class="brand-seal">ONIRA LABS</div>
+        </div>
+
+        <p>Pelo presente instrumento particular, de um lado:</p>
+        <p><strong>CONTRATADA:</strong> <strong>ONIRA LABS TECNOLOGIA &amp; DESIGN LTDA</strong>, representada por <strong>Jefferson Motta</strong>, com sede e foro na Comarca de Caxias do Sul - RS.</p>
+        <p><strong>CONTRATANTE:</strong> <strong>Ioshi Japanese Food</strong>, Inscrito no CNPJ sob nº 00.000.000/0001-00, estabelecida em Caxias do Sul - RS, representada por <strong>Sócio-Administrador</strong>.</p>
+
+        <h2>CLÁUSULA 1ª — DO OBJETO</h2>
+        <p>O presente contrato tem por objeto o desenvolvimento, publicação, configuração técnica e sustentação de <strong>Canal Digital Proprietário de Alta Conversão</strong> (plataforma web mobile-first Onira.fly / Onira Pro), contemplando:</p>
+        <ul>
+            <li>Implantação de vitrine digital interativa com catálogo estruturado de produtos, fotos e composições;</li>
+            <li>Checkout direto e integrado via WhatsApp oficial sem taxa de intermediação sobre pedidos;</li>
+            <li>Gestão técnica e apontamento de Domínio Próprio Exclusivo (<code>ioshi-sushi.com.br</code>);</li>
+            <li>Hospedagem dedicada em nuvem global (Cloudflare Edge CDN) com certificado de segurança SSL e tempo de carregamento acelerado (Core Web Vitals).</li>
+        </ul>
+
+        <h2>CLÁUSULA 2ª — DA TITULARIDADE E SOBERANIA DOS DADOS</h2>
+        <p>A CONTRATADA garante que <strong>100% da base de clientes, histórico de conversas, dados cadastrais e pedidos pertencem exclusivamente à CONTRATANTE</strong>. Em nenhuma hipótese haverá cobrança de comissão percentual sobre o faturamento das vendas realizadas através da plataforma.</p>
+
+        <h2>CLÁUSULA 3ª — DO INVESTIMENTO E CONDIÇÕES DE PAGAMENTO</h2>
+        <div class="highlight-box">
+            <p><strong>1. Setup &amp; Implantação da Plataforma:</strong> Valor total de <strong>R$ 1.000,00</strong> (em parcela única via Pix ou parcelado em até 3x de R$ 800,00).</p>
+            <p style="margin-top: 8px;"><strong>2. Manutenção Contínua, Nuvem e Suporte:</strong> Mensalidade recorrente de <strong>R$ 100,00/mês</strong>, com vencimento no dia 10 de cada mês, incluindo suporte operacional, atualizações de cardápio e infraestrutura ininterrupta.</p>
+        </div>
+
+        <h2>CLÁUSULA 4ª — DO PRAZO E RESCISÃO</h2>
+        <p>O presente contrato vigorará pelo prazo de 12 (doze) meses, renovando-se automaticamente por iguais períodos caso não haja manifestação expressa em contrário com antecedência de 30 (trinta) dias. Não haverá cobrança de multa rescisória após decorridos os primeiros 90 (noventa) dias de vigência.</p>
+
+        <h2>CLÁUSULA 5ª — DO FORO</h2>
+        <p>Para dirimir quaisquer controvérsias oriundas da execução deste contrato, as partes elegem o Foro da Comarca de <strong>Caxias do Sul - RS</strong>, com renúncia expressa a qualquer outro.</p>
+
+        <p style="margin-top: 36px; text-align: right; color: var(--muted);">Caxias do Sul - RS, 17 de setembro de 2026.</p>
+
+        <div class="signatures">
+            <div class="sig-block">
+                <div class="sig-line"></div>
+                <b>ONIRA LABS TECNOLOGIA</b>
+                <span>Jefferson Motta • Diretor Executivo</span>
+            </div>
+            <div class="sig-block">
+                <div class="sig-line"></div>
+                <b>Ioshi Japanese Food</b>
+                <span>Sócio-Administrador • Contratante</span>
+            </div>
+        </div>
+    </div>
+
+    <button type="button" class="print-btn" onclick="window.print()">🖨️ Imprimir / Salvar em PDF</button>
+
+</body>
+</html>
