@@ -8,7 +8,9 @@
     const config = window.ONIRA_PROPOSAL_CONFIG || {
         clientSlug: window.location.pathname.split('/').filter(Boolean).pop()?.replace('.html', '') || 'cliente-demo',
         clientName: document.title || 'Cliente Onira',
-        webhookUrl: '', // URL do Webhook (CallMeBot / Telegram / Endpoint)
+        webhookUrl: '', // URL do Webhook legado (CallMeBot / Telegram / Endpoint)
+        supabaseUrl: window.ONIRA_TELEMETRY_SUPABASE_URL || '', // Base do projeto Supabase (https://xyz.supabase.co)
+        supabaseAnonKey: window.ONIRA_TELEMETRY_SUPABASE_KEY || '', // ANON key (pública). NUNCA service_role.
         sendInterval: 15000
     };
 
@@ -90,6 +92,39 @@
                     }).catch(() => {});
             } catch (e) {}
         }
+
+        // Histórico real: insert direto no Supabase (tabela proposal_views).
+        // Staff nunca chega aqui (retorno antecipado acima). Falha de rede = silenciosa,
+        // o contador local em localStorage segue como fallback offline.
+        sendToSupabase(payload);
+    }
+
+    function sendToSupabase(payload) {
+        const sbUrl = (config.supabaseUrl || window.ONIRA_TELEMETRY_SUPABASE_URL || '').replace(/\/$/, '');
+        const sbKey = config.supabaseAnonKey || window.ONIRA_TELEMETRY_SUPABASE_KEY || '';
+        if (!sbUrl || !sbKey) return;
+
+        try {
+            fetch(`${sbUrl}/rest/v1/proposal_views`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'apikey': sbKey,
+                    'Authorization': `Bearer ${sbKey}`,
+                    'Prefer': 'return=minimal'
+                },
+                body: JSON.stringify({
+                    client_slug: payload.clientSlug,
+                    client_name: payload.clientName,
+                    event: payload.event,
+                    view_count: payload.viewCount,
+                    device: payload.device,
+                    sections: payload.sectionsViewed || [],
+                    time_on_prices: payload.timeOnPrices || null
+                }),
+                keepalive: true
+            }).catch(() => {});
+        } catch (e) {}
     }
 
     // Dispara apenas se for cliente real
