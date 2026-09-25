@@ -26,16 +26,31 @@ const BRL = (v) => `R$ ${v.toFixed(2).replace('.', ',')}`;
 const esc = (s) => String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
 document.addEventListener('DOMContentLoaded', async () => {
+    let loaded = false;
     try {
         const res = await fetch('cardapio.json');
-        const data = await res.json();
-        MENU_DATA = data.products || [];
-        CATEGORIES = data.categories || [];
+        if (res.ok) {
+            const data = await res.json();
+            MENU_DATA = data.products || [];
+            CATEGORIES = data.categories || [];
+            loaded = true;
+        }
     } catch (err) {
-        console.error('Falha ao carregar cardápio:', err);
-        showToast('⚠️ Não foi possível carregar o cardápio. Recarregue a página.');
-        return;
+        console.warn('Fetch local/offline fallback ativo:', err);
     }
+
+    if (!loaded) {
+        if (window.CARDAPIO_DATA) {
+            MENU_DATA = window.CARDAPIO_DATA.products || [];
+            CATEGORIES = window.CARDAPIO_DATA.categories || [];
+            loaded = true;
+        } else {
+            console.error('Nenhum dado de cardápio encontrado.');
+            showToast('⚠️ Não foi possível carregar o cardápio. Recarregue a página.');
+            return;
+        }
+    }
+
     renderCategoryPills();
     renderMenu();
     setupMenuSearch();
