@@ -119,14 +119,14 @@ function renderMenu() {
                 <div class="card-img-gradient"></div>
                 ${item.badge ? `<span class="card-badge">${esc(item.badge)}</span>` : ''}
                 ${item.pieces ? `<span class="card-pieces-badge">${esc(item.pieces)}</span>` : ''}
-                <div class="card-rating"><i data-lucide="star" style="width:13px; height:13px; fill:#FFC107; color:#FFC107;"></i> ${item.rating || '5.0'}</div>
+                <div class="card-rating"><i data-lucide="star" style="width:13px; height:13px; fill:var(--gold); color:var(--gold);"></i> ${item.rating || '5.0'}</div>
             </div>
             <div class="card-body">
                 <h3 class="card-title">${esc(item.name)}</h3>
                 <p class="card-desc">${esc(item.description)}</p>
                 <div class="card-interactive-hint">
                     ${isSimpleItem 
-                        ? `<i data-lucide="zap" style="width:13px; height:13px; color:var(--accent);"></i> Adição rápida em 1 clique` 
+                        ? `<i data-lucide="sparkles" style="width:13px; height:13px; color:var(--gold);"></i> Adição rápida em 1 clique` 
                         : `<i data-lucide="info" style="width:13px; height:13px;"></i> Ver composição e detalhes`}
                 </div>
                 <div class="card-bottom">
