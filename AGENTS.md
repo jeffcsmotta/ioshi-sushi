@@ -11,7 +11,8 @@
 - **Nicho**: Gastronomia Japonesa
 - **Localização**: Av. Júlio de Castilhos, 2970 - São Pelegrino, Caxias do Sul - RS
 - **WhatsApp Oficial de Pedidos**: +55 (54) 3533-5556
-- **Paleta Oficial**: Laranja Ioshi (`#F27437`), Hover (`#E06124`), Dark Surface (`#121217`)
+- **Paleta Oficial**: Sumi Obsidian (`#07070A`), Champagne Gold (`#C5A880`), Japanese Lacquer Crimson (`#BA3329`)
+- **Tipografia**: Cinzel (Display Imperial) + Outfit (Headings) + Plus Jakarta Sans (Body)
 
 ---
 
