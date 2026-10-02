@@ -51,7 +51,7 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <link rel="stylesheet" href="style.css?v=20261002-v2">
+    <link rel="stylesheet" href="style.css?v=20261002-v3">
 </head>
 <body>
 
@@ -377,38 +377,36 @@
     <div class="cart-drawer-overlay" id="cart-overlay"></div>
     <aside class="cart-drawer" id="cart-drawer" aria-label="Carrinho de Compras">
         <div class="cart-header">
-            <div class="cart-header-title">
-                <i data-lucide="shopping-bag"></i> Meu Pedido
-            </div>
-            <div class="cart-header-actions">
+            <button type="button" class="btn-continue-shopping" onclick="window.closeCart()" aria-label="Continuar escolhendo">
+                <i data-lucide="arrow-left"></i> Continuar escolhendo
+            </button>
+            <div class="cart-header-right">
+                <span class="cart-header-title">Meu Pedido Ioshi</span>
                 <button type="button" class="cart-trash-btn" id="cart-clear-drawer" onclick="window.clearCart()" title="Limpar pedido" aria-label="Limpar pedido">
                     <i data-lucide="trash-2"></i>
-                </button>
-                <button type="button" class="cart-close-btn" onclick="window.closeCart()" aria-label="Fechar carrinho">
-                    <i data-lucide="x"></i>
                 </button>
             </div>
         </div>
 
         <div class="cart-body">
-            <!-- Alternador de Entrega / Retirada -->
+            <!-- Alternador Tele-entrega | Balcão -->
             <div class="fulfillment-toggle">
                 <button type="button" class="f-btn active" id="f-delivery" onclick="setFulfillment('delivery')">
-                    <i data-lucide="bike" style="width:16px; height:16px;"></i> Tele-Entrega
+                    <i data-lucide="bike" style="width:15px; height:15px;"></i> Tele-entrega
                 </button>
                 <button type="button" class="f-btn" id="f-takeout" onclick="setFulfillment('takeout')">
-                    <i data-lucide="store" style="width:16px; height:16px;"></i> Retirada no Balcão
+                    <i data-lucide="store" style="width:15px; height:15px;"></i> Balcão
                 </button>
             </div>
 
-            <!-- Dados do Cliente -->
+            <!-- Dados do Cliente (Opcionais) -->
             <div class="form-group">
-                <label class="form-label" for="customer-name">Seu Nome (Opcional)</label>
+                <label class="form-label" for="customer-name">Nome (Opcional)</label>
                 <input type="text" id="customer-name" class="form-input" placeholder="Ex: Jefferson Motta">
             </div>
 
             <div class="form-group" id="address-group">
-                <label class="form-label" for="customer-address">Endereço de Entrega</label>
+                <label class="form-label" for="customer-address">Endereço (Opcional)</label>
                 <input type="text" id="customer-address" class="form-input" placeholder="Rua, número, complemento e bairro">
             </div>
 
@@ -450,7 +448,7 @@
         </div>
     </aside>
 
-    <script src="data.js?v=20261002-v2"></script>
-    <script src="app.js?v=20261002-v2"></script>
+    <script src="data.js?v=20261002-v3"></script>
+    <script src="app.js?v=20261002-v3"></script>
 </body>
 </html>

@@ -135,11 +135,11 @@ function renderMenu() {
                         <div class="price-value">${BRL(item.price)}</div>
                     </div>
                     ${isSimpleItem 
-                        ? `<button type="button" class="btn-card-action" onclick="event.stopPropagation(); addDirectToCart('${item.id}', event)" aria-label="Adicionar ${esc(item.name)} direto ao pedido">
-                            <i data-lucide="plus" style="width:14px; height:14px;"></i> Adicionar
+                        ? `<button type="button" class="btn-card-action" onclick="event.stopPropagation(); addDirectToCart('${item.id}', event)" aria-label="Adicionar ${esc(item.name)} ao pedido">
+                            <i data-lucide="plus-circle" style="width:14px; height:14px;"></i> Add Pedido
                         </button>`
-                        : `<button type="button" class="btn-card-action" onclick="event.stopPropagation(); openProductModal('${item.id}')" aria-label="Ver opções de ${esc(item.name)}">
-                            <i data-lucide="sliders-horizontal" style="width:14px; height:14px;"></i> Opções
+                        : `<button type="button" class="btn-card-action" onclick="event.stopPropagation(); openProductModal('${item.id}')" aria-label="Adicionar ${esc(item.name)} ao pedido">
+                            <i data-lucide="plus-circle" style="width:14px; height:14px;"></i> Add Pedido
                         </button>`}
                 </div>
             </div>
@@ -254,7 +254,9 @@ function confirmModalAddToCart() {
             title: activeModalProduct.name,
             price: activeModalProduct.price,
             quantity: modalQuantity,
-            notes: notes
+            notes: notes,
+            image: activeModalProduct.image || 'assets/tabua.webp',
+            description: activeModalProduct.description || ''
         });
     }
 
@@ -282,7 +284,9 @@ function addDirectToCart(itemId, e) {
             title: item.name,
             price: item.price,
             quantity: 1,
-            notes: ''
+            notes: '',
+            image: item.image || 'assets/tabua.webp',
+            description: item.description || ''
         });
     }
     updateCartUI();
@@ -404,20 +408,28 @@ function updateCartUI() {
     itemsContainer.innerHTML = `
         <div class="cart-items-list">
             ${cart.map((item, idx) => `
-                <div class="cart-item">
-                    <div class="cart-item-top">
-                        <span class="cart-item-title">${esc(item.title)}</span>
-                        <span class="cart-item-price">${BRL(item.price * item.quantity)}</span>
-                    </div>
-                    <div class="cart-item-controls">
-                        <div class="qty-control">
-                            <button type="button" class="qty-btn" onclick="changeQuantity(${idx}, -1)" aria-label="Diminuir">-</button>
-                            <span class="qty-val">${item.quantity}</span>
-                            <button type="button" class="qty-btn" onclick="changeQuantity(${idx}, 1)" aria-label="Aumentar">+</button>
+                <div class="cart-item-card">
+                    <div class="cart-item-main">
+                        <img src="${item.image || 'assets/tabua.webp'}" alt="${esc(item.title)}" class="cart-item-thumb" onerror="this.onerror=null;this.src='assets/tabua.webp'">
+                        <div class="cart-item-details">
+                            <div class="cart-item-headline">
+                                <h4 class="cart-item-title">${esc(item.title)}</h4>
+                                <span class="cart-item-price">${BRL(item.price * item.quantity)}</span>
+                            </div>
+                            ${item.description ? `<p class="cart-item-desc">${esc(item.description)}</p>` : ''}
+                            <div class="cart-item-actions">
+                                <div class="cart-qty-control">
+                                    <button type="button" class="cart-qty-btn" onclick="changeQuantity(${idx}, -1)" aria-label="Diminuir quantidade">−</button>
+                                    <span class="cart-qty-val">${item.quantity}</span>
+                                    <button type="button" class="cart-qty-btn" onclick="changeQuantity(${idx}, 1)" aria-label="Aumentar quantidade">+</button>
+                                </div>
+                                <span class="cart-item-unit-tag">${BRL(item.price)} un</span>
+                            </div>
                         </div>
-                        <span style="font-size:0.75rem; color:var(--text-muted);">${BRL(item.price)} un</span>
                     </div>
-                    <input type="text" class="cart-item-notes" placeholder="Observações (ex: sem cebolinha, sem wasabi...)" value="${esc(item.notes)}" onchange="updateItemNotes(${idx}, this.value)">
+                    <div class="cart-item-notes-wrap">
+                        <input type="text" class="cart-item-notes" placeholder="Observações (ex: sem cebolinha, sem wasabi...)" value="${esc(item.notes || '')}" onchange="updateItemNotes(${idx}, this.value)">
+                    </div>
                 </div>
             `).join('')}
         </div>`;
