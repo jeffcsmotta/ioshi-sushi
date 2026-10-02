@@ -365,9 +365,14 @@
             <span class="eyebrow">VAMOS COMEÇAR?</span>
             <h2>Seu canal próprio no ar em tempo recorde</h2>
             <p>O protótipo com os produtos do Ioshi Japanese Food já está estruturado e pronto para rodar. Ative agora a sua ferramenta de soberania digital.</p>
-            <a href="https://api.whatsapp.com/send?phone=555435335556&text=Ol%C3%A1!%20Vamos%20colocar%20o%20Onira.fly%20do%20Ioshi Japanese Food%20no%20ar!" target="_blank" class="btn btn-accent btn-aceitar">
-                <i data-lucide="message-circle"></i> Falar com o Estrategista Onira
-            </a>
+            <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+                <a href="https://wa.me/5554996862169?text=Ol%C3%A1%20Jefferson!%20Vi%20a%20proposta%20do%20Onira.fly%20para%20o%20Ioshi%20Japanese%20Food%20e%20quero%20avançar!" target="_blank" rel="noopener" class="btn btn-accent btn-aceitar">
+                    <i data-lucide="message-circle"></i> Falar com o Estrategista Onira
+                </a>
+                <a href="contrato.html" target="_blank" rel="noopener" class="btn" style="background: var(--surface-2); color: #fff;">
+                    <i data-lucide="file-text"></i> Visualizar Minuta do Contrato
+                </a>
+            </div>
         </div>
     </section>
 
@@ -382,9 +387,10 @@
         window.ONIRA_PROPOSAL_CONFIG = {
             clientSlug: "ioshi-sushi",
             clientName: "Ioshi Japanese Food",
-            webhookUrl: "" // Preenchido com URL do webhook se ativo
+            webhookUrl: "", // Preenchido com URL do webhook se ativo
             supabaseUrl: "https://xivmwffgedfheyayckwo.supabase.co", // Telemetria real (Supabase)
-            supabaseAnonKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhpdm13ZmZnZWRmaGV5YXlja3dvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzYyMDUwMjAsImV4cCI6MjA5MTc4MTAyMH0.DDx3TuJeUJwxGUCsq1XpiOcW00aVeud5vnBbs2YUGj0" // ANON key. NUNCA service_role.        };
+            supabaseAnonKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhpdm13ZmZnZWRmaGV5YXlja3dvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzYyMDUwMjAsImV4cCI6MjA5MTc4MTAyMH0.DDx3TuJeUJwxGUCsq1XpiOcW00aVeud5vnBbs2YUGj0" // ANON key. NUNCA service_role.
+        };
     </script>
     <script src="assets/proposal-tracker.js" defer></script>
 
