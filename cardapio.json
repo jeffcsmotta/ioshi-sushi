@@ -15,14 +15,46 @@
     "logo": "assets/logo_official.png"
   },
   "categories": [
-    { "id": "combos", "name": "Combos & Combinados", "icon": "package" },
-    { "id": "hots", "name": "Hots Especiais", "icon": "flame" },
-    { "id": "pokes", "name": "Pokes Havaianos", "icon": "bowl" },
-    { "id": "entradas", "name": "Entradas & Onigiris", "icon": "utensils" },
-    { "id": "sashimis", "name": "Sashimis & Niguiris", "icon": "fish" },
-    { "id": "quentes", "name": "Pratos Quentes", "icon": "soup" },
-    { "id": "sobremesas", "name": "Sobremesas", "icon": "sparkles" },
-    { "id": "bebidas", "name": "Bebidas", "icon": "cup-soda" }
+    {
+      "id": "combos",
+      "name": "Combos & Combinados",
+      "icon": "package"
+    },
+    {
+      "id": "hots",
+      "name": "Hots Especiais",
+      "icon": "flame"
+    },
+    {
+      "id": "pokes",
+      "name": "Pokes Havaianos",
+      "icon": "bowl"
+    },
+    {
+      "id": "entradas",
+      "name": "Entradas & Onigiris",
+      "icon": "utensils"
+    },
+    {
+      "id": "sashimis",
+      "name": "Sashimis & Niguiris",
+      "icon": "fish"
+    },
+    {
+      "id": "quentes",
+      "name": "Pratos Quentes",
+      "icon": "soup"
+    },
+    {
+      "id": "sobremesas",
+      "name": "Sobremesas",
+      "icon": "sparkles"
+    },
+    {
+      "id": "bebidas",
+      "name": "Bebidas",
+      "icon": "cup-soda"
+    }
   ],
   "products": [
     {
@@ -40,9 +72,9 @@
         "6 Niguiris Salmão Maçaricado",
         "8 Hot Rolls Crocantes"
       ],
-      "price": 110.00,
+      "price": 110.0,
       "badge": "Mais Pedido ⭐",
-      "image": "assets/tabua.webp",
+      "image": "assets/pratos/combo-iosake.webp",
       "rating": 5.0
     },
     {
@@ -58,9 +90,9 @@
         "12 Hot Filadélfia Crocantes",
         "1 Refrigerante Lata 350ml Grátis"
       ],
-      "price": 79.90,
+      "price": 79.9,
       "badge": "Destaque da Casa 🔥",
-      "image": "assets/sushi.webp",
+      "image": "assets/pratos/combo-promocional.webp",
       "rating": 4.9
     },
     {
@@ -79,9 +111,9 @@
         "2 Hot Ioshi da Casa",
         "2 Hot Doritos Crocantes c/ Tarê"
       ],
-      "price": 34.90,
+      "price": 34.9,
       "badge": "Favorito 🍣",
-      "image": "assets/sushi.webp",
+      "image": "assets/pratos/combo-hot-12.webp",
       "rating": 4.8
     },
     {
@@ -98,9 +130,9 @@
         "Cream Cheese Philadelphia Genuíno",
         "Finalizado com Tarê Artesanal e Cebolinha"
       ],
-      "price": 43.00,
+      "price": 43.0,
       "badge": "Crocante & Suculento",
-      "image": "assets/sushi.webp",
+      "image": "assets/pratos/big-hot-salmao.webp",
       "rating": 4.9
     },
     {
@@ -118,9 +150,9 @@
         "8 Niguiris Selecionados",
         "12 Hot Rolls Crocantes"
       ],
-      "price": 163.00,
+      "price": 163.0,
       "badge": "Para Compartilhar 👥",
-      "image": "assets/tabua.webp",
+      "image": "assets/pratos/combo-chuugi.webp",
       "rating": 4.9
     },
     {
@@ -138,9 +170,9 @@
         "12 Hossomakis de Salmão",
         "16 Hots Especiais Crocantes"
       ],
-      "price": 237.00,
+      "price": 237.0,
       "badge": "Master Banquete 🏆",
-      "image": "assets/tabua.webp",
+      "image": "assets/pratos/combo-makoto.webp",
       "rating": 5.0
     },
     {
@@ -159,9 +191,9 @@
         "Alho Poró Crispy & Batata Doce Crispy",
         "Gergelim Tostado & Molho da Casa"
       ],
-      "price": 49.00,
+      "price": 49.0,
       "badge": "Mais Pedido ⭐",
-      "image": "assets/sushi.webp",
+      "image": "assets/pratos/poke-salmao-fresh.webp",
       "rating": 5.0
     },
     {
@@ -179,9 +211,9 @@
         "Pepino Sunomono Agridoce",
         "Chips Crocantes & Tarê Especial"
       ],
-      "price": 52.00,
+      "price": 52.0,
       "badge": "Trufado 🌿",
-      "image": "assets/sushi.webp",
+      "image": "assets/pratos/poke-salmao-selado.webp",
       "rating": 4.9
     },
     {
@@ -198,9 +230,9 @@
         "Cebola Roxa & Pimenta Dedo-de-Moça Suave",
         "Milho Crocante Especial"
       ],
-      "price": 32.00,
+      "price": 32.0,
       "badge": "Cítrico & Refrescante",
-      "image": "assets/sushi.webp",
+      "image": "assets/pratos/ceviche-salmao.webp",
       "rating": 4.8
     },
     {
@@ -216,9 +248,9 @@
         "Tartar de Salmão Temperado",
         "Alga Nori Crocante de Alta Qualidade"
       ],
-      "price": 15.00,
+      "price": 15.0,
       "badge": "Snack Tradicional 🍙",
-      "image": "assets/sushi.webp",
+      "image": "assets/pratos/oniguiri-salmao.webp",
       "rating": 4.7
     },
     {
@@ -234,9 +266,9 @@
         "Cream Cheese & Cebolinha",
         "Envolto em Alga Nori Crocante"
       ],
-      "price": 16.00,
+      "price": 16.0,
       "badge": "",
-      "image": "assets/sushi.webp",
+      "image": "assets/pratos/oniguiri-camarao.webp",
       "rating": 4.7
     },
     {
@@ -253,9 +285,9 @@
         "Geleia de Pimenta Suave",
         "Lâminas de Amêndoas Douradas"
       ],
-      "price": 26.00,
+      "price": 26.0,
       "badge": "Gourmet ✨",
-      "image": "assets/sushi.webp",
+      "image": "assets/pratos/combo-tabo.webp",
       "rating": 4.9
     },
     {
@@ -270,9 +302,9 @@
         "10 Fatias Espessas de Salmão Premium",
         "Acompanha Wasabi e Gengibre Gari Artesanal"
       ],
-      "price": 40.00,
+      "price": 40.0,
       "badge": "Corte Nobre 🐟",
-      "image": "assets/tabua.webp",
+      "image": "assets/pratos/combo-especialidades.webp",
       "rating": 5.0
     },
     {
@@ -288,9 +320,9 @@
         "Azeite Trufado Importado",
         "Flor de Sal & Raspas de Limão Siciliano"
       ],
-      "price": 44.00,
+      "price": 44.0,
       "badge": "Chef Choice 🌟",
-      "image": "assets/tabua.webp",
+      "image": "assets/pratos/combo-yume.webp",
       "rating": 5.0
     },
     {
@@ -306,9 +338,9 @@
         "Maçaricado com Crosta Brûlée Agridoce",
         "Gotas de Tarê Especial"
       ],
-      "price": 28.00,
+      "price": 28.0,
       "badge": "Sucesso Absoluto",
-      "image": "assets/sushi.webp",
+      "image": "assets/pratos/combo-especialidades.webp",
       "rating": 4.9
     },
     {
@@ -325,7 +357,7 @@
         "Legumes Frescos Salteados no Wok",
         "Molho Shoyu Oriental Tradicional"
       ],
-      "price": 36.00,
+      "price": 36.0,
       "badge": "Prato Quente 🍜",
       "image": "assets/sushi.webp",
       "rating": 4.8
@@ -343,7 +375,7 @@
         "Mix de Legumes Grelhados na Chapa",
         "Porção de Arroz Gohan Fresco"
       ],
-      "price": 54.00,
+      "price": 54.0,
       "badge": "",
       "image": "assets/sushi.webp",
       "rating": 4.8
@@ -362,7 +394,7 @@
         "Calda Generosa de Nutella",
         "Morangos Frescos Selecionados"
       ],
-      "price": 24.00,
+      "price": 24.0,
       "badge": "Sobremesa Destaque 🍫",
       "image": "assets/brownie.webp",
       "rating": 5.0
@@ -380,9 +412,9 @@
         "Banana Caramelizada",
         "Nutella Genuína e Leite Ninho"
       ],
-      "price": 22.00,
+      "price": 22.0,
       "badge": "Irresistível",
-      "image": "assets/brownie.webp",
+      "image": "assets/pratos/sobremesa-morango.webp",
       "rating": 4.9
     },
     {
@@ -393,8 +425,10 @@
       "pieces": "Lata 350ml",
       "serves": "Individual Gelada",
       "description": "Lata 350ml servida estupidamente gelada.",
-      "items_breakdown": ["Lata 350ml Gelada"],
-      "price": 7.00,
+      "items_breakdown": [
+        "Lata 350ml Gelada"
+      ],
+      "price": 7.0,
       "badge": "",
       "image": "assets/sushi.webp",
       "rating": 4.8
@@ -407,8 +441,10 @@
       "pieces": "Lata 350ml",
       "serves": "Individual Gelada",
       "description": "Lata 350ml servida estupidamente gelada.",
-      "items_breakdown": ["Lata 350ml Gelada"],
-      "price": 7.00,
+      "items_breakdown": [
+        "Lata 350ml Gelada"
+      ],
+      "price": 7.0,
       "badge": "",
       "image": "assets/sushi.webp",
       "rating": 4.8
@@ -421,8 +457,10 @@
       "pieces": "Garrafa 500ml",
       "serves": "Individual Gelada",
       "description": "Garrafa 500ml com gás natural.",
-      "items_breakdown": ["Garrafa 500ml"],
-      "price": 5.00,
+      "items_breakdown": [
+        "Garrafa 500ml"
+      ],
+      "price": 5.0,
       "badge": "",
       "image": "assets/sushi.webp",
       "rating": 4.8
@@ -435,8 +473,10 @@
       "pieces": "Long Neck 330ml",
       "serves": "Individual Gelada",
       "description": "Puro malte lager 330ml bem gelada.",
-      "items_breakdown": ["Long Neck 330ml Gelada"],
-      "price": 12.00,
+      "items_breakdown": [
+        "Long Neck 330ml Gelada"
+      ],
+      "price": 12.0,
       "badge": "Gelada 🍺",
       "image": "assets/sushi.webp",
       "rating": 4.9
@@ -446,7 +486,7 @@
     "id": "trio-brownie-ioshi",
     "title": "Sobremesa Oficial da Casa 🍫",
     "subtitle": "Feche seu pedido com chave de ouro: Trio de Brownie Artesanal de Chocolate Belga.",
-    "price": 24.00,
+    "price": 24.0,
     "image": "assets/brownie.webp"
   }
 }

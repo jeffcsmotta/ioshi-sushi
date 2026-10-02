@@ -76,10 +76,10 @@ window.CARDAPIO_DATA = {
         "6 Niguiris Salmão Maçaricado",
         "8 Hot Rolls Crocantes"
       ],
-      "price": 110,
+      "price": 110.0,
       "badge": "Mais Pedido ⭐",
-      "image": "assets/tabua.webp",
-      "rating": 5
+      "image": "assets/pratos/combo-iosake.webp",
+      "rating": 5.0
     },
     {
       "id": "combo-promocional",
@@ -96,7 +96,7 @@ window.CARDAPIO_DATA = {
       ],
       "price": 79.9,
       "badge": "Destaque da Casa 🔥",
-      "image": "assets/sushi.webp",
+      "image": "assets/pratos/combo-promocional.webp",
       "rating": 4.9
     },
     {
@@ -117,7 +117,7 @@ window.CARDAPIO_DATA = {
       ],
       "price": 34.9,
       "badge": "Favorito 🍣",
-      "image": "assets/sushi.webp",
+      "image": "assets/pratos/combo-hot-12.webp",
       "rating": 4.8
     },
     {
@@ -134,9 +134,9 @@ window.CARDAPIO_DATA = {
         "Cream Cheese Philadelphia Genuíno",
         "Finalizado com Tarê Artesanal e Cebolinha"
       ],
-      "price": 43,
+      "price": 43.0,
       "badge": "Crocante & Suculento",
-      "image": "assets/sushi.webp",
+      "image": "assets/pratos/big-hot-salmao.webp",
       "rating": 4.9
     },
     {
@@ -154,9 +154,9 @@ window.CARDAPIO_DATA = {
         "8 Niguiris Selecionados",
         "12 Hot Rolls Crocantes"
       ],
-      "price": 163,
+      "price": 163.0,
       "badge": "Para Compartilhar 👥",
-      "image": "assets/tabua.webp",
+      "image": "assets/pratos/combo-chuugi.webp",
       "rating": 4.9
     },
     {
@@ -174,10 +174,10 @@ window.CARDAPIO_DATA = {
         "12 Hossomakis de Salmão",
         "16 Hots Especiais Crocantes"
       ],
-      "price": 237,
+      "price": 237.0,
       "badge": "Master Banquete 🏆",
-      "image": "assets/tabua.webp",
-      "rating": 5
+      "image": "assets/pratos/combo-makoto.webp",
+      "rating": 5.0
     },
     {
       "id": "poke-salmao-fresh",
@@ -195,10 +195,10 @@ window.CARDAPIO_DATA = {
         "Alho Poró Crispy & Batata Doce Crispy",
         "Gergelim Tostado & Molho da Casa"
       ],
-      "price": 49,
+      "price": 49.0,
       "badge": "Mais Pedido ⭐",
-      "image": "assets/sushi.webp",
-      "rating": 5
+      "image": "assets/pratos/poke-salmao-fresh.webp",
+      "rating": 5.0
     },
     {
       "id": "poke-salmao-selado",
@@ -215,9 +215,9 @@ window.CARDAPIO_DATA = {
         "Pepino Sunomono Agridoce",
         "Chips Crocantes & Tarê Especial"
       ],
-      "price": 52,
+      "price": 52.0,
       "badge": "Trufado 🌿",
-      "image": "assets/sushi.webp",
+      "image": "assets/pratos/poke-salmao-selado.webp",
       "rating": 4.9
     },
     {
@@ -234,9 +234,9 @@ window.CARDAPIO_DATA = {
         "Cebola Roxa & Pimenta Dedo-de-Moça Suave",
         "Milho Crocante Especial"
       ],
-      "price": 32,
+      "price": 32.0,
       "badge": "Cítrico & Refrescante",
-      "image": "assets/sushi.webp",
+      "image": "assets/pratos/ceviche-salmao.webp",
       "rating": 4.8
     },
     {
@@ -252,9 +252,9 @@ window.CARDAPIO_DATA = {
         "Tartar de Salmão Temperado",
         "Alga Nori Crocante de Alta Qualidade"
       ],
-      "price": 15,
+      "price": 15.0,
       "badge": "Snack Tradicional 🍙",
-      "image": "assets/sushi.webp",
+      "image": "assets/pratos/oniguiri-salmao.webp",
       "rating": 4.7
     },
     {
@@ -270,9 +270,9 @@ window.CARDAPIO_DATA = {
         "Cream Cheese & Cebolinha",
         "Envolto em Alga Nori Crocante"
       ],
-      "price": 16,
+      "price": 16.0,
       "badge": "",
-      "image": "assets/sushi.webp",
+      "image": "assets/pratos/oniguiri-camarao.webp",
       "rating": 4.7
     },
     {
@@ -289,9 +289,9 @@ window.CARDAPIO_DATA = {
         "Geleia de Pimenta Suave",
         "Lâminas de Amêndoas Douradas"
       ],
-      "price": 26,
+      "price": 26.0,
       "badge": "Gourmet ✨",
-      "image": "assets/sushi.webp",
+      "image": "assets/pratos/combo-tabo.webp",
       "rating": 4.9
     },
     {
@@ -306,10 +306,10 @@ window.CARDAPIO_DATA = {
         "10 Fatias Espessas de Salmão Premium",
         "Acompanha Wasabi e Gengibre Gari Artesanal"
       ],
-      "price": 40,
+      "price": 40.0,
       "badge": "Corte Nobre 🐟",
-      "image": "assets/tabua.webp",
-      "rating": 5
+      "image": "assets/pratos/combo-especialidades.webp",
+      "rating": 5.0
     },
     {
       "id": "sashimi-salmao-selado-10",
@@ -324,10 +324,10 @@ window.CARDAPIO_DATA = {
         "Azeite Trufado Importado",
         "Flor de Sal & Raspas de Limão Siciliano"
       ],
-      "price": 44,
+      "price": 44.0,
       "badge": "Chef Choice 🌟",
-      "image": "assets/tabua.webp",
-      "rating": 5
+      "image": "assets/pratos/combo-yume.webp",
+      "rating": 5.0
     },
     {
       "id": "niguiri-salmao-brulee-6",
@@ -342,9 +342,9 @@ window.CARDAPIO_DATA = {
         "Maçaricado com Crosta Brûlée Agridoce",
         "Gotas de Tarê Especial"
       ],
-      "price": 28,
+      "price": 28.0,
       "badge": "Sucesso Absoluto",
-      "image": "assets/sushi.webp",
+      "image": "assets/pratos/combo-especialidades.webp",
       "rating": 4.9
     },
     {
@@ -361,7 +361,7 @@ window.CARDAPIO_DATA = {
         "Legumes Frescos Salteados no Wok",
         "Molho Shoyu Oriental Tradicional"
       ],
-      "price": 36,
+      "price": 36.0,
       "badge": "Prato Quente 🍜",
       "image": "assets/sushi.webp",
       "rating": 4.8
@@ -379,7 +379,7 @@ window.CARDAPIO_DATA = {
         "Mix de Legumes Grelhados na Chapa",
         "Porção de Arroz Gohan Fresco"
       ],
-      "price": 54,
+      "price": 54.0,
       "badge": "",
       "image": "assets/sushi.webp",
       "rating": 4.8
@@ -398,10 +398,10 @@ window.CARDAPIO_DATA = {
         "Calda Generosa de Nutella",
         "Morangos Frescos Selecionados"
       ],
-      "price": 24,
+      "price": 24.0,
       "badge": "Sobremesa Destaque 🍫",
       "image": "assets/brownie.webp",
-      "rating": 5
+      "rating": 5.0
     },
     {
       "id": "hot-banana-nutella",
@@ -416,9 +416,9 @@ window.CARDAPIO_DATA = {
         "Banana Caramelizada",
         "Nutella Genuína e Leite Ninho"
       ],
-      "price": 22,
+      "price": 22.0,
       "badge": "Irresistível",
-      "image": "assets/brownie.webp",
+      "image": "assets/pratos/sobremesa-morango.webp",
       "rating": 4.9
     },
     {
@@ -432,7 +432,7 @@ window.CARDAPIO_DATA = {
       "items_breakdown": [
         "Lata 350ml Gelada"
       ],
-      "price": 7,
+      "price": 7.0,
       "badge": "",
       "image": "assets/sushi.webp",
       "rating": 4.8
@@ -448,7 +448,7 @@ window.CARDAPIO_DATA = {
       "items_breakdown": [
         "Lata 350ml Gelada"
       ],
-      "price": 7,
+      "price": 7.0,
       "badge": "",
       "image": "assets/sushi.webp",
       "rating": 4.8
@@ -464,7 +464,7 @@ window.CARDAPIO_DATA = {
       "items_breakdown": [
         "Garrafa 500ml"
       ],
-      "price": 5,
+      "price": 5.0,
       "badge": "",
       "image": "assets/sushi.webp",
       "rating": 4.8
@@ -480,7 +480,7 @@ window.CARDAPIO_DATA = {
       "items_breakdown": [
         "Long Neck 330ml Gelada"
       ],
-      "price": 12,
+      "price": 12.0,
       "badge": "Gelada 🍺",
       "image": "assets/sushi.webp",
       "rating": 4.9
@@ -490,7 +490,7 @@ window.CARDAPIO_DATA = {
     "id": "trio-brownie-ioshi",
     "title": "Sobremesa Oficial da Casa 🍫",
     "subtitle": "Feche seu pedido com chave de ouro: Trio de Brownie Artesanal de Chocolate Belga.",
-    "price": 24,
+    "price": 24.0,
     "image": "assets/brownie.webp"
   }
 };

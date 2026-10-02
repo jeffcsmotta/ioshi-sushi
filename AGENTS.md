@@ -11,7 +11,7 @@
 - **Nicho**: Gastronomia Japonesa
 - **Localização**: Av. Júlio de Castilhos, 2970 - São Pelegrino, Caxias do Sul - RS
 - **WhatsApp Oficial de Pedidos**: +55 (54) 3533-5556
-- **Paleta Oficial**: Sumi Obsidian (`#07070A`), Champagne Gold (`#C5A880`), Japanese Lacquer Crimson (`#BA3329`)
+- **Paleta Oficial**: Sumi Obsidian (`#07070A`), Sunset Flame Orange (`#F37437`), Warm Shari Cream (`#FFF9F2` / `#EBE3D8`), Japanese Lacquer Crimson (`#BA3329`)
 - **Tipografia**: Cinzel (Display Imperial) + Outfit (Headings) + Plus Jakarta Sans (Body)
 
 ---
