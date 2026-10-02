@@ -532,3 +532,28 @@ function showToast(html) {
         box.classList.remove('show');
     }, 3200);
 }
+
+/* ---------- Pill Lab Theme Switcher ---------- */
+window.applyPillTheme = function(theme, btnEl, index) {
+    const box = document.getElementById('category-filters');
+    if (!box) return;
+    box.classList.remove('theme-solid', 'theme-cream', 'theme-neon', 'theme-gradient');
+    box.classList.add(theme);
+
+    const buttons = document.querySelectorAll('.pill-switcher-btn');
+    buttons.forEach((b) => b.classList.remove('current'));
+    if (btnEl) {
+        btnEl.classList.add('current');
+    } else if (typeof index === 'number' && buttons[index]) {
+        buttons[index].classList.add('current');
+    }
+
+    const cards = document.querySelectorAll('.pill-sample-card');
+    cards.forEach((c, idx) => {
+        if (typeof index === 'number') {
+            c.classList.toggle('selected', idx === index);
+        } else if (btnEl) {
+            c.classList.toggle('selected', btnEl.innerText.includes(String(idx + 1)));
+        }
+    });
+};

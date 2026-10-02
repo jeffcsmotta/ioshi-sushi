@@ -357,40 +357,234 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height
     box-shadow: 0 0 0 2px var(--gold-soft), 0 8px 24px rgba(0,0,0,0.5); 
 }
 
-/* Categorias Touch */
+/* ==========================================================================
+   CATEGORIAS & PÍLULAS (4 TEMAS DE DESIGN & SHAPE ERGONÔMICO)
+   ========================================================================== */
 .category-filters-container { width: 100%; margin-bottom: 34px; }
-.category-filters { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; padding: 2px 0; }
+.category-filters { display: flex; justify-content: center; gap: 9px; flex-wrap: wrap; padding: 2px 0; }
+
 .filter-btn { 
     display: inline-flex; 
     align-items: center; 
-    gap: 6px; 
-    padding: 8px 18px; 
-    background: rgba(16, 16, 22, 0.7); 
+    gap: 7px; 
+    padding: 9px 20px; 
+    background: rgba(255, 255, 255, 0.04); 
     backdrop-filter: blur(12px);
-    border: 1px solid var(--border-glass); 
-    border-radius: var(--radius-xs); 
-    color: var(--text-muted); 
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.09); 
+    border-radius: var(--radius-pill); 
+    color: #D1C7BC; 
     font-family: var(--font-heading); 
     font-weight: 500; 
-    font-size: 0.8rem; 
+    font-size: 0.84rem; 
     cursor: pointer; 
-    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1); 
+    transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1); 
     white-space: nowrap; 
-    min-height: 40px; 
+    min-height: 42px; 
+    letter-spacing: 0.2px;
+}
+.filter-btn:hover { 
+    border-color: rgba(243, 116, 55, 0.40); 
+    color: #FFFFFF; 
+    background: rgba(255, 255, 255, 0.08); 
+    transform: translateY(-1px);
+}
+
+/* --- TEMA 1: Solid Sunset Flame (Preenchimento Laranja Sólido Ioshi) --- */
+.category-filters.theme-solid .filter-btn.active,
+.category-filters:not([class*="theme-"]) .filter-btn.active,
+.demo-pill.theme-solid.active { 
+    background: var(--orange); 
+    border-color: var(--orange); 
+    color: #FFFFFF; 
+    font-weight: 700;
+    box-shadow: 0 4px 18px rgba(243, 116, 55, 0.45); 
+    transform: translateY(-1px);
+}
+
+/* --- TEMA 2: Warm Shari Cream (Marfim & Arroz Nobre Omakase) --- */
+.category-filters.theme-cream .filter-btn,
+.demo-pill.theme-cream:not(.active) {
+    background: rgba(20, 20, 26, 0.85);
+    border-color: rgba(255, 255, 255, 0.08);
+    color: #A89E94;
+}
+.category-filters.theme-cream .filter-btn:hover,
+.demo-pill.theme-cream:not(.active):hover {
+    border-color: rgba(255, 249, 242, 0.3);
+    color: #FFF9F2;
+}
+.category-filters.theme-cream .filter-btn.active,
+.demo-pill.theme-cream.active { 
+    background: #FFF9F2; 
+    border-color: #FFF9F2; 
+    color: #0E0E14; 
+    font-weight: 800;
+    box-shadow: 0 4px 20px rgba(255, 249, 242, 0.32); 
+    transform: translateY(-1px);
+}
+
+/* --- TEMA 3: Obsidian Neon Glass (Izakaya Tokyo Dark) --- */
+.category-filters.theme-neon .filter-btn,
+.demo-pill.theme-neon:not(.active) {
+    background: rgba(14, 14, 18, 0.92);
+    border-color: rgba(255, 255, 255, 0.08);
+    color: #A89E94;
+}
+.category-filters.theme-neon .filter-btn:hover,
+.demo-pill.theme-neon:not(.active):hover {
+    border-color: var(--orange-border);
+    color: #FFF;
+}
+.category-filters.theme-neon .filter-btn.active,
+.demo-pill.theme-neon.active { 
+    background: linear-gradient(135deg, rgba(243, 116, 55, 0.24) 0%, rgba(20, 20, 28, 0.95) 100%); 
+    border: 1.5px solid var(--orange); 
+    color: #FFF9F2; 
+    font-weight: 700;
+    box-shadow: 0 0 22px rgba(243, 116, 55, 0.35), inset 0 1px 0 rgba(255,255,255,0.2); 
+    transform: translateY(-1px);
+}
+
+/* --- TEMA 4: Sunset Gradient Flame (Gradiente de Fogo & Salmão Nobre) --- */
+.category-filters.theme-gradient .filter-btn.active,
+.demo-pill.theme-gradient.active { 
+    background: linear-gradient(135deg, #FF7B3D 0%, #D84E18 100%); 
+    border: 1px solid rgba(255, 255, 255, 0.25); 
+    color: #FFFFFF; 
+    font-weight: 700;
+    box-shadow: 0 6px 22px rgba(243, 116, 55, 0.48); 
+    transform: translateY(-1px);
+}
+
+/* --- SHOWCASE / COMPARADOR INTERATIVO DE PÍLULAS --- */
+.pill-lab-container {
+    background: rgba(18, 18, 24, 0.90);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(243, 116, 55, 0.25);
+    border-radius: var(--radius-md);
+    padding: 20px 22px;
+    margin-bottom: 28px;
+    box-shadow: 0 12px 36px rgba(0,0,0,0.65), 0 0 20px rgba(243, 116, 55, 0.10);
+}
+.pill-lab-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.pill-lab-title {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-heading);
+}
+.pill-lab-title i { color: var(--orange); }
+.pill-lab-tag {
+    font-size: 0.68rem;
+    padding: 2px 8px;
+    border-radius: var(--radius-pill);
+    background: rgba(243, 116, 55, 0.16);
+    color: var(--orange-hover);
+    border: 1px solid var(--orange-border);
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
-.filter-btn:hover { 
-    border-color: var(--gold-border); 
-    color: var(--text-primary); 
-    background: rgba(24, 24, 32, 0.85); 
+.pill-lab-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
 }
-.filter-btn.active { 
-    background: var(--orange-soft); 
-    border-color: var(--orange); 
-    color: var(--orange-hover); 
+.pill-switcher-btn {
+    padding: 6px 14px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: var(--radius-pill);
+    color: var(--text-secondary);
+    font-size: 0.76rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: var(--font-heading);
+}
+.pill-switcher-btn:hover {
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+}
+.pill-switcher-btn.current {
+    background: rgba(243, 116, 55, 0.18);
+    border-color: var(--orange);
+    color: var(--orange-hover);
+}
+
+.pill-samples-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 12px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255,255,255,0.07);
+}
+.pill-sample-card {
+    background: rgba(10, 10, 14, 0.65);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    cursor: pointer;
+    transition: all 0.22s;
+    text-align: left;
+}
+.pill-sample-card:hover {
+    border-color: rgba(243, 116, 55, 0.4);
+    background: rgba(16, 16, 22, 0.9);
+}
+.pill-sample-card.selected {
+    border-color: var(--orange);
+    background: rgba(243, 116, 55, 0.10);
+    box-shadow: 0 0 16px rgba(243, 116, 55, 0.15);
+}
+.pill-sample-name {
+    font-size: 0.78rem;
     font-weight: 700;
-    box-shadow: 0 2px 14px var(--orange-glow); 
+    color: var(--text-primary);
+    margin-bottom: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.pill-sample-desc {
+    font-size: 0.70rem;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    line-height: 1.35;
+}
+.pill-sample-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.demo-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 14px;
+    border-radius: var(--radius-pill);
+    font-size: 0.74rem;
+    font-family: var(--font-heading);
+    white-space: nowrap;
+    cursor: default;
+}
+.demo-pill:not(.active) {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    color: #D1C7BC;
+    font-weight: 500;
 }
 
 /* Grid de Produtos (Estética Omakase Nobre) */

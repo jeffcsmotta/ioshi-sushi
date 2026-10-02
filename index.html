@@ -51,7 +51,7 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <link rel="stylesheet" href="style.css?v=20261001-sunset-flame">
+    <link rel="stylesheet" href="style.css?v=20261001-sunset-flame-pills">
 </head>
 <body>
 
@@ -111,9 +111,88 @@
                 <input type="text" id="menu-search" class="search-input" placeholder="Buscar prato ou combinado... (ex: salmão, combo, poke, hot, sashimi)">
             </div>
 
+            <!-- SHOWCASE / COMPARADOR AO VIVO DE PÍLULAS DE DESIGN -->
+            <div class="pill-lab-container" id="pill-lab-box">
+                <div class="pill-lab-header">
+                    <div class="pill-lab-title">
+                        <i data-lucide="sparkles"></i>
+                        <span>Amostras de Design das Pílulas</span>
+                        <span class="pill-lab-tag">Clique para testar</span>
+                    </div>
+                    <div class="pill-lab-actions">
+                        <button type="button" class="pill-switcher-btn current" onclick="window.applyPillTheme('theme-solid', this, 0)">
+                            1. Solid Sunset Flame ⭐
+                        </button>
+                        <button type="button" class="pill-switcher-btn" onclick="window.applyPillTheme('theme-cream', this, 1)">
+                            2. Warm Shari Cream
+                        </button>
+                        <button type="button" class="pill-switcher-btn" onclick="window.applyPillTheme('theme-neon', this, 2)">
+                            3. Obsidian Neon Glass
+                        </button>
+                        <button type="button" class="pill-switcher-btn" onclick="window.applyPillTheme('theme-gradient', this, 3)">
+                            4. Sunset Gradient
+                        </button>
+                    </div>
+                </div>
+
+                <div class="pill-samples-grid">
+                    <!-- Amostra 1 -->
+                    <div class="pill-sample-card selected" onclick="window.applyPillTheme('theme-solid', null, 0)">
+                        <div class="pill-sample-name">
+                            <span>1. Solid Sunset Flame</span>
+                            <span style="color:var(--orange); font-size:0.68rem; font-weight:800;">ATIVO</span>
+                        </div>
+                        <p class="pill-sample-desc">Preenchimento sólido vibrante no Laranja Ioshi com texto em branco. Máximo contraste e presença visual.</p>
+                        <div class="pill-sample-row">
+                            <span class="demo-pill">Inativo</span>
+                            <span class="demo-pill theme-solid active">Combos & Combinados</span>
+                        </div>
+                    </div>
+
+                    <!-- Amostra 2 -->
+                    <div class="pill-sample-card" onclick="window.applyPillTheme('theme-cream', null, 1)">
+                        <div class="pill-sample-name">
+                            <span>2. Warm Shari Cream</span>
+                            <span style="color:#FFF9F2; font-size:0.68rem; font-weight:800;">OMAKASE</span>
+                        </div>
+                        <p class="pill-sample-desc">Marfim/off-white nobre inspirado no arroz artesanal japonês com texto em preto obsidian profundo.</p>
+                        <div class="pill-sample-row">
+                            <span class="demo-pill theme-cream">Inativo</span>
+                            <span class="demo-pill theme-cream active">Hots Especiais</span>
+                        </div>
+                    </div>
+
+                    <!-- Amostra 3 -->
+                    <div class="pill-sample-card" onclick="window.applyPillTheme('theme-neon', null, 2)">
+                        <div class="pill-sample-name">
+                            <span>3. Obsidian Neon Glass</span>
+                            <span style="color:var(--orange-hover); font-size:0.68rem; font-weight:800;">IZAKAYA DARK</span>
+                        </div>
+                        <p class="pill-sample-desc">Fundo escuro com borda precisa de 1.5px e halo de iluminação noturna japonesa. 100% dark chic.</p>
+                        <div class="pill-sample-row">
+                            <span class="demo-pill theme-neon">Inativo</span>
+                            <span class="demo-pill theme-neon active">Pokes Havaianos</span>
+                        </div>
+                    </div>
+
+                    <!-- Amostra 4 -->
+                    <div class="pill-sample-card" onclick="window.applyPillTheme('theme-gradient', null, 3)">
+                        <div class="pill-sample-name">
+                            <span>4. Sunset Gradient</span>
+                            <span style="color:#FF7B3D; font-size:0.68rem; font-weight:800;">FIRE GRADIENT</span>
+                        </div>
+                        <p class="pill-sample-desc">Gradiente suave do Laranja Sunset ao Laranja Brasa maçaricado com borda leve de vidro.</p>
+                        <div class="pill-sample-row">
+                            <span class="demo-pill">Inativo</span>
+                            <span class="demo-pill theme-gradient active">Festival & Sashimis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Carrossel de Categorias Touch -->
             <div class="category-filters-container">
-                <div class="category-filters" id="category-filters">
+                <div class="category-filters theme-solid" id="category-filters">
                     <!-- Gerado via JS -->
                 </div>
             </div>
