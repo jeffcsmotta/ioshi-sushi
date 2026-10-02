@@ -77,7 +77,7 @@ window.CARDAPIO_DATA = {
         "8 Hot Rolls Crocantes"
       ],
       "price": 110.0,
-      "badge": "Mais Pedido ⭐",
+      "badge": "Mais Pedido",
       "image": "assets/pratos/combo-iosake.webp",
       "rating": 5.0
     },
@@ -95,7 +95,7 @@ window.CARDAPIO_DATA = {
         "1 Refrigerante Lata 350ml Grátis"
       ],
       "price": 79.9,
-      "badge": "Destaque da Casa 🔥",
+      "badge": "Destaque da Casa",
       "image": "assets/pratos/combo-promocional.webp",
       "rating": 4.9
     },
@@ -116,7 +116,7 @@ window.CARDAPIO_DATA = {
         "2 Hot Doritos Crocantes c/ Tarê"
       ],
       "price": 34.9,
-      "badge": "Favorito 🍣",
+      "badge": "Favorito",
       "image": "assets/pratos/combo-hot-12.webp",
       "rating": 4.8
     },
@@ -155,7 +155,7 @@ window.CARDAPIO_DATA = {
         "12 Hot Rolls Crocantes"
       ],
       "price": 163.0,
-      "badge": "Para Compartilhar 👥",
+      "badge": "Para Compartilhar",
       "image": "assets/pratos/combo-chuugi.webp",
       "rating": 4.9
     },
@@ -175,7 +175,7 @@ window.CARDAPIO_DATA = {
         "16 Hots Especiais Crocantes"
       ],
       "price": 237.0,
-      "badge": "Master Banquete 🏆",
+      "badge": "Master Banquete",
       "image": "assets/pratos/combo-makoto.webp",
       "rating": 5.0
     },
@@ -196,7 +196,7 @@ window.CARDAPIO_DATA = {
         "Gergelim Tostado & Molho da Casa"
       ],
       "price": 49.0,
-      "badge": "Mais Pedido ⭐",
+      "badge": "Mais Pedido",
       "image": "assets/pratos/poke-salmao-fresh.webp",
       "rating": 5.0
     },
@@ -216,7 +216,7 @@ window.CARDAPIO_DATA = {
         "Chips Crocantes & Tarê Especial"
       ],
       "price": 52.0,
-      "badge": "Trufado 🌿",
+      "badge": "Trufado",
       "image": "assets/pratos/poke-salmao-selado.webp",
       "rating": 4.9
     },
@@ -253,7 +253,7 @@ window.CARDAPIO_DATA = {
         "Alga Nori Crocante de Alta Qualidade"
       ],
       "price": 15.0,
-      "badge": "Snack Tradicional 🍙",
+      "badge": "Snack Tradicional",
       "image": "assets/pratos/oniguiri-salmao.webp",
       "rating": 4.7
     },
@@ -290,7 +290,7 @@ window.CARDAPIO_DATA = {
         "Lâminas de Amêndoas Douradas"
       ],
       "price": 26.0,
-      "badge": "Gourmet ✨",
+      "badge": "Gourmet",
       "image": "assets/pratos/combo-tabo.webp",
       "rating": 4.9
     },
@@ -307,7 +307,7 @@ window.CARDAPIO_DATA = {
         "Acompanha Wasabi e Gengibre Gari Artesanal"
       ],
       "price": 40.0,
-      "badge": "Corte Nobre 🐟",
+      "badge": "Corte Nobre",
       "image": "assets/pratos/combo-especialidades.webp",
       "rating": 5.0
     },
@@ -325,7 +325,7 @@ window.CARDAPIO_DATA = {
         "Flor de Sal & Raspas de Limão Siciliano"
       ],
       "price": 44.0,
-      "badge": "Chef Choice 🌟",
+      "badge": "Chef Choice",
       "image": "assets/pratos/combo-yume.webp",
       "rating": 5.0
     },
@@ -362,7 +362,7 @@ window.CARDAPIO_DATA = {
         "Molho Shoyu Oriental Tradicional"
       ],
       "price": 36.0,
-      "badge": "Prato Quente 🍜",
+      "badge": "Prato Quente",
       "image": "assets/sushi.webp",
       "rating": 4.8
     },
@@ -399,7 +399,7 @@ window.CARDAPIO_DATA = {
         "Morangos Frescos Selecionados"
       ],
       "price": 24.0,
-      "badge": "Sobremesa Destaque 🍫",
+      "badge": "Sobremesa Destaque",
       "image": "assets/brownie.webp",
       "rating": 5.0
     },
@@ -481,14 +481,14 @@ window.CARDAPIO_DATA = {
         "Long Neck 330ml Gelada"
       ],
       "price": 12.0,
-      "badge": "Gelada 🍺",
+      "badge": "Gelada",
       "image": "assets/sushi.webp",
       "rating": 4.9
     }
   ],
   "upsell": {
     "id": "trio-brownie-ioshi",
-    "title": "Sobremesa Oficial da Casa 🍫",
+    "title": "Sobremesa Oficial da Casa",
     "subtitle": "Feche seu pedido com chave de ouro: Trio de Brownie Artesanal de Chocolate Belga.",
     "price": 24.0,
     "image": "assets/brownie.webp"

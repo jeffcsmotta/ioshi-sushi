@@ -73,7 +73,7 @@
         "8 Hot Rolls Crocantes"
       ],
       "price": 110.0,
-      "badge": "Mais Pedido ⭐",
+      "badge": "Mais Pedido",
       "image": "assets/pratos/combo-iosake.webp",
       "rating": 5.0
     },
@@ -91,7 +91,7 @@
         "1 Refrigerante Lata 350ml Grátis"
       ],
       "price": 79.9,
-      "badge": "Destaque da Casa 🔥",
+      "badge": "Destaque da Casa",
       "image": "assets/pratos/combo-promocional.webp",
       "rating": 4.9
     },
@@ -112,7 +112,7 @@
         "2 Hot Doritos Crocantes c/ Tarê"
       ],
       "price": 34.9,
-      "badge": "Favorito 🍣",
+      "badge": "Favorito",
       "image": "assets/pratos/combo-hot-12.webp",
       "rating": 4.8
     },
@@ -151,7 +151,7 @@
         "12 Hot Rolls Crocantes"
       ],
       "price": 163.0,
-      "badge": "Para Compartilhar 👥",
+      "badge": "Para Compartilhar",
       "image": "assets/pratos/combo-chuugi.webp",
       "rating": 4.9
     },
@@ -171,7 +171,7 @@
         "16 Hots Especiais Crocantes"
       ],
       "price": 237.0,
-      "badge": "Master Banquete 🏆",
+      "badge": "Master Banquete",
       "image": "assets/pratos/combo-makoto.webp",
       "rating": 5.0
     },
@@ -192,7 +192,7 @@
         "Gergelim Tostado & Molho da Casa"
       ],
       "price": 49.0,
-      "badge": "Mais Pedido ⭐",
+      "badge": "Mais Pedido",
       "image": "assets/pratos/poke-salmao-fresh.webp",
       "rating": 5.0
     },
@@ -212,7 +212,7 @@
         "Chips Crocantes & Tarê Especial"
       ],
       "price": 52.0,
-      "badge": "Trufado 🌿",
+      "badge": "Trufado",
       "image": "assets/pratos/poke-salmao-selado.webp",
       "rating": 4.9
     },
@@ -249,7 +249,7 @@
         "Alga Nori Crocante de Alta Qualidade"
       ],
       "price": 15.0,
-      "badge": "Snack Tradicional 🍙",
+      "badge": "Snack Tradicional",
       "image": "assets/pratos/oniguiri-salmao.webp",
       "rating": 4.7
     },
@@ -286,7 +286,7 @@
         "Lâminas de Amêndoas Douradas"
       ],
       "price": 26.0,
-      "badge": "Gourmet ✨",
+      "badge": "Gourmet",
       "image": "assets/pratos/combo-tabo.webp",
       "rating": 4.9
     },
@@ -303,7 +303,7 @@
         "Acompanha Wasabi e Gengibre Gari Artesanal"
       ],
       "price": 40.0,
-      "badge": "Corte Nobre 🐟",
+      "badge": "Corte Nobre",
       "image": "assets/pratos/combo-especialidades.webp",
       "rating": 5.0
     },
@@ -321,7 +321,7 @@
         "Flor de Sal & Raspas de Limão Siciliano"
       ],
       "price": 44.0,
-      "badge": "Chef Choice 🌟",
+      "badge": "Chef Choice",
       "image": "assets/pratos/combo-yume.webp",
       "rating": 5.0
     },
@@ -358,7 +358,7 @@
         "Molho Shoyu Oriental Tradicional"
       ],
       "price": 36.0,
-      "badge": "Prato Quente 🍜",
+      "badge": "Prato Quente",
       "image": "assets/sushi.webp",
       "rating": 4.8
     },
@@ -395,7 +395,7 @@
         "Morangos Frescos Selecionados"
       ],
       "price": 24.0,
-      "badge": "Sobremesa Destaque 🍫",
+      "badge": "Sobremesa Destaque",
       "image": "assets/brownie.webp",
       "rating": 5.0
     },
@@ -477,14 +477,14 @@
         "Long Neck 330ml Gelada"
       ],
       "price": 12.0,
-      "badge": "Gelada 🍺",
+      "badge": "Gelada",
       "image": "assets/sushi.webp",
       "rating": 4.9
     }
   ],
   "upsell": {
     "id": "trio-brownie-ioshi",
-    "title": "Sobremesa Oficial da Casa 🍫",
+    "title": "Sobremesa Oficial da Casa",
     "subtitle": "Feche seu pedido com chave de ouro: Trio de Brownie Artesanal de Chocolate Belga.",
     "price": 24.0,
     "image": "assets/brownie.webp"

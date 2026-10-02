@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Ioshi Japanese Food | Delivery de Sushi em Caxias do Sul</title>
-    <meta name="description" content="🍣 Ioshi Japanese Food — Combos nobres, pokes frescos, hots crocantes e sashimis na Av. Júlio de Castilhos, 2970, São Pelegrino, Caxias do Sul. Faça seu pedido online e envie direto no WhatsApp com 0% taxas.">
+    <meta name="description" content="Ioshi Japanese Food — Combos nobres, pokes frescos, hots crocantes e sashimis na Av. Júlio de Castilhos, 2970, São Pelegrino, Caxias do Sul. Faça seu pedido online e envie direto no WhatsApp com 0% taxas.">
     <meta name="keywords" content="Ioshi Sushi, Ioshi Japanese Food, Sushi Caxias do Sul, Delivery Sushi São Pelegrino, Combo Sushi Caxias, Poke Caxias, Festival de Sushi">
 
     <!-- Open Graph / WhatsApp Social Sharing -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Ioshi Japanese Food">
     <meta property="og:title" content="Ioshi Japanese Food | Delivery de Sushi em Caxias do Sul">
-    <meta property="og:description" content="🍣 Combos nobres, pokes frescos, hots crocantes e festival de sushi. Peça direto no WhatsApp com 0% taxas!">
+    <meta property="og:description" content="Combos nobres, pokes frescos, hots crocantes e festival de sushi. Peça direto no WhatsApp com 0% taxas!">
     <meta property="og:image" content="assets/logo_official.png">
     <meta property="og:locale" content="pt_BR">
 
@@ -51,7 +51,7 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <link rel="stylesheet" href="style.css?v=20261002-obsidian-glow">
+    <link rel="stylesheet" href="style.css?v=20261002-obsidian-ambient">
 </head>
 <body>
 
@@ -125,50 +125,55 @@
         </div>
     </main>
 
-    <!-- BANNER DE UPSELL NO RODAPÉ DO CARDÁPIO (+ Sobremesa Oficial) -->
-    <section class="special-offer-section section">
+    <!-- EXPERIÊNCIA & TRADIÇÃO (Grid de 2 Colunas Simétricas) -->
+    <section class="experience-section section" id="experiencia">
         <div class="container">
-            <div class="special-offer-card">
-                <div class="special-offer-img-box">
-                    <img src="assets/brownie.webp" alt="Trio de Brownie Artesanal Ioshi" class="special-offer-img" loading="lazy">
-                    <div class="special-badge">
-                        <i data-lucide="sparkles" style="width:14px; height:14px;"></i> Sobremesa Destaque
+            <div class="experience-grid">
+                <!-- Coluna 1: Sobremesa Oficial da Casa -->
+                <div class="experience-card">
+                    <div class="experience-img-box">
+                        <img src="assets/brownie.webp" alt="Trio de Brownie Artesanal Ioshi" class="experience-img" loading="lazy">
+                        <span class="experience-badge">
+                            <i data-lucide="sparkles"></i> Sobremesa Destaque
+                        </span>
                     </div>
-                </div>
-                <div class="special-offer-content">
-                    <span class="subtitle-red">EXPERIÊNCIA COMPLETA</span>
-                    <h2 class="special-title">Trio de Brownie Artesanal Ioshi</h2>
-                    <p class="special-desc">Três mini brownies quentinhos de puro chocolate belga com cobertura de doce de leite artesanal, calda de Nutella e morango fresco selecionado.</p>
-                    <div class="special-price-row">
-                        <div class="price-box">
-                            <span class="price-label" style="color: var(--text-dim);">Adicione ao pedido por:</span>
-                            <div class="new-price">R$ 24,00</div>
+                    <div class="experience-body">
+                        <span class="subtitle">EXPERIÊNCIA COMPLETA</span>
+                        <h2 class="experience-title">Trio de Brownie Artesanal</h2>
+                        <p class="experience-desc">Três mini brownies quentinhos de puro chocolate belga com cobertura de doce de leite artesanal, calda de Nutella e morango fresco selecionado.</p>
+                        <div class="experience-footer">
+                            <div class="experience-price">
+                                <span class="price-label">Adicione por:</span>
+                                <div class="price-value">R$ 24,00</div>
+                            </div>
+                            <button type="button" class="btn btn-primary" onclick="window.openProductModal('trio-brownie-ioshi')" aria-label="Adicionar sobremesa ao pedido">
+                                <i data-lucide="plus"></i> Adicionar Sobremesa
+                            </button>
                         </div>
-                        <button type="button" class="btn btn-primary" onclick="window.openProductModal('trio-brownie-ioshi')">
-                            <i data-lucide="plus"></i> Adicionar Sobremesa
-                        </button>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- HISTÓRIA EDITORIAL DA CASA (1 Foto + 1 Texto, Sem Mosaicos) -->
-    <section class="story-section section" id="historia">
-        <div class="container">
-            <div class="story-grid">
-                <div class="story-img-box">
-                    <img src="assets/tabua.webp" alt="Tradição e Maestria no Ioshi Sushi" class="story-img" loading="lazy">
-                </div>
-                <div class="story-text">
-                    <span class="subtitle">PRAZER EM SERVIR</span>
-                    <h2 class="title" style="margin-bottom: 18px;">Autenticidade e Frescor no Coração de São Pelegrino</h2>
-                    <p>O <strong>Ioshi Japanese Food</strong> nasceu da paixão pela autêntica culinária oriental e pelo respeito absoluto a cada insumo. Localizado na tradicional Av. Júlio de Castilhos, tornamo-nos referência na Serra Gaúcha pela arte no corte do salmão fresco e pela textura inconfundível do nosso shari artesanal.</p>
-                    <p>Além do consagrado festival de sushi no salão, estruturamos uma operação de delivery ágil e cuidadosa, garantindo que combinados, pokes e hots cheguem à sua mesa com a mesma crocância, frescor e temperatura ideais de um restaurante premium.</p>
-                    <div style="margin-top: 24px;">
-                        <a href="#cardapio" class="btn btn-primary">
-                            <i data-lucide="utensils"></i> Explorar o Cardápio
-                        </a>
+                <!-- Coluna 2: Autenticidade & Tradição da Casa -->
+                <div class="experience-card">
+                    <div class="experience-img-box">
+                        <img src="assets/tabua.webp" alt="Autenticidade e Frescor no Ioshi Sushi" class="experience-img" loading="lazy">
+                        <span class="experience-badge">
+                            <i data-lucide="award"></i> Tradição & Maestria
+                        </span>
+                    </div>
+                    <div class="experience-body">
+                        <span class="subtitle">PRAZER EM SERVIR</span>
+                        <h2 class="experience-title">Autenticidade em São Pelegrino</h2>
+                        <p class="experience-desc">Arte no corte do salmão fresco, textura inconfundível do shari artesanal e combinados exclusivos direto na sua mesa com delivery ágil e 0% taxas.</p>
+                        <div class="experience-footer">
+                            <div class="experience-price">
+                                <span class="price-label">Atendimento:</span>
+                                <div class="experience-meta-tag">Terça a Domingo • 18h30</div>
+                            </div>
+                            <a href="#cardapio" class="btn btn-primary" aria-label="Explorar o cardápio oficial">
+                                <i data-lucide="utensils"></i> Explorar o Cardápio
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -179,14 +184,20 @@
     <section class="reviews-section section">
         <div class="container">
             <div class="text-center" style="margin-bottom: 40px;">
-                <span class="subtitle" style="color: #FBBF24;">DEPOIMENTOS REAIS</span>
+                <span class="subtitle">DEPOIMENTOS REAIS</span>
                 <h2 class="title">O que dizem nossos clientes</h2>
                 <p class="section-desc">Mais de 1.240 clientes avaliaram nossa experiência gastronômica com nota média de 4,7 estrelas no Google.</p>
             </div>
 
             <div class="reviews-grid">
                 <div class="review-card">
-                    <div class="stars">★★★★★</div>
+                    <div class="stars">
+                        <i data-lucide="star" class="star-icon"></i>
+                        <i data-lucide="star" class="star-icon"></i>
+                        <i data-lucide="star" class="star-icon"></i>
+                        <i data-lucide="star" class="star-icon"></i>
+                        <i data-lucide="star" class="star-icon"></i>
+                    </div>
                     <p class="review-text">"O melhor sushi de Caxias do Sul sem dúvida! Peças sempre super frescas, o Combo Iosake tem um custo-benefício incrível e o salmão maçaricado derrete na boca."</p>
                     <div class="reviewer">
                         <div class="reviewer-avatar">RC</div>
@@ -197,7 +208,13 @@
                     </div>
                 </div>
                 <div class="review-card">
-                    <div class="stars">★★★★★</div>
+                    <div class="stars">
+                        <i data-lucide="star" class="star-icon"></i>
+                        <i data-lucide="star" class="star-icon"></i>
+                        <i data-lucide="star" class="star-icon"></i>
+                        <i data-lucide="star" class="star-icon"></i>
+                        <i data-lucide="star" class="star-icon"></i>
+                    </div>
                     <p class="review-text">"Delivery impecável! As peças chegam arrumadinhas, os hots bem crocantes e o poke de salmão com alho poró crispy é sensacional. Pedimos toda semana."</p>
                     <div class="reviewer">
                         <div class="reviewer-avatar">MS</div>
@@ -208,7 +225,13 @@
                     </div>
                 </div>
                 <div class="review-card">
-                    <div class="stars">★★★★★</div>
+                    <div class="stars">
+                        <i data-lucide="star" class="star-icon"></i>
+                        <i data-lucide="star" class="star-icon"></i>
+                        <i data-lucide="star" class="star-icon"></i>
+                        <i data-lucide="star" class="star-icon"></i>
+                        <i data-lucide="star" class="star-icon"></i>
+                    </div>
                     <p class="review-text">"Atendimento atencioso, festival de altíssimo padrão e entrega muito rápida. O sashimi selado trufado é de outro mundo!"</p>
                     <div class="reviewer">
                         <div class="reviewer-avatar">LF</div>

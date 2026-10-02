@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             loaded = true;
         } else {
             console.error('Nenhum dado de cardápio encontrado.');
-            showToast('⚠️ Não foi possível carregar o cardápio. Recarregue a página.');
+            showToast('Não foi possível carregar o cardápio. Recarregue a página.');
             return;
         }
     }
@@ -180,8 +180,8 @@ function openProductModal(itemId) {
     if (modalTags) {
         let tagsHtml = '';
         if (item.category_name) tagsHtml += `<span class="modal-tag">${esc(item.category_name)}</span>`;
-        if (item.pieces) tagsHtml += `<span class="modal-tag accent">🍣 ${esc(item.pieces)}</span>`;
-        if (item.serves) tagsHtml += `<span class="modal-tag">👥 ${esc(item.serves)}</span>`;
+        if (item.pieces) tagsHtml += `<span class="modal-tag accent">${esc(item.pieces)}</span>`;
+        if (item.serves) tagsHtml += `<span class="modal-tag">${esc(item.serves)}</span>`;
         modalTags.innerHTML = tagsHtml;
     }
 
@@ -264,7 +264,7 @@ function confirmModalAddToCart() {
     closeProductModal();
     updateCartUI();
     openCart();
-    showToast(`🍣 <strong>${addedQty}x ${esc(addedName)}</strong> adicionado ao pedido!`);
+    showToast(`<strong>${addedQty}x ${esc(addedName)}</strong> adicionado ao pedido!`);
 }
 window.confirmModalAddToCart = confirmModalAddToCart;
 
@@ -286,7 +286,7 @@ function addDirectToCart(itemId, e) {
         });
     }
     updateCartUI();
-    showToast(`⚡ <strong>1x ${esc(item.name)}</strong> adicionado ao carrinho!`);
+    showToast(`<strong>1x ${esc(item.name)}</strong> adicionado ao pedido!`);
 }
 window.addDirectToCart = addDirectToCart;
 
@@ -321,7 +321,7 @@ function clearCart() {
         clearArmed = true;
         if (headerBtn) headerBtn.style.color = '#EF4444';
         if (drawerBtn) drawerBtn.classList.add('armed');
-        showToast('⚠️ Clique novamente na lixeira para confirmar a limpeza do pedido.');
+        showToast('Clique novamente na lixeira para confirmar a limpeza do pedido.');
         clearTimer = setTimeout(() => {
             clearArmed = false;
             if (headerBtn) headerBtn.style.color = '';
@@ -335,7 +335,7 @@ function clearCart() {
     if (headerBtn) headerBtn.style.color = '';
     if (drawerBtn) drawerBtn.classList.remove('armed');
     updateCartUI();
-    showToast('🗑️ Pedido esvaziado.');
+    showToast('Pedido esvaziado.');
 }
 window.clearCart = clearCart;
 
@@ -466,7 +466,7 @@ function setupKeyboardListeners() {
 
 function checkoutWhatsApp() {
     if (cart.length === 0) {
-        showToast('⚠️ Seu pedido está vazio!');
+        showToast('Seu pedido está vazio!');
         return;
     }
 
@@ -501,11 +501,11 @@ function checkoutWhatsApp() {
 
     msg += `*${customerName}*\n`;
     if (fulfillmentType === 'delivery') {
-        msg += `📍 ${address}\n`;
+        msg += `Endereço: ${address}\n`;
     } else {
-        msg += `🏢 Retirada: Av. Júlio de Castilhos, 2970 - São Pelegrino\n`;
+        msg += `Retirada: Av. Júlio de Castilhos, 2970 - São Pelegrino\n`;
     }
-    msg += `💳 Pagamento em ${selectedPayment}\n\n`;
+    msg += `Pagamento: ${selectedPayment}\n\n`;
     msg += `_Enviado pelo canal oficial Ioshi Japanese Food_`;
 
     const encoded = encodeURIComponent(msg);
