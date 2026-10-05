@@ -315,136 +315,7 @@
         </section>
 
         <!-- ==========================================
-             SEÇÃO 3: SHOWROOM INTERATIVO (CASOS REAIS)
-        =========================================== -->
-        <section class="showroom-section" id="cases">
-            <div class="section-container">
-                <div class="section-header text-center">
-                    <div class="eyebrow-tag">PROVA DE CONVERSÃO & PERFORMANCE</div>
-                    <h2 class="section-title">Navegue e comprove a <span class="text-orange">fluidez na prática.</span></h2>
-                    <p class="section-description">
-                        Teste o que seu cliente vivencia: sem downloads de aplicativo, sem cadastros exaustivos. Escolha rápida, navegação limpa e fechamento em poucos toques.
-                    </p>
-                </div>
-
-                <!-- Abas de Nicho -->
-                <div class="case-tabs-wrapper">
-                    <div class="case-tabs" role="tablist" aria-label="Nicho de Demonstração">
-                        <button class="case-tab active" data-case="bebidas" role="tab" aria-selected="true">
-                            <span>🍷 Bebidas & Adega</span>
-                        </button>
-                        <button class="case-tab" data-case="delicatessen" role="tab" aria-selected="false">
-                            <span>🥐 Delicatessen & Pâtisserie</span>
-                        </button>
-                        <button class="case-tab" data-case="hamburgueria" role="tab" aria-selected="false">
-                            <span>🍔 Hamburgueria</span>
-                        </button>
-                        <button class="case-tab" data-case="pizzaria" role="tab" aria-selected="false">
-                            <span>🍕 Forneria & Pizzas</span>
-                        </button>
-                        <button class="case-tab" data-case="pastelaria" role="tab" aria-selected="false">
-                            <span>🥟 Pastelarias</span>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Container do Showroom Mobile-First -->
-                <div class="showroom-layout">
-                    <!-- Coluna Esquerda: Mockup Smartphone Interativo -->
-                    <div class="showroom-mockup-wrap">
-                        <div class="mockup-phone-view active" id="showcase-phone-container">
-                            <div class="phone-frame-mockup phone-frame-showcase">
-                                <div class="phone-glass-bezel">
-                                    <div class="phone-top-speaker"></div>
-                                    <div class="phone-browser-bar">
-                                        <span class="browser-secure-dot"></span>
-                                        <span class="browser-url" id="phone-case-url">adegabebidasexpress.com.br</span>
-                                        <span class="browser-speed-badge" id="phone-case-badge"><i data-lucide="shield-check" style="width:11px;height:11px;display:inline-block;vertical-align:middle;margin-right:3px;"></i> Canal Seguro • 0% Taxa</span>
-                                    </div>
-                                    <div class="phone-screenshot-viewport" id="phone-case-scroll-viewport">
-                                        <img src="assets/screenshots/montecristo_mobile.jpg"
-                                             alt="Screenshot do Cardápio Mobile"
-                                             id="img-case-mobile"
-                                             class="viewport-screenshot-img"
-                                             loading="lazy">
-                                        <div class="floating-scroll-hint">
-                                            <span>👇 Role para explorar o cardápio real</span>
-                                        </div>
-                                    </div>
-                                    <div class="phone-bottom-bar"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Coluna Direita: Métricas e Intel do Nicho -->
-                    <div class="showroom-intel-wrap">
-                        <div class="intel-card">
-                            <div class="intel-header">
-                                <span class="niche-badge" id="case-niche-badge">BEBIDAS & ADEGA EXPRESS</span>
-                                <span class="domain-tag" id="case-domain-tag">adegabebidasexpress.com.br</span>
-                            </div>
-
-                            <h3 class="intel-title" id="case-intel-title">Adega &amp; Conveniência Express</h3>
-                            <p class="intel-desc" id="case-intel-desc">
-                                Vitrine noturna em fundo escuro que destaca rótulos nobres e reposição de cervejas geladas. O cliente seleciona garrafa avulsa ou caixa fechada com desconto em 1 clique, sem modais lentos.
-                            </p>
-
-                            <!-- Pilares de Fluidez e Diferenciais de Interface por Operação -->
-                            <div class="showroom-experience-pillars" id="case-pillars-container">
-                                <div class="pillar-item">
-                                    <div class="pillar-icon"><i data-lucide="layout-grid"></i></div>
-                                    <div class="pillar-content">
-                                        <strong>Dark Mode &amp; Rótulos em Alta Resolução</strong>
-                                        <p>Fundo contrastante que valoriza garrafas de whisky, vinhos e destilados nobres com teor alcoólico, volume (mL/L) e preço unitário visíveis de imediato.</p>
-                                    </div>
-                                </div>
-                                <div class="pillar-item">
-                                    <div class="pillar-icon"><i data-lucide="layers"></i></div>
-                                    <div class="pillar-content">
-                                        <strong>Alternância Rápida: Garrafa vs. Caixa</strong>
-                                        <p>Seletor instantâneo no próprio produto entre compra avulsa ou pack de 6/12 unidades com valor por garrafa recalculado na hora.</p>
-                                    </div>
-                                </div>
-                                <div class="pillar-item">
-                                    <div class="pillar-icon"><i data-lucide="shopping-cart"></i></div>
-                                    <div class="pillar-content">
-                                        <strong>Adição em 1 Toque Direto na Vitrine</strong>
-                                        <p>Sem modais intermediários travando a rolagem: adiciona múltiplos itens ao pedido e finaliza com endereço no WhatsApp.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Destaques Rápidos da Operação -->
-                            <div class="showroom-quick-metrics">
-                                <div class="quick-metric-badge">
-                                    <span class="quick-metric-val text-orange" id="metric-speed">22s</span>
-                                    <span class="quick-metric-lbl">tempo médio de pedido</span>
-                                </div>
-                                <div class="quick-metric-badge">
-                                    <span class="quick-metric-val text-emerald">0%</span>
-                                    <span class="quick-metric-lbl">taxa de marketplace</span>
-                                </div>
-                                <div class="quick-metric-badge">
-                                    <span class="quick-metric-val text-gold">100%</span>
-                                    <span class="quick-metric-lbl">da margem no seu caixa</span>
-                                </div>
-                            </div>
-
-                            <div class="intel-cta-block">
-                                <a href="index.html" class="btn btn-primary btn-block">
-                                    <span>Navegar no Cardápio do Ioshi Sushi ➔</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- ==========================================
-             SEÇÃO 4: ANCORAGEM FINANCEIRA & SIMULADOR DE MARGEM (2 COLUNAS COMPACTAS)
+             SEÇÃO 3: ANCORAGEM FINANCEIRA & SIMULADOR DE MARGEM (2 COLUNAS COMPACTAS)
         =========================================== -->
         <section class="simulator-section" id="simulador">
             <div class="section-container">
@@ -647,29 +518,30 @@
                         </a>
                     </div>
 
-                    <!-- Card 2: Suporte & Manutenção Mensal -->
+                    <!-- Card 2: Hospedagem em Nuvem & Suporte (Infraestrutura Dedicada) -->
                     <div class="pricing-card">
+                        <span class="pricing-badge-top-inline" style="background: rgba(16, 185, 129, 0.15); color: #34D399; border: 1px solid rgba(16, 185, 129, 0.3); padding: 4px 10px; border-radius: 999px; font-size: 0.7rem; font-weight: 800; display: inline-block; margin-bottom: 12px; letter-spacing: 0.05em;">INFRAESTRUTURA DEDICADA</span>
                         <div>
-                            <h3 class="plan-name">Suporte &amp; Nuvem Contínua</h3>
-                            <p class="plan-desc">Garantia de cardápio sempre atualizado, alta disponibilidade e suporte direto com o desenvolvedor.</p>
+                            <h3 class="plan-name">Hospedagem em Nuvem &amp; Suporte</h3>
+                            <p class="plan-desc">Servidor de alta velocidade, segurança SSL, CDN global e suporte contínuo para manter seu canal próprio no ar 24h por dia.</p>
                             
                             <div class="plan-price-box">
                                 <div class="price-installment white">R$ 100<span style="font-size: 1.1rem; color: var(--text-muted); font-weight: 600;">/mês</span></div>
-                                <div class="price-subinfo">Sem fidelidade obrigatória • Cancele quando quiser</div>
+                                <div class="price-subinfo">Hospedagem em nuvem de alta performance • 0% de comissões por venda</div>
                             </div>
 
                             <ul class="plan-features-list emerald">
-                                <li><i data-lucide="check"></i> Hospedagem em nuvem de alta velocidade e SSL</li>
-                                <li><i data-lucide="check"></i> Atualizações de preços, novos combos e festivais sazonais</li>
-                                <li><i data-lucide="check"></i> Inclusão de novas fotos do cardápio</li>
-                                <li><i data-lucide="check"></i> Monitoramento contínuo de estabilidade</li>
-                                <li><i data-lucide="check"></i> Suporte prioritário via WhatsApp direto</li>
+                                <li><i data-lucide="check"></i> Hospedagem em nuvem de alta velocidade e certificado SSL HTTPS</li>
+                                <li><i data-lucide="check"></i> Manutenção contínua de itens, fotos e alterações de preços</li>
+                                <li><i data-lucide="check"></i> 0% de taxas e comissões sobre suas vendas (lucro 100% da casa)</li>
+                                <li><i data-lucide="check"></i> Monitoramento contínuo de estabilidade e segurança</li>
+                                <li><i data-lucide="check"></i> Suporte prioritário via WhatsApp direto com o desenvolvedor</li>
                             </ul>
                         </div>
 
-                        <a href="https://wa.me/5554996862169?text=Ol%C3%A1%20Jefferson!%20Gostei%20do%20Onira.fly%20e%20quero%20incluir%20o%20suporte%20mensal%20de%20R%24%20100!" target="_blank" rel="noopener noreferrer" class="btn-choose-plan secondary">
-                            <span>Incluir Suporte Mensal</span>
-                        </a>
+                        <div class="btn-choose-plan secondary" style="cursor: default; opacity: 0.95; text-align: center; background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.15);">
+                            <span>Infraestrutura Essencial do Canal</span>
+                        </div>
                     </div>
 
                     <!-- Card 3: Upsell Estratégico (Acelerador Google Meu Negócio & SEO Local) -->
@@ -902,7 +774,6 @@
                 <h4 class="footer-col-title">Navegação Rápida</h4>
                 <ul class="footer-menu">
                     <li><a href="#tese">Estratégia dos Canais</a></li>
-                    <li><a href="#cases">Casos Reais & Demonstrações</a></li>
                     <li><a href="#simulador">Benchmark & Simulador</a></li>
                     <li><a href="#investimento">Investimento & Planos</a></li>
                 </ul>
