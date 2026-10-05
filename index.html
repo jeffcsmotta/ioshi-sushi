@@ -51,7 +51,7 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <link rel="stylesheet" href="style.css?v=20261002-v3">
+    <link rel="stylesheet" href="style.css?v=20261002-v4">
 </head>
 <body>
 
@@ -448,7 +448,25 @@
         </div>
     </aside>
 
-    <script src="data.js?v=20261002-v3"></script>
-    <script src="app.js?v=20261002-v3"></script>
+    <!-- FLOATING ONIRA PROPOSAL WIDGET (RETRÁTIL & TRANSPARENTE AO SCROLL - AZUL OFICIAL ONIRA) -->
+    <div class="onira-cta" id="onira-cta">
+        <a class="onira-cta-link" href="proposta.html" rel="nofollow" title="Saiba como funciona meu trabalho">
+            <img src="assets/jeff-avatar.webp" alt="Jefferson Motta, Onira Labs" class="onira-cta-avatar" width="40" height="40" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80';">
+            <span class="onira-cta-text">
+                <span class="onira-cta-hook">Gostou do site?</span>
+                <span class="onira-cta-call">Saiba como funciona meu trabalho →</span>
+            </span>
+        </a>
+        <button type="button" class="onira-cta-close" id="onira-cta-close" aria-label="Recolher convite" title="Recolher">
+            <i data-lucide="chevron-right"></i>
+        </button>
+        <a class="onira-cta-collapsed-pill" href="proposta.html" id="onira-cta-collapsed" aria-label="Ver Proposta">
+            <i data-lucide="sparkles"></i>
+            <span>Compre esse site</span>
+        </a>
+    </div>
+
+    <script src="data.js?v=20261002-v4"></script>
+    <script src="app.js?v=20261002-v4"></script>
 </body>
 </html>

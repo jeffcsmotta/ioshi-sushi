@@ -569,3 +569,34 @@ window.applyPillTheme = function(theme, btnEl, index) {
         }
     });
 };
+
+/* ---------- Floating Proposal Widget (.onira-cta) ---------- */
+function setupOniraCta() {
+    const cta = document.getElementById('onira-cta');
+    const fechar = document.getElementById('onira-cta-close');
+    if (!cta) return;
+
+    if (fechar) {
+        fechar.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            cta.classList.toggle('collapsed');
+        });
+    }
+
+    let isScrolling;
+    window.addEventListener('scroll', () => {
+        cta.classList.add('scrolling');
+        clearTimeout(isScrolling);
+        isScrolling = setTimeout(() => {
+            cta.classList.remove('scrolling');
+        }, 180);
+    }, { passive: true });
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupOniraCta);
+} else {
+    setupOniraCta();
+}
+

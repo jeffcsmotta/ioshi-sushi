@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+  <defs>
+    <style>
+      .star-fill { fill: #FFC700; }
+    </style>
+  </defs>
+  <!-- Sparkle 1 (Large Top Right) -->
+  <path class="star-fill" d="M 500,20 C 510,250 630,370 860,380 C 630,390 510,510 500,740 C 490,510 370,390 140,380 C 370,370 490,250 500,20 Z" />
+  <!-- Sparkle 2 (Smaller Bottom Left) -->
+  <path class="star-fill" d="M 280,560 C 286,690 350,754 480,760 C 350,766 286,830 280,960 C 274,830 210,766 80,760 C 210,754 274,690 280,560 Z" />
+</svg>

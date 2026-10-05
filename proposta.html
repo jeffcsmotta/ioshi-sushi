@@ -1,427 +1,966 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Onira.fly para Ioshi Japanese Food — Canal Próprio 0% Comissão</title>
-    <meta name="description" content="Proposta comercial Onira.fly para Ioshi Japanese Food: canal digital proprietário de alta conversão, 0% de comissão por pedido e soberania da base de clientes em Caxias do Sul - RS.">
-    <meta name="theme-color" content="#08080A">
-    <link rel="icon" type="image/png" href="assets/logo_official.png">
+    <title>Onira.fly para Ioshi Japanese Food — Seu Primeiro Canal Próprio sem Taxas</title>
+    <meta name="description"
+        content="Infraestrutura de canal próprio digital para o Ioshi Japanese Food em Caxias do Sul. Soberania da carteira de clientes, 0% de comissão por pedido e integração direta no WhatsApp oficial.">
+    <meta name="keywords"
+        content="cardápio digital, ioshi sushi, canal próprio restaurante, delivery sushi caxias do sul, delivery sem taxa, fidelização gastronomia, pedidos whatsapp, onira fly, onirafly, onira labs, soberania operacional, cac delivery">
+
+    <!-- Open Graph / Meta Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Onira.fly para Ioshi Japanese Food — Seu Primeiro Canal Próprio sem Taxas">
+    <meta property="og:description"
+        content="Soberania de carteira para o Ioshi Japanese Food: cardápio interativo ultra-veloz, checkout direto no WhatsApp e zero comissão por pedido em Caxias do Sul.">
+    <meta property="og:image" content="assets/onirafly_branco_tag.png">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="theme-color" content="#0A0A0A">
+
+    <!-- Favicon: Brilhos Oficiais Onira.fly -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon-sparkles.svg">
+
+    <!-- Google Fonts: Plus Jakarta Sans (Headings), Inter (Body), JetBrains Mono (Badges) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        :root {
-            --accent: #F37437;
-            --accent-hover: #FF854D;
-            --accent-glow: rgba(243, 116, 55, 0.28);
-            --accent-soft: rgba(243, 116, 55, 0.10);
 
-            --bg: #07070A;
-            --surface: #111116;
-            --surface-glass: rgba(17, 17, 22, 0.78);
-            --surface-2: #16161D;
+    <!-- Stylesheet Master Onira.fly -->
+    <link rel="stylesheet" href="onirafly.css?v=3.6">
 
-            --text: #FFF9F2;
-            --text-secondary: #EBE3D8;
-            --muted: #A89E93;
-            --dim: #71717A;
-
-            --green: #34D399;
-            --red: #EF4444;
-            --radius: 10px;
-
-            --font-h: 'Outfit', sans-serif;
-            --font-b: 'Plus Jakarta Sans', sans-serif;
-            --font-m: 'JetBrains Mono', monospace;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-        html { scroll-behavior: smooth; }
-        body { 
-            background: var(--bg); 
-            background-image: 
-                radial-gradient(circle at 20% 15%, var(--accent-soft) 0%, transparent 45%),
-                radial-gradient(circle at 80% 65%, rgba(255, 255, 255, 0.02) 0%, transparent 40%);
-            background-attachment: fixed;
-            color: var(--text-secondary); 
-            font-family: var(--font-b); 
-            line-height: 1.6; 
-            overflow-x: hidden; 
-        }
-        .wrap { width: 100%; max-width: 1160px; margin: 0 auto; padding: 0 24px; }
-        section { padding: clamp(56px, 7vw, 96px) 0; scroll-margin-top: 80px; }
-        
-        .eyebrow { 
-            display: inline-block; 
-            font-family: var(--font-m); 
-            font-size: 0.75rem; 
-            font-weight: 700; 
-            letter-spacing: 0.08em; 
-            color: var(--accent); 
-            background: var(--accent-soft); 
-            padding: 6px 14px; 
-            border-radius: 999px; 
-            margin-bottom: 14px; 
-            border: 1px solid var(--accent-glow); 
-        }
-        h1, h2, h3 { color: var(--text); font-family: var(--font-h); line-height: 1.2; }
-        .hero-title { font-size: clamp(2.1rem, 5.2vw, 3.8rem); font-weight: 800; letter-spacing: -0.02em; margin-bottom: 20px; }
-        .hero-lead { font-size: clamp(1.05rem, 2vw, 1.25rem); color: var(--muted); max-width: 680px; margin-bottom: 32px; }
-
-        .btn { 
-            display: inline-flex; 
-            align-items: center; 
-            gap: 10px; 
-            padding: 14px 28px; 
-            border-radius: 10px; 
-            font-weight: 700; 
-            font-size: 0.95rem; 
-            text-decoration: none; 
-            transition: all 0.2s ease; 
-            cursor: pointer; 
-            border: none; 
-        }
-        .btn-accent { 
-            background: var(--accent); 
-            color: #FFFFFF; 
-            box-shadow: 0 4px 20px var(--accent-glow); 
-        }
-        .btn-accent:hover { 
-            background: var(--accent-hover); 
-            transform: translateY(-2px); 
-            box-shadow: 0 6px 25px var(--accent-glow); 
-        }
-
-        .site-header { 
-            position: sticky; 
-            top: 0; 
-            z-index: 100; 
-            background: rgba(8, 8, 10, 0.85); 
-            backdrop-filter: blur(16px); 
-            border-bottom: 1px solid rgba(255,255,255,0.06); 
-            padding: 16px 0; 
-        }
-        .nav { display: flex; align-items: center; justify-content: space-between; }
-        .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; font-size: 1.15rem; color: #FFFFFF; text-decoration: none; }
-        .brand img { width: 34px; height: 34px; border-radius: 8px; object-fit: contain; }
-
-        /* Proof Grid */
-        .proof-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 48px; }
-        .proof { 
-            background: var(--surface-glass); 
-            backdrop-filter: blur(14px);
-            border: 1px solid rgba(255,255,255,0.08); 
-            border-radius: var(--radius); 
-            padding: 22px; 
-        }
-        .proof b { display: block; font-family: var(--font-h); font-size: 1.6rem; color: var(--accent); }
-        .proof span { font-size: 0.82rem; color: var(--muted); }
-
-        /* Canais */
-        .channels { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 36px; }
-        .channel { 
-            background: var(--surface-glass); 
-            backdrop-filter: blur(14px);
-            border: 1px solid rgba(255,255,255,0.08); 
-            border-radius: var(--radius); 
-            padding: 28px 24px; 
-            transition: transform 0.2s ease;
-        }
-        .channel:hover { transform: translateY(-3px); }
-        .channel.own { 
-            border-color: var(--accent); 
-            background: radial-gradient(circle at top right, var(--accent-soft) 0%, var(--surface) 75%); 
-            box-shadow: 0 8px 30px rgba(0,0,0,0.4), 0 0 25px var(--accent-soft);
-        }
-        .channel .tag { font-family: var(--font-m); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em; color: var(--muted); }
-        .channel.own .tag { color: var(--accent); }
-        .channel h3 { font-size: 1.25rem; margin: 8px 0 6px; }
-        .channel .rate { font-family: var(--font-h); font-weight: 800; font-size: 1.05rem; margin: 12px 0; padding: 10px 14px; border-radius: 10px; background: rgba(0,0,0,0.45); }
-        .channel .rate.bad { color: var(--red); }
-        .channel .rate.good { color: var(--green); }
-        .channel p { color: var(--muted); font-size: 0.92rem; }
-
-        /* Simulador */
-        .sim-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 36px; align-items: start; }
-        .sim-card { 
-            background: var(--surface-glass); 
-            backdrop-filter: blur(14px);
-            border: 1px solid rgba(255,255,255,0.08); 
-            border-radius: var(--radius); 
-            padding: 32px 28px; 
-        }
-        .sim-card.result { 
-            border-color: rgba(52, 211, 153, 0.4); 
-            background: linear-gradient(160deg, rgba(52, 211, 153, 0.1) 0%, var(--surface) 60%); 
-            text-align: center; 
-        }
-        .sim-field { margin-bottom: 26px; }
-        .sim-field label { display: flex; justify-content: space-between; font-weight: 700; font-size: 0.92rem; margin-bottom: 10px; }
-        .sim-field label output { color: var(--accent); font-family: var(--font-h); font-size: 1.05rem; }
-        input[type="range"] { width: 100%; accent-color: var(--accent); height: 32px; cursor: pointer; }
-        .res-month { font-family: var(--font-h); font-size: clamp(2rem, 5vw, 2.8rem); font-weight: 900; color: var(--green); }
-        .res-annual { font-family: var(--font-h); font-size: 1.3rem; font-weight: 800; color: var(--accent); margin-top: 6px; }
-        .res-note { font-size: 0.82rem; color: var(--muted); margin: 14px 0 22px; }
-
-        /* Pricing */
-        .pricing-deck { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 36px; }
-        .price-card { 
-            background: var(--surface-glass); 
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(255,255,255,0.08); 
-            border-radius: var(--radius); 
-            padding: 32px 24px; 
-            display: flex; 
-            flex-direction: column; 
-            position: relative;
-            transition: transform 0.25s ease, border-color 0.25s ease;
-        }
-        .price-card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,0.2); }
-        .price-card.featured { 
-            border-color: var(--accent); 
-            background: radial-gradient(circle at top right, var(--accent-soft) 0%, var(--surface) 75%); 
-            box-shadow: 0 12px 36px rgba(0,0,0,0.6), 0 0 30px var(--accent-soft);
-        }
-        .price-card h3 { font-size: 1.25rem; margin-bottom: 6px; }
-        .price-card .pdesc { color: var(--muted); font-size: 0.88rem; margin-bottom: 18px; min-height: 40px; }
-        .price-big { font-family: var(--font-h); font-size: 1.85rem; font-weight: 900; color: var(--accent); }
-        .price-sub { color: var(--dim); font-size: 0.82rem; margin-bottom: 20px; }
-        .feat { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 26px; flex: 1; }
-        .feat li { display: flex; gap: 10px; align-items: flex-start; font-size: 0.88rem; color: #E4E4E7; }
-        .feat li i { width: 16px; height: 16px; color: var(--green); flex-shrink: 0; margin-top: 3px; }
-
-        /* CTA final */
-        .final { text-align: center; background: radial-gradient(circle at center, var(--accent-soft) 0%, transparent 65%); border-top: 1px solid rgba(255,255,255,0.07); }
-        .final h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; margin-bottom: 14px; }
-        .final p { color: var(--muted); max-width: 620px; margin: 0 auto 30px; }
-        footer { border-top: 1px solid rgba(255,255,255,0.07); padding: 26px 0; color: var(--dim); font-size: 0.84rem; text-align: center; }
-        footer a { color: var(--accent); text-decoration: none; font-weight: 700; }
-
-        @media (max-width: 960px) {
-            .pricing-deck { grid-template-columns: 1fr; }
-            .proof-strip { grid-template-columns: repeat(2, 1fr); }
-            .channels, .sim-grid { grid-template-columns: 1fr; }
-        }
-    </style>
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Onira.fly",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "1800",
+        "priceCurrency": "BRL"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "Onira Labs",
+        "url": "https://oniralabs.framer.website"
+      },
+      "description": "Infraestrutura de canal próprio digital para gastronomia e fidelização de carteira com 0% de comissão e integração direta no WhatsApp."
+    }
+    </script>
 </head>
-<body>
 
-    <header class="site-header">
-        <div class="wrap nav">
-            <a href="index.html" class="brand">
-                <img src="assets/logo_official.png" alt="Ioshi Japanese Food">
-                <span>Ioshi Japanese Food</span>
+<body>
+    <!-- Background Ambient Glows com Container de Contenção Estrita -->
+    <div class="ambient-glow-wrapper" aria-hidden="true">
+        <div class="ambient-glow glow-yellow-top"></div>
+        <div class="ambient-glow glow-amber-center"></div>
+    </div>
+
+    <!-- ==========================================
+         NAVIGATION HEADER
+    =========================================== -->
+    <header class="site-header" id="top">
+        <div class="nav-container">
+            <a href="#top" class="brand-logo" aria-label="Onira.fly Início">
+                <img src="assets/onirafly_branco.svg" alt="Onira.fly" class="brand-logo-img">
+                <span class="status-badge-header">0% COMISSÃO</span>
             </a>
-            <a href="#investimento" class="btn btn-accent" style="padding: 9px 18px; font-size: 0.85rem;">
-                Ver Investimento
-            </a>
+
+            <div class="header-center-tagline">
+                <span>Ioshi Japanese Food • Canal Próprio Oficial 0% Taxa</span>
+            </div>
+
+            <div class="nav-actions">
+                <a href="index.html" class="btn btn-primary btn-header" aria-label="Ver Demonstração">
+                    <i data-lucide="eye" class="btn-icon"></i>
+                    <span>Ver Cardápio Demonstração</span>
+                </a>
+            </div>
         </div>
     </header>
 
-    <!-- Hero -->
-    <section id="hero" class="hero section">
-        <div class="wrap">
-            <span class="eyebrow">ESTRATÉGIA ONIRA.FLY • Caxias do Sul - RS</span>
-            <h1 class="hero-title">Recupere até 27% da sua margem com seu canal próprio.</h1>
-            <p class="hero-lead">Desenvolvemos o canal digital proprietário do Ioshi Japanese Food: cardápio interativo ultra-veloz, checkout direto no WhatsApp e zero comissão por pedido.</p>
-            <div style="display: flex; gap: 14px; flex-wrap: wrap;">
-                <a href="index.html" target="_blank" class="btn btn-accent">
-                    <i data-lucide="eye"></i> Testar Cardápio Protótipo
-                </a>
-                <a href="#simulador" class="btn" style="background: var(--surface-2); color: #fff;">
-                    <i data-lucide="calculator"></i> Simular Economia
-                </a>
-            </div>
-
-            <div class="proof-strip">
-                <div class="proof">
-                    <b>0%</b>
-                    <span>Comissão por pedido</span>
-                </div>
-                <div class="proof">
-                    <b>100%</b>
-                    <span>Controle dos dados dos clientes</span>
-                </div>
-                <div class="proof">
-                    <b>&lt; 1s</b>
-                    <span>Carregamento mobile no 4G</span>
-                </div>
-                <div class="proof">
-                    <b>WhatsApp</b>
-                    <span>Checkout direto sem intermediários</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Comparativo -->
-    <section id="comparativo" class="section" style="background: rgba(0,0,0,0.2);">
-        <div class="wrap">
-            <span class="eyebrow">COMPARATIVO DE CANAIS</span>
-            <h2>Por que depender apenas de marketplaces corrói seu lucro</h2>
-            <div class="channels">
-                <div class="channel">
-                    <span class="tag">MARKETPLACES (IFOOD)</span>
-                    <h3>Intermediadores</h3>
-                    <div class="rate bad">12% a 27% de taxa</div>
-                    <p>O cliente é da plataforma. Você não tem acesso a WhatsApp nem e-mail para campanhas diretas de fidelização.</p>
-                </div>
-                <div class="channel">
-                    <span class="tag">WHATSAPP TRADICIONAL</span>
-                    <h3>PDF Estático / Imagem</h3>
-                    <div class="rate bad">Fricção de Pedido</div>
-                    <p>Cardápio pesado, cliente precisa digitar o pedido inteiro, atendente gasta tempo calculando taxa de entrega e troco.</p>
-                </div>
-                <div class="channel own">
-                    <span class="tag">ONIRA.FLY (SEU CANAL)</span>
-                    <h3>Canal Próprio Direto</h3>
-                    <div class="rate good">0% de comissão</div>
-                    <p>Cardápio visual, rápido, carrinho interativo que envia o pedido pronto e formatado para o seu WhatsApp oficial.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Simulador -->
-    <section id="simulador" class="section">
-        <div class="wrap">
-            <span class="eyebrow">CALCULADORA DE RETORNO</span>
-            <h2>Veja o impacto da migração de pedidos</h2>
-            <div class="sim-grid">
-                <div class="sim-card">
-                    <div class="sim-field">
-                        <label>Faturamento Mensal Estimado: <output id="lbl-faturamento">R$ 50.000</output></label>
-                        <input type="range" id="rng-faturamento" min="15000" max="200000" step="5000" value="50000">
+    <main>
+        <!-- ==========================================
+             SEÇÃO 1: HERO & TOPO (O CAMINHO NATURAL DE TODO DELIVERY)
+        =========================================== -->
+        <section class="hero-section" id="hero">
+            <div class="hero-bg-overlay" aria-hidden="true"></div>
+            <div class="section-container hero-layout">
+                <!-- Coluna Esquerda: Textos & Conversão -->
+                <div class="hero-content">
+                    <div class="eyebrow-pill">
+                        <span class="pulse-dot"></span>
+                        <span>OPERAÇÃO INTEGRADA & CANAL PRÓPRIO</span>
                     </div>
-                    <div class="sim-field">
-                        <label>% de Pedidos Migrados para Canal Próprio: <output id="lbl-migracao">30%</output></label>
-                        <input type="range" id="rng-migracao" min="10" max="80" step="5" value="30">
-                    </div>
-                    <div class="sim-field">
-                        <label>Taxa Média do Marketplace: <output id="lbl-taxa">18%</output></label>
-                        <input type="range" id="rng-taxa" min="12" max="27" step="1" value="18">
+
+                    <h1 class="hero-headline">
+                        O caminho natural de <span class="text-orange">todo delivery japonês.</span>
+                    </h1>
+
+                    <p class="hero-subheadline">
+                        Seu canal próprio funcionando de forma simultânea com a estrutura que o Ioshi já tem. O iFood traz cliente novo; o canal próprio fideliza e tem <strong>taxa zero</strong>. O Onira.fly usa a mesma operação que você já roda hoje para os marketplaces, entregando os combinados e sushis montados pelo seu <code>www.ioshijapanese.com.br</code> direto na mão do seu atendente.
+                    </p>
+
+                    <div class="hero-cta-group">
+                        <a href="index.html" class="btn btn-primary btn-xl">
+                            <span>Ver Demonstração do Ioshi Sushi ➔</span>
+                        </a>
+                        <a href="#simulador" class="btn btn-secondary btn-xl">
+                            <i data-lucide="calculator" class="btn-icon"></i>
+                            <span>Simular Economia da Minha Carteira</span>
+                        </a>
                     </div>
                 </div>
-                <div class="sim-card result">
-                    <span class="eyebrow" style="background: rgba(52,211,153,0.15); color: var(--green); border-color: rgba(52,211,153,0.3);">ECONOMIA PRESERVADA</span>
-                    <div class="res-month" id="res-mes">R$ 2.700</div>
-                    <div class="res-annual" id="res-ano">R$ 32.400 / ano</div>
-                    <p class="res-note">Recursos que voltam diretamente para o caixa do Ioshi Japanese Food.</p>
+
+                <!-- Coluna Direita: Mockup Flutuante com Scroll Real & Ticker Automático -->
+                <div class="hero-visual">
+                    <div class="phone-frame-mockup">
+                        <div class="phone-glass-bezel">
+                            <div class="phone-top-speaker"></div>
+                            
+                            <!-- Barra de endereço do navegador móvel Oficial Ioshi -->
+                            <div class="phone-browser-bar">
+                                <span class="browser-secure-dot"></span>
+                                <span class="browser-url" id="hero-browser-url">ioshijapanese.com.br</span>
+                                <span class="browser-speed-badge" id="hero-ticker-badge"><i data-lucide="lock" style="width:11px;height:11px;display:inline-block;vertical-align:middle;margin-right:3px;"></i> Oficial • 0% Taxa</span>
+                            </div>
+
+                            <!-- Viewport da tela real desenhada com scroll interno nativo -->
+                            <div class="phone-screen-viewport phone-screenshot-viewport" id="hero-phone-scroll-viewport">
+                                <img src="assets/tabua.webp" 
+                                     alt="Canal Próprio Oficial Ioshi Japanese Food" 
+                                     class="viewport-screenshot-img hero-ticker-img" 
+                                     id="hero-phone-case-img"
+                                     style="object-fit: cover; width: 100%; height: 100%;"
+                                     loading="eager" />
+                            </div>
+
+                            <div class="phone-bottom-bar"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Investimento -->
-    <section id="investimento" class="section">
-        <div class="wrap">
-            <span class="eyebrow">INVESTIMENTO & PLANOS</span>
-            <h2>Proposta transparente sem surpresas</h2>
-            <div class="pricing-deck">
-                <div class="price-card">
-                    <h3>1. Setup & Ativação</h3>
-                    <p class="pdesc">Implantação completa da ferramenta com catálogo inicial e identidade visual.</p>
-                    <div class="price-big">R$ 1.800,00</div>
-                    <div class="price-sub">À vista no Pix ou 3x de R$ 800,00</div>
-                    <ul class="feat">
-                        <li><i data-lucide="check"></i> Cadastramento de produtos e fotos</li>
-                        <li><i data-lucide="check"></i> Otimização mobile e carregamento ultrarrápido</li>
-                        <li><i data-lucide="check"></i> Configuração de checkout no WhatsApp oficial</li>
-                        <li><i data-lucide="check"></i> QR Code para mesas e embalagens</li>
-                    </ul>
-                </div>
-                <div class="price-card featured">
-                    <span class="eyebrow" style="position: absolute; top: -14px; right: 24px;">RECOMENDADO</span>
-                    <h3>2. Manutenção & Nuvem</h3>
-                    <p class="pdesc">Infraestrutura em nuvem contínua, suporte e alterações de cardápio.</p>
-                    <div class="price-big">R$ 100,00<span style="font-size: 1rem; font-weight: 500;">/mês</span></div>
-                    <div class="price-sub">Sem taxa de cancelamento</div>
-                    <ul class="feat">
-                        <li><i data-lucide="check"></i> Hospedagem de alta velocidade com SSL</li>
-                        <li><i data-lucide="check"></i> Suporte contínuo para atualização de preços e pratos</li>
-                        <li><i data-lucide="check"></i> 0% de comissão sobre suas vendas</li>
-                        <li><i data-lucide="check"></i> Backups e estabilidade garantida</li>
-                    </ul>
-                </div>
-                <div class="price-card">
-                    <h3>3. Upsell: Google & Tráfego</h3>
-                    <p class="pdesc">Para estabelecimentos que desejam atrair novos clientes na região.</p>
-                    <div class="price-big">+ R$ 100<span style="font-size: 1rem; font-weight: 500;">/mês</span></div>
-                    <div class="price-sub">Módulo opcional de expansão</div>
-                    <ul class="feat">
-                        <li><i data-lucide="check"></i> Otimização do Perfil Google Empresas</li>
-                        <li><i data-lucide="check"></i> Gestão de campanhas Google Search locais</li>
-                        <li><i data-lucide="check"></i> Relatório mensal de pedidos e conversões</li>
-                    </ul>
+            <!-- OS 4 CARDS DE ALÍVIO OPERACIONAL -->
+            <div class="hero-transition-strip micrometrics-strip">
+                <div class="section-container micrometrics-grid">
+                    <div class="micrometric-card">
+                        <div class="micrometric-header">
+                            <div class="micrometric-icon-wrap">
+                                <i data-lucide="percent" class="micrometric-icon"></i>
+                            </div>
+                            <span class="micrometric-title">Margem 100% sua</span>
+                        </div>
+                        <p class="micrometric-desc">O cliente que te compra toda semana não tem que pagar taxa pro iFood. O lucro fica com quem cozinha.</p>
+                    </div>
+
+                    <div class="micrometric-card">
+                        <div class="micrometric-header">
+                            <div class="micrometric-icon-wrap">
+                                <i data-lucide="layers" class="micrometric-icon"></i>
+                            </div>
+                            <span class="micrometric-title">Zero Mudança no Balcão</span>
+                        </div>
+                        <p class="micrometric-desc">Não mudamos nada para trás do sushibar: montagem, embalagem e expedição seguem no mesmo ritmo.</p>
+                    </div>
+
+                    <div class="micrometric-card">
+                        <div class="micrometric-header">
+                            <div class="micrometric-icon-wrap">
+                                <i data-lucide="shield-check" class="micrometric-icon"></i>
+                            </div>
+                            <span class="micrometric-title">Tecnologia invisível</span>
+                        </div>
+                        <p class="micrometric-desc">Sem login e sem aplicativo pro seu cliente baixar. Abre em menos de 1 segundo no celular e fecha o pedido em 2 toques.</p>
+                    </div>
+
+                    <div class="micrometric-card">
+                        <div class="micrometric-header">
+                            <div class="micrometric-icon-wrap">
+                                <i data-lucide="send" class="micrometric-icon"></i>
+                            </div>
+                            <span class="micrometric-title">Despacho Pronto</span>
+                        </div>
+                        <p class="micrometric-desc">Comanda formatada pronta pro seu WhatsApp e impressora, com endereço completo, observações e forma de pagamento.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CTA Final -->
-    <section id="fechamento" class="final section">
-        <div class="wrap">
-            <span class="eyebrow">VAMOS COMEÇAR?</span>
-            <h2>Seu canal próprio no ar em tempo recorde</h2>
-            <p>O protótipo com os produtos do Ioshi Japanese Food já está estruturado e pronto para rodar. Ative agora a sua ferramenta de soberania digital.</p>
-            <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
-                <a href="https://wa.me/5554996862169?text=Ol%C3%A1%20Jefferson!%20Vi%20a%20proposta%20do%20Onira.fly%20para%20o%20Ioshi%20Japanese%20Food%20e%20quero%20avançar!" target="_blank" rel="noopener" class="btn btn-accent btn-aceitar">
-                    <i data-lucide="message-circle"></i> Falar com o Estrategista Onira
+        <!-- ==========================================
+             SEÇÃO 2: A TESE CENTRAL (ARQUITETURA INTEGRADA DE CANAIS)
+        =========================================== -->
+        <section class="thesis-section" id="tese">
+            <!-- FAIXA DA TESE FULL-WIDTH EM BAIXO-RELEVO (INNER SHADOW & SEM CONTORNO) -->
+            <div class="thesis-fullwidth-recessed">
+                <div class="section-container">
+                    <div class="thesis-opening-statement">
+                        <h2 class="thesis-opening-text spell-blur-reveal" id="thesis-blur-reveal">
+                            O delivery maduro não declara guerra às plataformas, <span class="text-orange">ele entende a função de cada canal.</span>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-container">
+                <!-- ECOSSISTEMA DE 3 CANAIS DE PEDIDO: BALCÃO, IFOOD E SITE PRÓPRIO -->
+                <div class="channels-ecosystem-card">
+                    <div class="ecosystem-header-strip">
+                        <span class="ecosystem-badge">ARQUITETURA DE CANAIS INTEGRADOS</span>
+                        <h3 class="ecosystem-title">Como os pedidos entram: O papel de cada canal e o caminho da rentabilidade.</h3>
+                    </div>
+
+                    <!-- OS 3 CANAIS DE ENTRADA -->
+                    <div class="ecosystem-channels-grid">
+                        <!-- Canal 1: Balcão & Presencial -->
+                        <div class="channel-col channel-col-counter">
+                            <div class="channel-header">
+                                <div class="channel-icon-badge">
+                                    <i data-lucide="store"></i>
+                                </div>
+                                <div class="channel-title-group">
+                                    <span class="channel-tag">CANAL 1</span>
+                                    <h4 class="channel-name">Balcão & Presencial</h4>
+                                </div>
+                            </div>
+                            <div class="channel-stat-badge stat-emerald">
+                                <span class="stat-main">100% Margem</span>
+                                <span class="stat-sub">Fluxo de São Pelegrino</span>
+                            </div>
+                            <div class="channel-role-box">
+                                <span class="role-label">Papel Estratégico:</span>
+                                <p class="role-desc">Atender quem consome no salão, clientes da Av. Júlio de Castilhos e retiradas presenciais no balcão.</p>
+                            </div>
+                            <div class="channel-contrib-pill">
+                                <i data-lucide="check-circle-2"></i>
+                                <span>Margem pura e vínculo direto com o bairro</span>
+                            </div>
+                        </div>
+
+                        <!-- Canal 2: iFood & Marketplaces (Investimento em Mídia) -->
+                        <div class="channel-col channel-col-marketplace">
+                            <div class="channel-header">
+                                <div class="channel-icon-badge icon-orange">
+                                    <i data-lucide="shopping-bag"></i>
+                                </div>
+                                <div class="channel-title-group">
+                                    <span class="channel-tag">CANAL 2</span>
+                                    <h4 class="channel-name">iFood & Apps</h4>
+                                </div>
+                            </div>
+                            <div class="channel-stat-badge stat-amber">
+                                <span class="stat-main">~27% Médio</span>
+                                <span class="stat-sub">Taxa de Marketplace • CAC de Aquisição</span>
+                            </div>
+                            <div class="channel-role-box">
+                                <span class="role-label">Papel Estratégico:</span>
+                                <p class="role-desc">Estar visível na vitrine mais ativa da cidade. A taxa média de 27% deve ser tratada como investimento em mídia (CAC) para captar clientes que ainda não conhecem sua marca.</p>
+                            </div>
+                            <div class="channel-contrib-pill">
+                                <i data-lucide="sparkles"></i>
+                                <span>Captação contínua e fluxo de novos clientes</span>
+                            </div>
+                        </div>
+
+                        <!-- Canal 3: Site Próprio Onira.fly -->
+                        <div class="channel-col channel-col-own">
+                            <div class="channel-header">
+                                <div class="channel-icon-badge icon-gold">
+                                    <i data-lucide="globe"></i>
+                                </div>
+                                <div class="channel-title-group">
+                                    <span class="channel-tag tag-gold">CANAL 3 • ONIRA.FLY</span>
+                                    <h4 class="channel-name">Site Próprio Oficial</h4>
+                                </div>
+                            </div>
+                            <div class="channel-stat-badge stat-gold">
+                                <span class="stat-main">100% Margem</span>
+                                <span class="stat-sub">Taxa Zero • 0% Comissão</span>
+                            </div>
+                            <div class="channel-role-box">
+                                <span class="role-label">Papel Estratégico:</span>
+                                <p class="role-desc">Reter e fidelizar os clientes que já conhecem a qualidade do Ioshi e compram toda semana, retendo 100% da margem limpa no seu caixa.</p>
+                            </div>
+                            <div class="channel-contrib-pill">
+                                <i data-lucide="shield-check"></i>
+                                <span>Margem 100% sua + CRM no seu bolso</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD EXECUTIVO JEFFERSON MOTTA (PADRÃO NAVY COM FRASE ANTES E AUTOR À DIREITA) -->
+                <div class="white-glove-executive-card">
+                    <p class="white-glove-phrase">
+                        Você fala direto comigo, você não mexe em plataforma alguma. Eu entrego o canal próprio rodando redondo na mão do teu time.
+                    </p>
+                    <div class="white-glove-author-right">
+                        <img src="assets/jeff-avatar.webp" alt="Jefferson Motta" class="white-glove-avatar" width="56" height="56" loading="lazy">
+                        <div class="white-glove-author-meta">
+                            <span class="white-glove-author-name">Jefferson Motta</span>
+                            <span class="white-glove-author-role">Especialista em negócios digitais</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SEÇÃO 3: SHOWROOM INTERATIVO (CASOS REAIS)
+        =========================================== -->
+        <section class="showroom-section" id="cases">
+            <div class="section-container">
+                <div class="section-header text-center">
+                    <div class="eyebrow-tag">PROVA DE CONVERSÃO & PERFORMANCE</div>
+                    <h2 class="section-title">Navegue e comprove a <span class="text-orange">fluidez na prática.</span></h2>
+                    <p class="section-description">
+                        Teste o que seu cliente vivencia: sem downloads de aplicativo, sem cadastros exaustivos. Escolha rápida, navegação limpa e fechamento em poucos toques.
+                    </p>
+                </div>
+
+                <!-- Abas de Nicho -->
+                <div class="case-tabs-wrapper">
+                    <div class="case-tabs" role="tablist" aria-label="Nicho de Demonstração">
+                        <button class="case-tab active" data-case="bebidas" role="tab" aria-selected="true">
+                            <span>🍷 Bebidas & Adega</span>
+                        </button>
+                        <button class="case-tab" data-case="delicatessen" role="tab" aria-selected="false">
+                            <span>🥐 Delicatessen & Pâtisserie</span>
+                        </button>
+                        <button class="case-tab" data-case="hamburgueria" role="tab" aria-selected="false">
+                            <span>🍔 Hamburgueria</span>
+                        </button>
+                        <button class="case-tab" data-case="pizzaria" role="tab" aria-selected="false">
+                            <span>🍕 Forneria & Pizzas</span>
+                        </button>
+                        <button class="case-tab" data-case="pastelaria" role="tab" aria-selected="false">
+                            <span>🥟 Pastelarias</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Container do Showroom Mobile-First -->
+                <div class="showroom-layout">
+                    <!-- Coluna Esquerda: Mockup Smartphone Interativo -->
+                    <div class="showroom-mockup-wrap">
+                        <div class="mockup-phone-view active" id="showcase-phone-container">
+                            <div class="phone-frame-mockup phone-frame-showcase">
+                                <div class="phone-glass-bezel">
+                                    <div class="phone-top-speaker"></div>
+                                    <div class="phone-browser-bar">
+                                        <span class="browser-secure-dot"></span>
+                                        <span class="browser-url" id="phone-case-url">adegabebidasexpress.com.br</span>
+                                        <span class="browser-speed-badge" id="phone-case-badge"><i data-lucide="shield-check" style="width:11px;height:11px;display:inline-block;vertical-align:middle;margin-right:3px;"></i> Canal Seguro • 0% Taxa</span>
+                                    </div>
+                                    <div class="phone-screenshot-viewport" id="phone-case-scroll-viewport">
+                                        <img src="assets/screenshots/montecristo_mobile.jpg"
+                                             alt="Screenshot do Cardápio Mobile"
+                                             id="img-case-mobile"
+                                             class="viewport-screenshot-img"
+                                             loading="lazy">
+                                        <div class="floating-scroll-hint">
+                                            <span>👇 Role para explorar o cardápio real</span>
+                                        </div>
+                                    </div>
+                                    <div class="phone-bottom-bar"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Coluna Direita: Métricas e Intel do Nicho -->
+                    <div class="showroom-intel-wrap">
+                        <div class="intel-card">
+                            <div class="intel-header">
+                                <span class="niche-badge" id="case-niche-badge">BEBIDAS & ADEGA EXPRESS</span>
+                                <span class="domain-tag" id="case-domain-tag">adegabebidasexpress.com.br</span>
+                            </div>
+
+                            <h3 class="intel-title" id="case-intel-title">Adega &amp; Conveniência Express</h3>
+                            <p class="intel-desc" id="case-intel-desc">
+                                Vitrine noturna em fundo escuro que destaca rótulos nobres e reposição de cervejas geladas. O cliente seleciona garrafa avulsa ou caixa fechada com desconto em 1 clique, sem modais lentos.
+                            </p>
+
+                            <!-- Pilares de Fluidez e Diferenciais de Interface por Operação -->
+                            <div class="showroom-experience-pillars" id="case-pillars-container">
+                                <div class="pillar-item">
+                                    <div class="pillar-icon"><i data-lucide="layout-grid"></i></div>
+                                    <div class="pillar-content">
+                                        <strong>Dark Mode &amp; Rótulos em Alta Resolução</strong>
+                                        <p>Fundo contrastante que valoriza garrafas de whisky, vinhos e destilados nobres com teor alcoólico, volume (mL/L) e preço unitário visíveis de imediato.</p>
+                                    </div>
+                                </div>
+                                <div class="pillar-item">
+                                    <div class="pillar-icon"><i data-lucide="layers"></i></div>
+                                    <div class="pillar-content">
+                                        <strong>Alternância Rápida: Garrafa vs. Caixa</strong>
+                                        <p>Seletor instantâneo no próprio produto entre compra avulsa ou pack de 6/12 unidades com valor por garrafa recalculado na hora.</p>
+                                    </div>
+                                </div>
+                                <div class="pillar-item">
+                                    <div class="pillar-icon"><i data-lucide="shopping-cart"></i></div>
+                                    <div class="pillar-content">
+                                        <strong>Adição em 1 Toque Direto na Vitrine</strong>
+                                        <p>Sem modais intermediários travando a rolagem: adiciona múltiplos itens ao pedido e finaliza com endereço no WhatsApp.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Destaques Rápidos da Operação -->
+                            <div class="showroom-quick-metrics">
+                                <div class="quick-metric-badge">
+                                    <span class="quick-metric-val text-orange" id="metric-speed">22s</span>
+                                    <span class="quick-metric-lbl">tempo médio de pedido</span>
+                                </div>
+                                <div class="quick-metric-badge">
+                                    <span class="quick-metric-val text-emerald">0%</span>
+                                    <span class="quick-metric-lbl">taxa de marketplace</span>
+                                </div>
+                                <div class="quick-metric-badge">
+                                    <span class="quick-metric-val text-gold">100%</span>
+                                    <span class="quick-metric-lbl">da margem no seu caixa</span>
+                                </div>
+                            </div>
+
+                            <div class="intel-cta-block">
+                                <a href="index.html" class="btn btn-primary btn-block">
+                                    <span>Navegar no Cardápio do Ioshi Sushi ➔</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SEÇÃO 4: ANCORAGEM FINANCEIRA & SIMULADOR DE MARGEM (2 COLUNAS COMPACTAS)
+        =========================================== -->
+        <section class="simulator-section" id="simulador">
+            <div class="section-container">
+                <div class="section-header text-center">
+                    <div class="eyebrow-tag">ANCORAGEM FINANCEIRA & IMPACTO REAL</div>
+                    <h2 class="section-title">
+                        Qual é o seu momento?<br>
+                        <span class="text-orange">Veja quanto pode sobrar na sua operação.</span>
+                    </h2>
+                    <p class="section-description">
+                        O ganho com o canal próprio não é teórico. Veja a sobra real conforme o porte da sua casa e simule a migração ao lado:
+                    </p>
+                </div>
+
+                <!-- ESTRUTURA EM DUAS COLUNAS (ESPAÇO OTIMIZADO) -->
+                <div class="moments-simulator-split">
+                    <!-- COLUNA ESQUERDA: PEQUENA, MÉDIA E OPERAÇÃO CONSOLIDADA -->
+                    <div class="moments-col-left">
+                        <!-- Card 1: Pequena Operação -->
+                        <div class="compact-moment-card" data-stage="small" role="button" tabindex="0" aria-pressed="false">
+                            <div class="compact-featured-pill">ESTÁGIO INICIAL</div>
+                            <div class="compact-moment-top">
+                                <span class="compact-badge badge-gold">ESTÁGIO INICIAL</span>
+                                <span class="compact-revenue revenue-gold">Faturamento ~R$ 20.000 / mês</span>
+                            </div>
+                            <h3 class="compact-title">Pequena Operação</h3>
+                            <div class="compact-savings-box">
+                                <span class="compact-savings-label">Sobra limpa no caixa:</span>
+                                <div class="compact-savings-val">+ R$ 1.150 a R$ 1.380 <small>/ mês</small></div>
+                                <span class="compact-savings-sub">Migrando apenas 25% dos pedidos fiéis</span>
+                            </div>
+                            <div class="compact-benefit">
+                                <i data-lucide="check-circle-2"></i>
+                                <span>Paga insumos nobres, salmão fresco e embalagens térmicas sem aperto no fluxo.</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Operação Média (Destaque) -->
+                        <div class="compact-moment-card compact-moment-active" data-stage="medium" role="button" tabindex="0" aria-pressed="true">
+                            <div class="compact-featured-pill">MAIS FREQUENTE</div>
+                            <div class="compact-moment-top">
+                                <span class="compact-badge badge-gold">ESTÁGIO EM ESCALA</span>
+                                <span class="compact-revenue revenue-gold">Faturamento ~R$ 50.000 / mês</span>
+                            </div>
+                            <h3 class="compact-title">Operação Média (Padrão Ioshi)</h3>
+                            <div class="compact-savings-box">
+                                <span class="compact-savings-label">Sobra limpa no caixa:</span>
+                                <div class="compact-savings-val">+ R$ 3.450 a R$ 4.600 <small>/ mês</small></div>
+                                <span class="compact-savings-sub">Migrando 30% a 40% da clientela habitual</span>
+                            </div>
+                            <div class="compact-benefit">
+                                <i data-lucide="check-circle-2"></i>
+                                <span>Financia um sushiman experiente a mais, banca anúncios no Google Maps ou vira pró-labore limpo.</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Operação Consolidada -->
+                        <div class="compact-moment-card" data-stage="consolidated" role="button" tabindex="0" aria-pressed="false">
+                            <div class="compact-featured-pill">ALTA ESCALA</div>
+                            <div class="compact-moment-top">
+                                <span class="compact-badge badge-gold">ESTÁGIO CONSOLIDADO</span>
+                                <span class="compact-revenue revenue-gold">Faturamento R$ 100.000+ / mês</span>
+                            </div>
+                            <h3 class="compact-title">Operação Consolidada</h3>
+                            <div class="compact-savings-box">
+                                <span class="compact-savings-label">Sobra limpa no caixa:</span>
+                                <div class="compact-savings-val">+ R$ 9.200 a R$ 13.800 <small>/ mês</small></div>
+                                <span class="compact-savings-sub">Migrando metade da base de recompra</span>
+                            </div>
+                            <div class="compact-benefit">
+                                <i data-lucide="check-circle-2"></i>
+                                <span>Gera capital de giro real, permite expansão do salão e blinda a operação contra oscilações de algoritmos.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- COLUNA DIREITA: QUANTO RETORNA LIMPO NO CAIXA (SIMULADOR INTEGRADO) -->
+                    <div class="simulator-col-right">
+                        <div class="simulator-panel-card">
+                            <div class="panel-card-head">
+                                <div class="sim-header-meta">
+                                    <span class="panel-eyebrow">RETORNO LIMPO NO CAIXA</span>
+                                    <div class="sim-scenario-badge" id="sim-scenario-badge">
+                                        <i data-lucide="sparkles"></i>
+                                        <span id="sim-scenario-name">Cenário: <strong>Operação Média (R$ 50k)</strong></span>
+                                    </div>
+                                </div>
+                                <h3 class="panel-title">Simule o Retorno Limpo do Ioshi</h3>
+                                <p class="panel-desc">
+                                    Veja quanto dinheiro vivo deixa de ser retido em comissões de terceiros e passa a sobrar líquido no seu caixa:
+                                </p>
+                            </div>
+
+                            <!-- Controles Interativos (Mesmos IDs do onirafly.js) -->
+                            <div class="panel-sliders-wrap">
+                                <!-- Slider 1: Faturamento Total Delivery -->
+                                <div class="sim-input-group">
+                                    <div class="sim-label-row">
+                                        <label for="sim-revenue-range" class="sim-label">Faturamento Total Delivery:</label>
+                                        <span class="sim-value-display" id="sim-revenue-display">R$ 50.000</span>
+                                    </div>
+                                    <input type="range" id="sim-revenue-range" min="10000" max="150000" step="5000" value="50000" class="sim-slider">
+                                    <div class="sim-range-markers">
+                                        <span>R$ 10.000</span>
+                                        <span>R$ 75.000</span>
+                                        <span>R$ 150.000</span>
+                                    </div>
+                                </div>
+
+                                <!-- Slider 2: % de Recompra Migrado -->
+                                <div class="sim-input-group">
+                                    <div class="sim-label-row">
+                                        <label for="sim-migration-range" class="sim-label">% Recompra no Canal Próprio:</label>
+                                        <span class="sim-value-display" id="sim-migration-display">30%</span>
+                                    </div>
+                                    <input type="range" id="sim-migration-range" min="10" max="70" step="5" value="30" class="sim-slider">
+                                    <div class="sim-range-markers">
+                                        <span>10% (Início)</span>
+                                        <span>30-40% (Meta Inicial)</span>
+                                        <span>70-80% (Consolidado)</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Resultados Calculados -->
+                            <div class="panel-result-box">
+                                <div class="result-monthly-wrap">
+                                    <span class="result-label">Sobra Limpa Mensal no seu Caixa:</span>
+                                    <div class="result-val-primary">
+                                        <span id="result-monthly-calc" class="highlight-money">R$ 3.450</span>
+                                        <span class="result-sub-period">/mês livres</span>
+                                    </div>
+                                </div>
+
+                                <div class="result-annual-wrap">
+                                    <span class="result-label">Em 1 ano, são preservados:</span>
+                                    <div class="result-val-annual">
+                                        <span id="result-annual-calc" class="highlight-gold">R$ 41.400</span>
+                                        <span class="result-sub-period">a mais no caixa</span>
+                                    </div>
+                                </div>
+
+                                <div class="panel-calc-note">
+                                    <i data-lucide="shield-check"></i>
+                                    <span>Base de cálculo: média de 23% de taxas de intermediação que retornam 100% limpas ao seu fluxo.</span>
+                                </div>
+
+                                <a href="https://wa.me/5554996862169?text=Ol%C3%A1%20Jefferson!%20Simulei%20a%20economia%20do%20Ioshi%20Japanese%20Food%20no%20Onira.fly%20e%20quero%20avançar%20com%20meu%20canal%20próprio."
+                                    target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block btn-lg" id="sim-cta-whatsapp-btn">
+                                    <span>Garantir Esta Margem no Meu Caixa ➔</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SEÇÃO 5: PLANOS & INVESTIMENTO
+        =========================================== -->
+        <section class="pricing-section" id="investimento">
+            <div class="section-container">
+                <div class="section-header text-center">
+                    <div class="eyebrow-tag">
+                        <i data-lucide="credit-card" style="width:14px;height:14px;display:inline-block;vertical-align:middle;margin-right:4px;"></i>
+                        <span>CONDIÇÕES COMERCIAIS OFICIAIS</span>
+                    </div>
+                    <h2 class="section-title">Investimento transparente e sem pegadinhas</h2>
+                    <p class="section-description">
+                        Desenvolvimento completo, infraestrutura em nuvem de alta velocidade e acelerador opcional de tráfego local:
+                    </p>
+                </div>
+
+                <div class="pricing-cards-grid">
+                    <!-- Card 1: Projeto Principal (Featured) -->
+                    <div class="pricing-card featured">
+                        <span class="pricing-badge-top">Projeto Completo</span>
+                        <div>
+                            <h3 class="plan-name">Desenvolvimento &amp; Implantação Onira.fly</h3>
+                            <p class="plan-desc">Canal próprio completo, cardápio digital interativo de sushi com combos, pokes e checkout direto no WhatsApp oficial.</p>
+                            
+                            <div class="plan-price-box">
+                                <div class="price-installment">3x R$ 800</div>
+                                <div class="price-subinfo">ou R$ 1.800 à vista no Pix (sem comissões por venda)</div>
+                            </div>
+
+                            <ul class="plan-features-list">
+                                <li><i data-lucide="check"></i> 0% de comissões por venda (lucro 100% do Ioshi)</li>
+                                <li><i data-lucide="check"></i> Cardápio completo com combos, pokes, hots e sashimis oficiais</li>
+                                <li><i data-lucide="check"></i> Modais de complementos, shoyu extra e observações</li>
+                                <li><i data-lucide="check"></i> Opção de Tele-Entrega ou Retirada no Balcão (São Pelegrino)</li>
+                                <li><i data-lucide="check"></i> Comanda limpa e padronizada direto no WhatsApp oficial</li>
+                                <li><i data-lucide="check"></i> Domínio oficial ioshijapanese.com.br / ioshisushi.com.br incluso</li>
+                            </ul>
+                        </div>
+
+                        <a href="https://wa.me/5554996862169?text=Ol%C3%A1%20Jefferson!%20Quero%20aprovar%20o%20projeto%20do%20canal%20pr%C3%B3prio%20Onira.fly%20para%20o%20Ioshi%20Japanese%20Food!" target="_blank" rel="noopener noreferrer" class="btn-choose-plan primary">
+                            <span>Aprovar Projeto do Ioshi</span>
+                        </a>
+                    </div>
+
+                    <!-- Card 2: Suporte & Manutenção Mensal -->
+                    <div class="pricing-card">
+                        <div>
+                            <h3 class="plan-name">Suporte &amp; Nuvem Contínua</h3>
+                            <p class="plan-desc">Garantia de cardápio sempre atualizado, alta disponibilidade e suporte direto com o desenvolvedor.</p>
+                            
+                            <div class="plan-price-box">
+                                <div class="price-installment white">R$ 100<span style="font-size: 1.1rem; color: var(--text-muted); font-weight: 600;">/mês</span></div>
+                                <div class="price-subinfo">Sem fidelidade obrigatória • Cancele quando quiser</div>
+                            </div>
+
+                            <ul class="plan-features-list emerald">
+                                <li><i data-lucide="check"></i> Hospedagem em nuvem de alta velocidade e SSL</li>
+                                <li><i data-lucide="check"></i> Atualizações de preços, novos combos e festivais sazonais</li>
+                                <li><i data-lucide="check"></i> Inclusão de novas fotos do cardápio</li>
+                                <li><i data-lucide="check"></i> Monitoramento contínuo de estabilidade</li>
+                                <li><i data-lucide="check"></i> Suporte prioritário via WhatsApp direto</li>
+                            </ul>
+                        </div>
+
+                        <a href="https://wa.me/5554996862169?text=Ol%C3%A1%20Jefferson!%20Gostei%20do%20Onira.fly%20e%20quero%20incluir%20o%20suporte%20mensal%20de%20R%24%20100!" target="_blank" rel="noopener noreferrer" class="btn-choose-plan secondary">
+                            <span>Incluir Suporte Mensal</span>
+                        </a>
+                    </div>
+
+                    <!-- Card 3: Upsell Estratégico (Acelerador Google Meu Negócio & SEO Local) -->
+                    <div class="pricing-card upsell google-featured-upsell">
+                        <div class="google-badge-pill-header">
+                            <div class="google-brand-badge-mini">
+                                <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+                                    <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
+                                    <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 10.04 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+                                    <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+                                </svg>
+                                <span>GOOGLE MEU NEGÓCIO &bull; SEO LOCAL</span>
+                            </div>
+                            <span class="pricing-badge-top-inline">Acelerador de Demanda</span>
+                        </div>
+
+                        <div>
+                            <h3 class="plan-name" style="color: #FFFFFF; display: flex; align-items: center; gap: 8px;">
+                                <span>Topo das Buscas Google &amp; Maps</span>
+                            </h3>
+                            <p class="plan-desc">Destaque absoluto quando alguém pesquisar delivery de sushi, combinados ou comida japonesa em Caxias do Sul.</p>
+                            
+                            <div class="plan-price-box">
+                                <div class="price-installment" style="color: #60A5FA;">+ R$ 300<span style="font-size: 1.1rem; color: #93C5FD; font-weight: 600;">/mês</span></div>
+                                <div class="price-subinfo" style="color: #E2E8F0;">Atração contínua de novos clientes da Serra Gaúcha</div>
+                            </div>
+
+                            <ul class="plan-features-list" style="--bullet-color: #38BDF8;">
+                                <li><i data-lucide="check" style="color: #38BDF8;"></i> Ficha oficial no Google Perfil de Empresas 100% otimizada</li>
+                                <li><i data-lucide="check" style="color: #38BDF8;"></i> Ranqueamento orgânico para buscas quentes de sushi e delivery</li>
+                                <li><i data-lucide="check" style="color: #38BDF8;"></i> Botão direto para o seu canal próprio oficial Onira.fly</li>
+                                <li><i data-lucide="check" style="color: #38BDF8;"></i> Relatório mensal de ligações, rotas traçadas e cliques</li>
+                            </ul>
+                        </div>
+
+                        <a href="https://wa.me/5554996862169?text=Ol%C3%A1%20Jefferson!%20Quero%20incluir%20o%20Acelerador%20Google%20Meu%20Neg%C3%B3cio%20e%20SEO%20Local%20para%20o%20Ioshi!" target="_blank" rel="noopener noreferrer" class="btn-choose-plan google-btn">
+                            <span>Adicionar Acelerador Google</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ACCORDION COM OS CARDS DE DETALHES DE UPSELL -->
+                <div class="upsell-accordion-wrapper">
+                    <details class="upsell-details-accordion">
+                        <summary class="upsell-accordion-trigger">
+                            <div class="trigger-label-group">
+                                <i data-lucide="help-circle" class="trigger-icon"></i>
+                                <span class="trigger-main-text">O que está incluso no Upsell? Ver detalhes de Aceleração de Demanda e Apoio Operacional</span>
+                            </div>
+                            <span class="trigger-chevron-badge">
+                                <i data-lucide="chevron-down"></i>
+                            </span>
+                        </summary>
+
+                        <div class="upsell-accordion-content">
+                            <div class="services-upsell-grid">
+                                <!-- Bloco 1: Aceleração de Demanda -->
+                                <div class="service-upsell-card">
+                                    <div class="service-card-top">
+                                        <div class="service-icon-box">
+                                            <i data-lucide="trending-up" class="service-icon"></i>
+                                        </div>
+                                        <span class="service-pill">TRÁFEGO & DEMANDA</span>
+                                    </div>
+                                    <h3 class="service-card-title">Aceleração de Demanda (Google Meu Negócio + Google Ads)</h3>
+                                    <div class="service-quote-box">
+                                        <p>
+                                            “Plus: nosso time é especialista em Google Ads e Google Meu Negócio. Se você quiser acelerar as vendas diretas desde o primeiro dia, estruturamos a captação local sob medida para Caxias do Sul.”
+                                        </p>
+                                    </div>
+                                    <p class="service-card-intro">
+                                        O canal próprio só fatura se as pessoas chegarem até ele. Nós cuidamos do tráfego para a sua equipe focar no sushi:
+                                    </p>
+                                    <div class="service-items-list">
+                                        <div class="service-item">
+                                            <div class="service-item-head">
+                                                <i data-lucide="map-pin" class="item-lucide text-purple"></i>
+                                                <strong>Google Perfil de Empresas Otimizado:</strong>
+                                            </div>
+                                            <p>Quem pesquisa <em>"sushi delivery perto de mim"</em> ou <em>"combinado sushi são pelegrino"</em> encontra o seu link oficial direto no topo da busca local, antes dos marketplaces.</p>
+                                        </div>
+                                        <div class="service-item">
+                                            <div class="service-item-head">
+                                                <i data-lucide="crosshair" class="item-lucide text-purple"></i>
+                                                <strong>Campanhas de Google Ads Locais:</strong>
+                                            </div>
+                                            <p>Anúncios focados no raio exato de entrega da sua operação. O clique leva para o Onira.fly sem intermediários.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Bloco 2: Apoio Operacional para Quem Não Tem ERP -->
+                                <div class="service-upsell-card">
+                                    <div class="service-card-top">
+                                        <div class="service-icon-box">
+                                            <i data-lucide="clipboard-list" class="service-icon"></i>
+                                        </div>
+                                        <span class="service-pill">OPERAÇÃO & BALCÃO</span>
+                                    </div>
+                                    <h3 class="service-card-title">Apoio Operacional para o Balcão</h3>
+                                    <div class="service-quote-box">
+                                        <p>
+                                            “Processo leve para sua expedição: aproveitamos os processos que você já tem para receber o pedido e despachar pro motoboy sem atrito.”
+                                        </p>
+                                    </div>
+                                    <div class="service-items-list">
+                                        <div class="service-item">
+                                            <div class="service-item-head">
+                                                <i data-lucide="printer" class="item-lucide text-purple"></i>
+                                                <strong>Comandas Formatadas para Impressão:</strong>
+                                            </div>
+                                            <p>Impressão limpa e rápida na cozinha ou visualização clara em tablet simples, sem complexidade de softwares pesados.</p>
+                                        </div>
+                                        <div class="service-item">
+                                            <div class="service-item-head">
+                                                <i data-lucide="check-check" class="item-lucide text-purple"></i>
+                                                <strong>Ajuste no Fluxo do Atendente:</strong>
+                                            </div>
+                                            <p>Configuramos a esteira no ritmo real da sua equipe para eliminar erros de expedição desde o primeiro pedido.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SEÇÃO 6: FECHAMENTO & CTA REFINADO
+        =========================================== -->
+        <section class="final-cta-section" id="cta-final">
+            <div class="final-cta-bg-overlay" aria-hidden="true"></div>
+            <div class="section-container">
+                <div class="final-cta-content text-center">
+                    <div class="eyebrow-tag">O PRÓXIMO PASSO</div>
+                    <h2 class="final-cta-title">Inicie o equilíbrio do seu <span class="text-orange">delivery hoje.</span></h2>
+                    <p class="final-cta-description">
+                        Você não precisa romper com os marketplaces do dia para a noite. Nós colocamos o seu canal próprio no ar, configuramos o seu domínio e deixamos a esteira pronta para capturar a recompra de quem já consome com o Ioshi Japanese Food.
+                    </p>
+
+                    <div class="final-cta-action">
+                        <a href="https://wa.me/5554996862169?text=Ol%C3%A1%20Jefferson!%20Vi%20a%20proposta%20do%20Onira.fly%20para%20o%20Ioshi%20Japanese%20Food%20e%20quero%20avançar!"
+                            target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-xl btn-pulsing">
+                            <i data-lucide="sparkles" class="btn-icon"></i>
+                            <span>Falar com o Estrategista Onira ➔</span>
+                        </a>
+                    </div>
+
+                    <div style="margin-top: 18px;">
+                        <a href="contrato.html" target="_blank" rel="noopener" class="btn btn-secondary btn-lg" style="color: #CBD5E1;">
+                            <i data-lucide="file-text" class="btn-icon"></i>
+                            <span>Visualizar Minuta do Contrato Jurídico</span>
+                        </a>
+                    </div>
+
+                    <div class="final-cta-guarantee">
+                        <i data-lucide="shield-check" class="guarantee-icon"></i>
+                        <span><strong>Garantia Técnica:</strong> O protótipo navegável com o cardápio e a identidade do Ioshi Japanese Food já está disponível para testes imediatos.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             ASSINATURA MASTER INSTITUCIONAL
+        =========================================== -->
+        <section class="master-signature-section">
+            <div class="section-container">
+                <div class="dev-profile-card">
+                    <div class="dev-profile-header">
+                        <img src="assets/jeff-avatar.webp" alt="Jefferson Motta" class="dev-avatar-img" width="76" height="76" loading="lazy">
+                        <div class="dev-profile-title-block">
+                            <span class="dev-badge-tag">SERVICE DESIGN & AI BUSINESS INTELLIGENCE</span>
+                            <h3 class="dev-author-name">Jefferson Motta</h3>
+                            <p class="dev-author-role">Service Designer e A.I Business Intelligence na <strong>Onira Labs</strong> • Caxias do Sul - Serra Gaúcha</p>
+                        </div>
+                    </div>
+
+                    <blockquote class="dev-quote">
+                        “Nosso propósito com o <strong>Onira.fly</strong> para o <strong>Ioshi Japanese Food</strong> é devolver a soberania do delivery à casa: o cliente visualiza os combos e sashimis em menos de 1 segundo, monta o pedido sem atrito e envia direto no WhatsApp oficial. Zero burocracia para quem pede e lucro integral no caixa de quem produz.”
+                    </blockquote>
+
+                    <div class="dev-profile-footer">
+                        <div class="dev-social-links">
+                            <a href="https://www.linkedin.com/in/jeff-motta" target="_blank" rel="noopener noreferrer" class="dev-link">
+                                <i data-lucide="linkedin"></i>
+                                <span>LinkedIn Oficial</span>
+                            </a>
+                            <a href="https://jeffmotta.framer.website/" target="_blank" rel="noopener noreferrer" class="dev-link">
+                                <i data-lucide="globe"></i>
+                                <span>Portfólio & Metodologia</span>
+                            </a>
+                        </div>
+                        <div class="dev-agency-brand">
+                            <span class="agency-label">Desenvolvido por</span>
+                            <a href="https://oniralabs.framer.website" target="_blank" rel="noopener noreferrer" class="agency-logo-link">
+                                <img src="assets/oniralabs_branco_tag.svg" alt="Onira Labs" class="agency-logo-img">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==========================================
+         RODAPÉ (FOOTER)
+    =========================================== -->
+    <footer class="site-footer">
+        <div class="section-container footer-grid">
+            <div class="footer-col footer-col-brand">
+                <div class="footer-logo-wrap">
+                    <a href="#top" aria-label="Onira.fly Voltar ao Topo">
+                        <img src="assets/onirafly_branco.svg" alt="Onira.fly" class="footer-logo-img">
+                    </a>
+                </div>
+                <p class="footer-brand-desc">
+                    Engenharia de canais próprios e retenção para gastronomia. Um produto <strong>Onira Labs</strong>.
+                </p>
+                <div class="footer-status-indicator">
+                    <span class="pulse-dot"></span>
+                    <span>Sistemas Operacionais & Redes Globais Ativas</span>
+                </div>
+            </div>
+
+            <div class="footer-col footer-col-links">
+                <h4 class="footer-col-title">Navegação Rápida</h4>
+                <ul class="footer-menu">
+                    <li><a href="#tese">Estratégia dos Canais</a></li>
+                    <li><a href="#cases">Casos Reais & Demonstrações</a></li>
+                    <li><a href="#simulador">Benchmark & Simulador</a></li>
+                    <li><a href="#investimento">Investimento & Planos</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-col-legal">
+                <h4 class="footer-col-title">Institucional & Contato</h4>
+                <ul class="footer-menu">
+                    <li><span>Caxias do Sul — Serra Gaúcha, RS</span></li>
+                    <li><a href="https://wa.me/5554996862169" target="_blank" rel="noopener noreferrer" class="footer-wa-link">
+                        <i data-lucide="message-circle"></i>
+                        <span>WhatsApp: (54) 99686-2169</span>
+                    </a></li>
+                    <li><a href="https://oniralabs.framer.website" target="_blank" rel="noopener noreferrer">Onira Labs Oficial</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom-bar">
+            <div class="section-container footer-bottom-content">
+                <p>© 2026 Onira Labs. Todos os direitos reservados. 0% de comissão por venda.</p>
+                <a href="#top" class="back-to-top" aria-label="Voltar ao topo da página">
+                    <span>Voltar ao topo</span>
+                    <i data-lucide="arrow-up"></i>
                 </a>
-                <a href="contrato.html" target="_blank" rel="noopener" class="btn" style="background: var(--surface-2); color: #fff;">
-                    <i data-lucide="file-text"></i> Visualizar Minuta do Contrato
-                </a>
             </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="wrap">
-            <p>© 2026 Onira Labs. Todos os direitos reservados. Feito para negócios gastronômicos que valorizam a própria margem.</p>
         </div>
     </footer>
 
+    <!-- Botão WhatsApp Flutuante com Glow Oficial -->
+    <a href="https://wa.me/5554996862169?text=Ol%C3%A1%20Jefferson!%20Vi%20a%20proposta%20do%20Onira.fly%20para%20o%20Ioshi%20Japanese%20Food%20e%20gostaria%20de%20conversar."
+       class="floating-whatsapp-btn"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Falar com a Onira Labs no WhatsApp (54) 99686-2169">
+        <i data-lucide="message-circle" class="wa-icon"></i>
+        <span class="wa-tooltip">Falar com o Estrategista</span>
+    </a>
+
+    <!-- Scripts da Aplicação -->
+    <script src="onirafly.js?v=3.2.0"></script>
+    <script>
+        // Inicializa ícones Lucide
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+    </script>
     <!-- Radar invisível de telemetria Onira -->
     <script>
         window.ONIRA_PROPOSAL_CONFIG = {
             clientSlug: "ioshi-sushi",
             clientName: "Ioshi Japanese Food",
-            webhookUrl: "", // Preenchido com URL do webhook se ativo
+            webhookUrl: "",
             supabaseUrl: "https://xivmwffgedfheyayckwo.supabase.co", // Telemetria real (Supabase)
             supabaseAnonKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhpdm13ZmZnZWRmaGV5YXlja3dvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzYyMDUwMjAsImV4cCI6MjA5MTc4MTAyMH0.DDx3TuJeUJwxGUCsq1XpiOcW00aVeud5vnBbs2YUGj0" // ANON key. NUNCA service_role.
         };
     </script>
     <script src="assets/proposal-tracker.js" defer></script>
-
-    <script>
-        if (window.lucide) lucide.createIcons();
-
-        // Lógica do Simulador Interativo
-        const fmt = (v) => 'R$ ' + Math.round(v).toLocaleString('pt-BR');
-        const rngFat = document.getElementById('rng-faturamento');
-        const rngMig = document.getElementById('rng-migracao');
-        const rngTax = document.getElementById('rng-taxa');
-
-        function updateSim() {
-            const fat = parseFloat(rngFat.value);
-            const mig = parseFloat(rngMig.value);
-            const tax = parseFloat(rngTax.value);
-
-            document.getElementById('lbl-faturamento').textContent = fmt(fat);
-            document.getElementById('lbl-migracao').textContent = mig + '%';
-            document.getElementById('lbl-taxa').textContent = tax + '%';
-
-            const faturamentoMigrado = fat * (mig / 100);
-            const economiaMes = faturamentoMigrado * (tax / 100);
-            const economiaAno = economiaMes * 12;
-
-            document.getElementById('res-mes').textContent = fmt(economiaMes);
-            document.getElementById('res-ano').textContent = fmt(economiaAno) + ' / ano';
-        }
-
-        [rngFat, rngMig, rngTax].forEach(el => el.addEventListener('input', updateSim));
-        updateSim();
-    </script>
 </body>
+
 </html>
